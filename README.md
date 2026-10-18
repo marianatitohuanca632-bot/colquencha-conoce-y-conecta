@@ -1,7 +1,8 @@
 # Conoce y Conecta: Sedes UMSA - la plataforma
 
 Rutas de acceso y promoción de los municipios con sede universitaria de la UMSA. Tiene un **inicio con todas
-las sedes** y una **página por sede**. La primera sede completa es Colquencha; las demás muestran "próximamente".
+las sedes** y una **página por sede**. Las 17 sedes tienen sus rutas; Colquencha tiene además la información del
+municipio que reunió el grupo, y en las demás esa información está marcada `[COMPLETAR]`.
 
 ## Cómo abrirla
 
@@ -16,6 +17,7 @@ Doble clic en `index.html`. Funciona **sin internet** y sin instalar nada: todo 
 | `estilo.css` | los estilos (el diseño del grupo, con las secciones 17 a 19 nuevas al final) |
 | `sedes.js` | **la lista de las sedes**: nombre, región, tipo y si ya está activa |
 | `sedes/colquencha.js` | **los datos de Colquencha**: lugares, tramos, accesos, información de cada sección y galería |
+| `sedes/<sede>.js` | los datos de cada una de las otras 16 sedes, con el mismo formato (generados con OpenStreetMap y Wikipedia) |
 | `img/colquencha/` | las imágenes de Colquencha |
 | `algoritmos.js` | Dijkstra, BFS y A* |
 | `pruebas/probar.js` | las pruebas de los algoritmos y de los datos de cada sede |
@@ -31,14 +33,16 @@ Doble clic en `index.html`. Funciona **sin internet** y sin instalar nada: todo 
    Solo información verificada.
 3. **La lista de sedes**, en `sedes.js`, sale del folleto del IDR-DU: falta una de las 14 sedes locales.
 
-## Cómo se agrega una sede (por ejemplo, Quime)
+## Cómo se agrega una sede (por ejemplo, la sede local que falta)
 
-1. Copiar `sedes/colquencha.js` como `sedes/quime.js`, cambiar la primera línea a `DATOS_SEDE.quime = {` y
-   poner sus datos: lugares (con latitud y longitud de openstreetmap.org), tramos con sus km y minutos
-   (la herramienta de rutas de openstreetmap.org), accesos, secciones y galería.
-2. En `sede.html`, junto a la de Colquencha, agregar `<script src="sedes/quime.js"></script>`.
-3. En `sedes.js`, ponerle `activa: true` a Quime.
-4. Correr las pruebas: `node pruebas/probar.js`.
+1. En `sedes.js`, agregarla a la lista con su `id` (sin tildes ni espacios, por ejemplo `nueva-sede`), región,
+   tipo y programas.
+2. Copiar `sedes/colquencha.js` como `sedes/nueva-sede.js`, cambiar la primera línea a
+   `DATOS_SEDE["nueva-sede"] = {` y poner sus datos: lugares (con latitud y longitud de openstreetmap.org),
+   tramos con sus km y minutos (la herramienta de rutas de openstreetmap.org), accesos, secciones y galería.
+3. En `sede.html`, junto a las demás, agregar `<script src="sedes/nueva-sede.js"></script>`.
+4. En `sedes.js`, ponerle `activa: true`.
+5. Correr las pruebas: `node pruebas/probar.js`.
 
 No hay que tocar `script.js` ni `algoritmos.js`: la página, el mapa y los cálculos salen de los datos.
 

@@ -52,7 +52,7 @@ function mostrarSede() {
     /* ---------- 4. Los textos y las imágenes de la sede ---------- */
     document.querySelector("#ubicacion").textContent = DATOS.ubicacion;
     document.querySelector("#lema").textContent = DATOS.lema;
-    document.querySelector("#sedeUmsa").textContent = `${DATOS.sede}. La primera sede de Conoce y Conecta.`;
+    document.querySelector("#sedeUmsa").textContent = `${DATOS.sede}.`;
     // El fondo del inicio: la foto de la sede sobre el degradado del diseño
     document.querySelector(".hero").style.backgroundImage =
         `linear-gradient(90deg, #09273ce8, #103a4d99, #102b4230), url("${DATOS.fondo}")`;

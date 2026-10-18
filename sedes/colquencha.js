@@ -10,7 +10,7 @@ DATOS_SEDE.colquencha = {
     municipio: "Colquencha",
     ubicacion: "Provincia Aroma, La Paz",
     lema: "Un municipio lleno de cultura, tradición, producción y oportunidades para el futuro.",
-    sede: "Sede Universitaria Local Colquencha, del CRU Patacamaya",
+    sede: "Sede Universitaria Local Colquencha, del CRU Patacamaya. La primera sede de Conoce y Conecta",
 
     // Fondo del inicio de la página (la foto del grupo). Si falta, se ve un fondo de color.
     fondo: "img/colquencha/paisaje_colquencha.png",
