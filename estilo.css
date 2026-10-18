@@ -1536,3 +1536,69 @@ footer i {
     color: inherit;
     text-decoration: underline;
 }
+
+/* ==============================
+   20. ENLACE "CONOCE Y CONECTA: SEDES UMSA"
+   Una tarjeta ancha debajo de las demás, que lleva a la pestaña
+   "Otras sedes" (pedido del grupo).
+============================== */
+
+.enlace-sedes {
+    grid-column: 1 / -1;
+    background: linear-gradient(135deg, #e8f5ff, #eaf7ee);
+}
+
+.enlace-sedes a {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 18px;
+    color: inherit;
+    text-decoration: none;
+}
+
+.enlace-sedes-icono {
+    font-size: 34px;
+    flex-shrink: 0;
+}
+
+.enlace-sedes-texto {
+    flex: 1;
+    min-width: 0;
+}
+
+.enlace-sedes h3 {
+    font-size: 14px;
+    margin-bottom: 4px;
+    color: #102b42;
+}
+
+.enlace-sedes p {
+    min-height: 0;
+    font-size: 11px;
+}
+
+.enlace-sedes-boton {
+    flex-shrink: 0;
+    padding: 9px 16px;
+    border-radius: 18px;
+    background: #16864d;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.enlace-sedes a:hover .enlace-sedes-boton {
+    background: #126e3f;
+}
+
+@media (max-width: 700px) {
+    .enlace-sedes a {
+        flex-wrap: wrap;
+    }
+
+    .enlace-sedes-boton {
+        width: 100%;
+        text-align: center;
+    }
+}

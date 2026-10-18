@@ -219,7 +219,7 @@ function mostrarSede() {
 
     /* ---------- 10. Botones de las tarjetas: la información de cada sección ----------
        Una sección sin datos verificados no se muestra: ni la tarjeta ni su enlace del menú. */
-    for (const tarjeta of document.querySelectorAll(".categoria-card")) {
+    for (const tarjeta of document.querySelectorAll(".categoria-card:not(.enlace-sedes)")) {
         const datos = DATOS.secciones[tarjeta.id] || [];
         if (!datos.length) {
             document.querySelector(`.sidebar nav a[href="#${tarjeta.id}"]`)?.remove();
