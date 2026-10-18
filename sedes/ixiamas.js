@@ -1,5 +1,5 @@
 /* ==============================================================
-   SEDE IXIAMAS: los datos de su página (sede.html?sede=ixiamas)
+   SEDE IXIAMAS: los datos de su página (index.html?sede=ixiamas)
    GENERADO por sedes-datos/escribir.py el 17/10/2026: lugares de OpenStreetMap
    (Nominatim), tramos por carretera de OSRM y el resumen del municipio de
    Wikipedia. Las distancias son APROXIMADAS. Lo que dice [COMPLETAR] lo

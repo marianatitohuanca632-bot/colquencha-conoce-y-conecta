@@ -1,33 +1,47 @@
 /* ==============================================================
-   LA PÁGINA DE UNA SEDE (sede.html?sede=<id>)
+   LA PÁGINA (index.html)
+   Sin nada más en la dirección, es la página de Colquencha.
+   Desde la pestaña "Otras sedes", la misma página muestra otra sede:
+   index.html?sede=quime
    Lee la lista de sedes (sedes.js) y los datos de la sede elegida
    (sedes/<id>.js), llama a los algoritmos (algoritmos.js) y muestra
    el resultado. No necesita internet.
    ============================================================== */
 
 
-/* ---------- 1. ¿Qué sede? La dice la dirección: sede.html?sede=colquencha ---------- */
+/* ---------- 1. ¿Qué sede? Colquencha, salvo que la dirección diga otra ---------- */
 const ID = new URLSearchParams(location.search).get("sede") || "colquencha";
 const SEDE = SEDES.find(s => s.id === ID) || SEDES.find(s => s.id === "colquencha");
 const DATOS = DATOS_SEDE[SEDE.id];
 const TIPO = { CRU: "Centro Regional Universitario", SUL: "Sede Universitaria Local" };
+const ES_COLQUENCHA = SEDE.id === "colquencha";
 
-document.title = `${SEDE.nombre} - Conoce y Conecta: Sedes UMSA`;
 for (const el of document.querySelectorAll(".nombre-sede")) el.textContent = SEDE.nombre;
+
+// En otra sede: título propio, la barra de sedes, "Volver a otras sedes" marcado,
+// y "Nosotros" lleva a la página de Colquencha
+if (!ES_COLQUENCHA) {
+    document.title = `${SEDE.nombre} - Otras sedes - Colquencha: Conoce y Conecta`;
+    document.querySelector("#sedesBarra").hidden = false;
+    document.querySelector("#volverSedes").hidden = false;
+    document.querySelector(".pestana-sedes").classList.add("menu-activo");
+    document.querySelector("#enlaceNosotros").href = "index.html#nosotros";
+    document.querySelector("#nosotros").remove();
+}
 
 
 /* ---------- 2. La barra de sedes: un enlace a la página de cada una ---------- */
 const barra = document.querySelector("#sedesBarra");
 for (const sede of SEDES) {
     const enlace = document.createElement("a");
-    enlace.href = `sede.html?sede=${sede.id}`;
+    enlace.href = sede.id === "colquencha" ? "index.html" : `index.html?sede=${sede.id}`;
     enlace.textContent = sede.nombre;
     if (sede.activa) enlace.classList.add("activa");
     if (sede.id === SEDE.id) enlace.setAttribute("aria-current", "page");
     barra.append(enlace);
 }
 const actual = barra.querySelector("[aria-current]");
-barra.scrollLeft = actual.offsetLeft - (barra.clientWidth - actual.offsetWidth) / 2;
+if (!barra.hidden) barra.scrollLeft = actual.offsetLeft - (barra.clientWidth - actual.offsetWidth) / 2;
 
 
 /* ---------- 3. Si la sede todavía no tiene datos: solo el aviso "próximamente" ---------- */
@@ -52,7 +66,9 @@ function mostrarSede() {
     /* ---------- 4. Los textos y las imágenes de la sede ---------- */
     document.querySelector("#ubicacion").textContent = DATOS.ubicacion;
     document.querySelector("#lema").textContent = DATOS.lema;
-    document.querySelector("#sedeUmsa").textContent = `${DATOS.sede}.`;
+    // En Colquencha no hace falta: es la página del proyecto
+    if (ES_COLQUENCHA) document.querySelector("#sedeUmsa").remove();
+    else document.querySelector("#sedeUmsa").textContent = `${DATOS.sede}.`;
     // El fondo del inicio: la foto de la sede sobre el degradado del diseño
     document.querySelector(".hero").style.backgroundImage =
         `linear-gradient(90deg, #09273ce8, #103a4d99, #102b4230), url("${DATOS.fondo}")`;

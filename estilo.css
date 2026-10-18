@@ -1532,3 +1532,9 @@ footer i {
     line-height: 1.8;
     color: #344b5c;
 }
+
+/* Lo que tiene el atributo hidden no se muestra, aunque su clase diga display: flex
+   (la barra de sedes y "Volver a otras sedes" solo aparecen en las otras sedes) */
+[hidden] {
+    display: none !important;
+}

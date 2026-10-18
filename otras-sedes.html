@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Otras sedes - Colquencha: Conoce y Conecta</title>
+
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body class="inicio">
+
+    <!-- BARRA SUPERIOR -->
+    <header class="topbar">
+
+        <a class="logo" href="index.html">
+            <span class="logo-icon">⛰️</span>
+            <span>COLQUENCHA: <span>CONOCE Y CONECTA</span></span>
+        </a>
+
+        <div class="slogan">
+            Conoce, llega y descubre Colquencha
+        </div>
+
+        <div class="top-icons">
+            <span>📍 Departamento de La Paz, Bolivia</span>
+        </div>
+
+    </header>
+
+
+    <!-- CONTENEDOR PRINCIPAL -->
+    <div class="layout">
+
+
+        <!-- MENÚ LATERAL -->
+        <aside class="sidebar">
+
+            <nav>
+
+                <a href="index.html">
+                    🏠 <span>Colquencha</span>
+                </a>
+
+                <a href="#inicio" class="menu-activo">
+                    🗺️ <span>Otras sedes</span>
+                </a>
+
+                <a href="#como">
+                    🧭 <span>Cómo funciona</span>
+                </a>
+
+                <a href="index.html#nosotros">
+                    💬 <span>Nosotros</span>
+                </a>
+
+            </nav>
+
+
+            <div class="sidebar-frase">
+                <p>Colquencha<br>
+                te espera...</p>
+
+                <div>♡</div>
+                <div class="montana">⌁⌁⌁</div>
+            </div>
+
+        </aside>
+
+
+        <!-- CONTENIDO -->
+        <main class="contenido">
+
+
+            <!-- HERO -->
+            <section id="inicio" class="hero hero-inicio">
+
+                <div class="hero-text">
+
+                    <p>Además de Colquencha</p>
+
+                    <h1>Otras sedes de la UMSA</h1>
+
+                    <span>
+                        La UMSA tiene 4 centros regionales y 14 sedes universitarias
+                        en el departamento de La Paz. Busca una y mira cómo llegar
+                        a ella y qué programas ofrece.
+                    </span>
+
+                    <label class="buscador" for="buscarSede">
+                        🔎
+                        <input id="buscarSede" type="search"
+                               placeholder="Busca una sede, una región o una carrera">
+                    </label>
+
+                </div>
+
+            </section>
+
+
+            <!-- LAS SEDES: las tarjetas las arma inicio.js con SEDES de sedes.js -->
+            <section id="sedes" class="sedes">
+
+                <h2>🗺️ Elige una sede</h2>
+
+                <p>
+                    Cada sede tiene su página, igual que <a href="index.html"><b>Colquencha</b></a>:
+                    las rutas de acceso desde los principales puntos de partida y la
+                    información de su municipio. Las rutas son aproximadas, calculadas
+                    con OpenStreetMap.
+                </p>
+
+                <p id="sinResultados" class="sin-resultados" hidden>
+                    No hay ninguna sede con ese nombre.
+                </p>
+
+                <div id="sedesRegiones" class="sedes-regiones"></div>
+
+                <p class="sedes-fuente">
+                    Sedes y programas según el folleto «Programas académicos» del IDR-DU de la UMSA:
+                    4 centros regionales y 14 sedes universitarias locales.
+                    <span class="completar">[COMPLETAR] Falta una de las 14 sedes locales.</span>
+                </p>
+
+            </section>
+
+
+            <!-- CÓMO FUNCIONA -->
+            <section id="como" class="como">
+
+                <h2>🧭 Cómo funciona</h2>
+
+                <div class="pasos-como">
+
+                    <div>
+                        <b>1</b>
+                        <h3>Elige la sede</h3>
+                        <p>Busca la sede a la que quieres llegar por su nombre, su región o la carrera que ofrece.</p>
+                    </div>
+
+                    <div>
+                        <b>2</b>
+                        <h3>Elige tu punto de partida</h3>
+                        <p>Puntos exactos: una plaza, una parada, una salida de la ciudad.</p>
+                    </div>
+
+                    <div>
+                        <b>3</b>
+                        <h3>Mira tu ruta</h3>
+                        <p>El algoritmo de Dijkstra calcula la ruta más corta y la dibuja en el mapa, sin internet.</p>
+                    </div>
+
+                    <div>
+                        <b>4</b>
+                        <h3>Conoce el municipio</h3>
+                        <p>Lugares para visitar, fiestas, producción, colegios y la sede de la UMSA.</p>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+        </main>
+
+    </div>
+
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+
+        <strong>COLQUERUTA © 2026</strong>
+
+        <span>
+            Proyecto para la comunidad y el desarrollo de Colquencha
+        </span>
+
+        <i>
+            ¡Juntos hacemos crecer nuestro municipio!
+        </i>
+
+    </footer>
+
+
+    <script src="sedes.js"></script>
+    <script src="otras-sedes.js"></script>
+
+</body>
+</html>

@@ -1,6 +1,6 @@
 /* ==============================================================
-   SEDE COLQUENCHA: los datos de su página (sede.html?sede=colquencha)
-   La primera sede de la plataforma, y el modelo para las demás:
+   SEDE COLQUENCHA: los datos de la página del proyecto (index.html)
+   Su formato es el modelo de las sedes de la pestaña "Otras sedes":
    para agregar otra, se copia este archivo y se cambian los datos.
    script.js no se toca.
    ============================================================== */
@@ -10,7 +10,7 @@ DATOS_SEDE.colquencha = {
     municipio: "Colquencha",
     ubicacion: "Provincia Aroma, La Paz",
     lema: "Un municipio lleno de cultura, tradición, producción y oportunidades para el futuro.",
-    sede: "Sede Universitaria Local Colquencha, del CRU Patacamaya. La primera sede de Conoce y Conecta",
+    sede: "Sede Universitaria Local Colquencha, del CRU Patacamaya",
 
     // Fondo del inicio de la página (la foto del grupo). Si falta, se ve un fondo de color.
     fondo: "img/colquencha/paisaje_colquencha.png",
@@ -113,7 +113,7 @@ DATOS_SEDE.colquencha = {
         umsa: [
             "Sede Universitaria Local Colquencha, del CRU Patacamaya de la Universidad Mayor de San Andrés.",
             "Programa Académico Desconcentrado: Técnico Superior en Informática (Carrera de Informática, Facultad de Ciencias Puras y Naturales).",
-            "Colquencha es la primera sede de Conoce y Conecta: Sedes UMSA, la plataforma que hicimos sus estudiantes."
+            "En la pestaña «Otras sedes» puedes ver las demás sedes universitarias de la UMSA y cómo llegar a ellas."
         ]
     },
 

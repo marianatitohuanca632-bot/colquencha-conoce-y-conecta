@@ -1,7 +1,7 @@
 /* ==============================================================
    EL INICIO (index.html): todas las sedes, agrupadas por región,
    con un buscador. Lee la lista de sedes.js; cada sede enlaza a su
-   página: sede.html?sede=<id>
+   página: index.html?sede=<id> (Colquencha es index.html, la página del proyecto)
    ============================================================== */
 
 
@@ -14,7 +14,7 @@ for (const region in regiones) {
     const bloque = document.createElement("section");
     const items = regiones[region].map(s => `
         <li data-buscar="${[s.nombre, region, ...s.programas].join(" ")}">
-            <a href="sede.html?sede=${s.id}" class="${s.activa ? "activa" : ""}">
+            <a href="${s.id === "colquencha" ? "index.html" : `index.html?sede=${s.id}`}" class="${s.activa ? "activa" : ""}">
                 ${s.activa ? "✓" : "○"} ${s.nombre}
                 <small>${s.tipo}${s.activa ? ", con rutas" : ", próximamente"}</small>
             </a>
@@ -29,7 +29,7 @@ for (const region in regiones) {
    Busca en el nombre, la región y los programas, sin distinguir mayúsculas ni
    tildes: "san buena" encuentra San Buenaventura, "yungas" las cuatro de los
    Yungas y "enfermeria" la sede que ofrece Enfermería. */
-const sinTildes = texto => texto.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
+const sinTildes = texto => texto.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
 
 document.querySelector("#buscarSede").addEventListener("input", evento => {
     const buscado = sinTildes(evento.target.value.trim());
@@ -49,11 +49,11 @@ document.querySelector("#buscarSede").addEventListener("input", evento => {
 
 
 /* ---------- 3. Menú lateral: marca la sección que se está viendo ---------- */
-const enlaces = document.querySelectorAll(".sidebar nav a");
+const enlaces = document.querySelectorAll(".sidebar nav a[href^='#']");
 const observador = new IntersectionObserver(entradas => {
     for (const e of entradas) {
         if (!e.isIntersecting) continue;
-        // Arriba de todo, siempre "Inicio" (el inicio es más bajo que la pantalla)
+        // Arriba de todo, siempre "Otras sedes" (el inicio de la página es más bajo que la pantalla)
         const id = window.scrollY < 80 ? "inicio" : e.target.id;
         enlaces.forEach(a => a.classList.toggle("menu-activo", a.getAttribute("href") === "#" + id));
     }

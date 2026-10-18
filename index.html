@@ -4,30 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Conoce y Conecta: Sedes UMSA</title>
+    <title>Colquencha - Conoce y Conecta</title>
 
     <link rel="stylesheet" href="estilo.css">
 </head>
 
-<body class="inicio">
+<body>
 
     <!-- BARRA SUPERIOR -->
     <header class="topbar">
 
         <a class="logo" href="index.html">
             <span class="logo-icon">⛰️</span>
-            <span>CONOCE Y CONECTA: <span>SEDES UMSA</span></span>
+            <span>COLQUENCHA: <span>CONOCE Y CONECTA</span></span>
         </a>
 
         <div class="slogan">
-            Rutas de acceso y promoción de los municipios con sede de la UMSA
+            Conoce, llega y descubre Colquencha
         </div>
 
         <div class="top-icons">
-            <span>📍 Departamento de La Paz, Bolivia</span>
+            <span>📍 <span class="nombre-sede">Colquencha</span> - <span id="ubicacion">La Paz</span>, Bolivia</span>
         </div>
 
     </header>
+
+
+    <!-- BARRA DE SEDES: solo en las páginas de las otras sedes (pestaña "Otras sedes").
+         La llena script.js con SEDES de sedes.js -->
+    <nav class="sedes-barra" id="sedesBarra" aria-label="Otras sedes de la UMSA" hidden></nav>
 
 
     <!-- CONTENEDOR PRINCIPAL -->
@@ -39,19 +44,52 @@
 
             <nav>
 
+                <!-- Solo en las páginas de las otras sedes -->
+                <a href="otras-sedes.html" class="volver" id="volverSedes" hidden>
+                    ← <span>Volver a otras sedes</span>
+                </a>
+
                 <a href="#inicio" class="menu-activo">
                     🏠 <span>Inicio</span>
                 </a>
 
-                <a href="#sedes">
-                    🗺️ <span>Sedes</span>
+                <a href="#rutas">
+                    🧭 <span>Rutas</span>
                 </a>
 
-                <a href="#como">
-                    🧭 <span>Cómo funciona</span>
+                <a href="#mapa">
+                    📍 <span>Mapa</span>
                 </a>
 
-                <a href="#nosotros">
+                <a href="#turismo">
+                    🌄 <span>Turismo</span>
+                </a>
+
+                <a href="#cultura">
+                    🎭 <span>Cultura</span>
+                </a>
+
+                <a href="#produccion">
+                    🌾 <span>Producción</span>
+                </a>
+
+                <a href="#educacion">
+                    🎓 <span>Educación</span>
+                </a>
+
+                <a href="#umsa">
+                    🏛️ <span>UMSA</span>
+                </a>
+
+                <a href="#galeria">
+                    🖼️ <span>Galería</span>
+                </a>
+
+                <a href="otras-sedes.html" class="pestana-sedes">
+                    🗺️ <span>Otras sedes</span>
+                </a>
+
+                <a href="#nosotros" id="enlaceNosotros">
                     💬 <span>Nosotros</span>
                 </a>
 
@@ -59,8 +97,8 @@
 
 
             <div class="sidebar-frase">
-                <p>Conoce, llega<br>
-                y conecta...</p>
+                <p><span class="nombre-sede">Colquencha</span><br>
+                te espera...</p>
 
                 <div>♡</div>
                 <div class="montana">⌁⌁⌁</div>
@@ -73,113 +111,475 @@
         <main class="contenido">
 
 
+            <!-- SEDE SIN DATOS TODAVÍA: se muestra en lugar de todo lo demás -->
+            <section id="proximamente" class="proximamente" hidden>
+                <h1 class="nombre-sede"></h1>
+                <p id="proximamenteTexto"></p>
+                <div id="proximamenteProgramas"></div>
+                <p>
+                    Esta sede todavía no tiene sus rutas. Mientras tanto, conoce
+                    <a href="index.html">Colquencha</a> o las otras sedes de la UMSA.
+                </p>
+                <a class="boton" href="otras-sedes.html">← Ver otras sedes</a>
+            </section>
+
+
+            <div id="contenidoSede">
+
+
             <!-- HERO -->
-            <section id="inicio" class="hero hero-inicio">
+            <section id="inicio" class="hero">
 
                 <div class="hero-text">
 
                     <p>Bienvenido a</p>
 
-                    <h1>Conoce y Conecta</h1>
+                    <h1 class="nombre-sede">Colquencha</h1>
 
-                    <span>
-                        Cómo llegar a cada sede universitaria de la UMSA
-                        en el departamento de La Paz, y qué ofrece su municipio:
-                        turismo, cultura, producción y educación.
-                    </span>
+                    <span id="lema"></span>
 
-                    <label class="buscador" for="buscarSede">
-                        🔎
-                        <input id="buscarSede" type="search"
-                               placeholder="Busca una sede, una región o una carrera">
-                    </label>
+                    <small class="hero-prototipo" id="sedeUmsa"></small>
+
+                    <button>
+                        Descubre más →
+                    </button>
 
                 </div>
 
             </section>
 
 
-            <!-- LAS SEDES: las tarjetas las arma inicio.js con SEDES de sedes.js -->
-            <section id="sedes" class="sedes">
+            <!-- SECCIÓN DE RUTAS -->
+            <section id="rutas" class="rutas-section">
 
-                <h2>🗺️ Elige una sede</h2>
+                <div class="ruta-panel">
+
+                    <div class="titulo-seccion">
+                        <strong>A</strong>
+
+                        <div>
+                            <h2>¿Cómo llegar a <span class="nombre-sede">Colquencha</span>?</h2>
+
+                            <p>
+                                Selecciona tu punto de partida y encuentra
+                                la ruta más corta.
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <!-- PUNTO DE PARTIDA -->
+                    <label>📍 PUNTO DE PARTIDA</label>
+
+                    <select id="origen">
+
+                        <option value="">
+                            Selecciona un lugar
+                        </option>
+
+                        <!-- Las demás opciones las agrega script.js desde datos.js -->
+
+                    </select>
+
+
+                    <!-- DESTINO -->
+                    <label>🚩 DESTINO</label>
+
+                    <div class="destino">
+                        📍 <span class="nombre-sede">Colquencha</span>
+                    </div>
+
+
+                    <!-- ALGORITMO -->
+                    <label>⚙️ ALGORITMO</label>
+
+                    <div class="algoritmos">
+
+                        <label>
+                            <input
+                                type="radio"
+                                name="algoritmo"
+                                value="dijkstra"
+                                checked
+                            >
+                            Dijkstra
+                            <small>(Ruta más corta)</small>
+                        </label>
+
+                        <label>
+                            <input
+                                type="radio"
+                                name="algoritmo"
+                                value="bfs"
+                            >
+                            BFS
+                            <small>(Menos tramos)</small>
+                        </label>
+
+                        <label>
+                            <input
+                                type="radio"
+                                name="algoritmo"
+                                value="aestrella"
+                            >
+                            A*
+                            <small>(Heurística)</small>
+                        </label>
+
+                    </div>
+
+
+                    <!-- BOTÓN -->
+                    <button class="boton calcular">
+                        ▶ Calcular ruta
+                    </button>
+
+
+                    <div class="info-ruta">
+                        ℹ️
+                        <span>
+                            El sistema analizará las rutas disponibles
+                            y mostrará el camino hacia <span class="nombre-sede">Colquencha</span>.
+                        </span>
+                    </div>
+
+                </div>
+
+
+                <!-- MAPA -->
+                <div class="mapa-container" id="mapa">
+
+                    <div class="mapa-placeholder">
+
+                        <div class="mapa-titulo">
+                            🗺️ MAPA DE RUTA
+                        </div>
+
+                        <!-- Lo dibuja script.js con las posiciones de datos.js -->
+                        <svg id="mapaRuta" viewBox="0 0 600 420" role="img"
+                             aria-label="Mapa simplificado de las rutas hacia la sede"></svg>
+
+                        <div class="mapa-mensaje">
+                            Esquema de las rutas, no está a escala. Funciona sin internet.
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- RESULTADO -->
+                <div class="resultado-panel">
+
+                    <div class="resultado-titulo">
+                        ✓ <strong>Ruta encontrada</strong>
+                    </div>
+
+                    <div id="resultadoRuta">
+
+                        <p id="textoOrigen">
+                            📍 <b>Origen:</b>
+                            Selecciona un lugar
+                        </p>
+
+                        <p>
+                            🚩 <b>Destino:</b>
+                            <span class="nombre-sede">Colquencha</span>
+                        </p>
+
+                        <div class="estadisticas">
+
+                            <div>
+                                <span>📏</span>
+                                <b id="distancia">--</b>
+                                <small>Distancia total</small>
+                            </div>
+
+                            <div>
+                                <span>◷</span>
+                                <b id="tiempo">--</b>
+                                <small>Tiempo estimado</small>
+                            </div>
+
+                        </div>
+
+
+                        <h4>🛣️ Ruta sugerida</h4>
+
+                        <ol id="rutaPasos">
+
+                            <li>
+                                Selecciona tu punto de partida
+                            </li>
+
+                        </ol>
+
+                        <p id="notaAlgoritmo" class="nota-algoritmo"></p>
+
+                    </div>
+
+
+                    <button class="boton detalles">
+                        Ver detalles de la ruta
+                    </button>
+
+                    <div id="detalleRuta" class="detalle-ruta" hidden></div>
+
+
+                    <div class="importante">
+
+                        ⚠️ <b>Importante</b>
+
+                        <p>
+                            Algunas rutas pueden ser alternativas
+                            y presentar desvíos. Se recomienda
+                            verificar las condiciones del camino.
+                            Distancias y tiempos aproximados en auto,
+                            calculados con OpenStreetMap.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- RUTAS DE ACCESO -->
+            <section class="accesos">
+
+                <div class="titulo-general">
+
+                    <h2>🅰️ Rutas de acceso a <span class="nombre-sede">Colquencha</span></h2>
+
+                    <p>
+                        Existen diferentes caminos para llegar
+                        al municipio:
+                    </p>
+
+                </div>
+
+
+                <!-- Las tarjetas las arma script.js con "accesos" de los datos de la sede -->
+                <div class="acceso-grid" id="accesos"></div>
+
+            </section>
+
+
+            <!-- POR QUÉ VISITAR -->
+            <section class="visitar">
+
+                <div class="visitar-imagen">
+                    <img src="img/colquencha/imapro.webp" alt="Paisaje del municipio" id="imagenVisitar">
+                </div>
+
+                <div class="visitar-texto">
+
+                    <h2>¿Por qué visitar <span class="nombre-sede">Colquencha</span>?</h2>
+
+                    <p>
+                        Porque aquí encontrarás paisajes únicos,
+                        una rica cultura, gente amable y grandes
+                        oportunidades para estudiar y emprender.
+                    </p>
+
+                    <button>
+                        Conoce más sobre el municipio →
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <!-- TARJETAS -->
+            <section class="categorias">
+
+
+                <!-- TURISMO -->
+                <article id="turismo" class="categoria-card">
+
+                    <div class="categoria-imagen turismo-img">
+                        <img src="img/colquencha/imgpro2.webp" alt="Lugar turístico del municipio" id="imagenTurismo">
+                    </div>
+
+                    <div class="categoria-contenido">
+
+                        <div class="icono-categoria">
+                            🏞️
+                        </div>
+
+                        <h3>Lugares turísticos</h3>
+
+                        <p>
+                            Conoce nuestros paisajes,
+                            miradores y sitios de interés.
+                        </p>
+
+                        <button>
+                            Ver lugares →
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- CULTURA -->
+                <article id="cultura" class="categoria-card">
+
+                    <div class="categoria-imagen cultura-img">
+                        🎭
+                    </div>
+
+                    <div class="categoria-contenido">
+
+                        <div class="icono-categoria">
+                            🎭
+                        </div>
+
+                        <h3>Cultura y festividades</h3>
+
+                        <p>
+                            Tradiciones, danzas y nuestra
+                            identidad cultural.
+                        </p>
+
+                        <button>
+                            Ver más →
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PRODUCCIÓN -->
+                <article id="produccion" class="categoria-card">
+
+                    <div class="categoria-imagen produccion-img">
+                        🥔
+                    </div>
+
+                    <div class="categoria-contenido">
+
+                        <div class="icono-categoria">
+                            🌱
+                        </div>
+
+                        <h3>Producción agrícola</h3>
+
+                        <p>
+                            Lo que produce el municipio:
+                            agricultura, industria y recursos.
+                        </p>
+
+                        <button>
+                            Ver producción →
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- EDUCACIÓN -->
+                <article id="educacion" class="categoria-card">
+
+                    <div class="categoria-imagen educacion-img">
+                        🏫
+                    </div>
+
+                    <div class="categoria-contenido">
+
+                        <div class="icono-categoria">
+                            🎓
+                        </div>
+
+                        <h3>Educación</h3>
+
+                        <p>
+                            Unidades educativas y
+                            oportunidades de formación.
+                        </p>
+
+                        <button>
+                            Ver educación →
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- UMSA -->
+                <article id="umsa" class="categoria-card">
+
+                    <div class="categoria-imagen umsa-img">
+                        🏛️
+                    </div>
+
+                    <div class="categoria-contenido">
+
+                        <div class="icono-categoria">
+                            🎓
+                        </div>
+
+                        <h3>UMSA – Sede <span class="nombre-sede">Colquencha</span></h3>
+
+                        <p>
+                            Estudia en nuestra sede
+                            universitaria y construye tu futuro.
+                        </p>
+
+                        <button>
+                            Ver detalles →
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+            </section>
+
+
+            <!-- GALERÍA -->
+            <section id="galeria" class="galeria">
+
+                <h2>📸 Galería de <span class="nombre-sede">Colquencha</span></h2>
 
                 <p>
-                    Cada sede tiene su página: las rutas de acceso desde los
-                    principales puntos de partida y la información de su municipio.
-                    Empezamos por <b>Colquencha</b>, nuestra sede, y la información de
-                    cada municipio se completa con datos verificados.
+                    Conoce mediante imágenes la belleza,
+                    cultura y vida del municipio.
                 </p>
 
-                <p id="sinResultados" class="sin-resultados" hidden>
-                    No hay ninguna sede con ese nombre.
-                </p>
-
-                <div id="sedesRegiones" class="sedes-regiones"></div>
-
-                <p class="sedes-fuente">
-                    Sedes y programas según el folleto «Programas académicos» del IDR-DU de la UMSA:
-                    4 centros regionales y 14 sedes universitarias locales.
-                    <span class="completar">[COMPLETAR] Falta una de las 14 sedes locales.</span>
-                </p>
+                <!-- Las fotos las arma script.js con "galeria" de los datos de la sede -->
+                <div class="galeria-box" id="galeria"></div>
 
             </section>
 
 
-            <!-- CÓMO FUNCIONA -->
-            <section id="como" class="como">
-
-                <h2>🧭 Cómo funciona</h2>
-
-                <div class="pasos-como">
-
-                    <div>
-                        <b>1</b>
-                        <h3>Elige la sede</h3>
-                        <p>Busca la sede a la que quieres llegar por su nombre, su región o la carrera que ofrece.</p>
-                    </div>
-
-                    <div>
-                        <b>2</b>
-                        <h3>Elige tu punto de partida</h3>
-                        <p>Puntos exactos: una plaza, una parada, una salida de la ciudad.</p>
-                    </div>
-
-                    <div>
-                        <b>3</b>
-                        <h3>Mira tu ruta</h3>
-                        <p>El algoritmo de Dijkstra calcula la ruta más corta y la dibuja en el mapa, sin internet.</p>
-                    </div>
-
-                    <div>
-                        <b>4</b>
-                        <h3>Conoce el municipio</h3>
-                        <p>Lugares para visitar, fiestas, producción, colegios y la sede de la UMSA.</p>
-                    </div>
-
-                </div>
-
-            </section>
-
-
-            <!-- NOSOTROS -->
+            <!-- NOSOTROS (solo en la página de Colquencha) -->
             <section id="nosotros" class="nosotros">
 
                 <h2>¿Quiénes somos?</h2>
 
                 <p>
-                    Somos estudiantes de la Sede Universitaria Local Colquencha
-                    de la UMSA. Empezamos esta plataforma con nuestra sede,
-                    Colquencha, y la extendimos a todas las sedes de la UMSA.
+                    Somos estudiantes que desarrollamos
+                    una propuesta tecnológica para promover
+                    y dar a conocer el municipio de Colquencha.
                 </p>
 
                 <p>
-                    Cada sede tiene su página con sus rutas de acceso, para que cada
-                    municipio con sede sea fácil de encontrar, de visitar y de conocer.
-                    Lo que falta de cada municipio se completa con quienes lo conocen.
+                    En la pestaña <a href="otras-sedes.html">Otras sedes</a> puedes
+                    ver también las demás sedes universitarias de la UMSA y cómo llegar a ellas.
                 </p>
 
             </section>
+
+
+            </div>
 
 
         </main>
@@ -190,21 +590,40 @@
     <!-- PIE DE PÁGINA -->
     <footer>
 
-        <strong>CONOCE Y CONECTA: SEDES UMSA © 2026</strong>
+        <strong>COLQUERUTA © 2026</strong>
 
         <span>
-            Un proyecto de estudiantes de la Sede Universitaria Local Colquencha (UMSA)
+            Proyecto para la comunidad y el desarrollo de Colquencha
         </span>
 
         <i>
-            ¡Conoce, llega y conecta!
+            ¡Juntos hacemos crecer nuestro municipio!
         </i>
 
     </footer>
 
 
+    <!-- Primero la lista de sedes, después los datos de cada sede: Colquencha y las de la pestaña "Otras sedes" -->
     <script src="sedes.js"></script>
-    <script src="inicio.js"></script>
+    <script src="sedes/colquencha.js"></script>
+    <script src="sedes/san-buenaventura.js"></script>
+    <script src="sedes/sapecho.js"></script>
+    <script src="sedes/ixiamas.js"></script>
+    <script src="sedes/apolo.js"></script>
+    <script src="sedes/patacamaya.js"></script>
+    <script src="sedes/quime.js"></script>
+    <script src="sedes/inquisivi.js"></script>
+    <script src="sedes/sica-sica.js"></script>
+    <script src="sedes/chulumani.js"></script>
+    <script src="sedes/caranavi.js"></script>
+    <script src="sedes/coripata.js"></script>
+    <script src="sedes/cajuata.js"></script>
+    <script src="sedes/achacachi.js"></script>
+    <script src="sedes/pillapi.js"></script>
+    <script src="sedes/viacha.js"></script>
+    <script src="sedes/puerto-acosta.js"></script>
+    <script src="algoritmos.js"></script>
+    <script src="script.js"></script>
 
 </body>
 </html>

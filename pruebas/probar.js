@@ -50,8 +50,8 @@ console.log("\n2. La lista de sedes");
     verificar("cada sede activa tiene su archivo de datos, y no sobra ninguno",
               activas.every(id => DATOS_SEDE[id]) && Object.keys(DATOS_SEDE).every(id => activas.includes(id)),
               `activas: ${activas.join(", ")}`);
-    const html = fs.readFileSync(path.join(raiz, "sede.html"), "utf8");
-    verificar("sede.html carga el archivo de cada sede activa",
+    const html = fs.readFileSync(path.join(raiz, "index.html"), "utf8");
+    verificar("index.html carga el archivo de cada sede activa",
               activas.every(id => html.includes(`src="sedes/${id}.js"`)));
     
     const todas = {};
