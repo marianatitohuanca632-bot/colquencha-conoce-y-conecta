@@ -1511,3 +1511,24 @@ footer i {
     opacity: 0.85;
     border-bottom: 1px solid #ffffff22;
 }
+
+.sedes-regiones .programas {
+    display: block;
+    margin: -2px 0 6px 14px;
+    font-size: 10.5px;
+    line-height: 1.5;
+    color: #697e8c;
+}
+
+#proximamenteProgramas h3 {
+    font-size: 15px;
+    color: #17618a;
+    margin: 6px 0;
+}
+
+#proximamenteProgramas ul {
+    margin: 0 0 16px 18px;
+    font-size: 14px;
+    line-height: 1.8;
+    color: #344b5c;
+}

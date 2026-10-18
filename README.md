@@ -29,7 +29,7 @@ Doble clic en `index.html`. Funciona **sin internet** y sin instalar nada: todo 
 2. **La información de Turismo, Cultura, Producción y Educación**, en `secciones` de `sedes/colquencha.js`. Lo
    que dice `[COMPLETAR]` se ve resaltado en amarillo en la página: escriban el dato y borren la marca.
    Solo información verificada.
-3. **La lista de sedes**, en `sedes.js`: confirmarla con el IDR-DU.
+3. **La lista de sedes**, en `sedes.js`, sale del folleto del IDR-DU: falta una de las 14 sedes locales.
 
 ## Cómo se agrega una sede (por ejemplo, Quime)
 

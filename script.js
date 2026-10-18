@@ -38,6 +38,10 @@ if (DATOS) {
     document.querySelector("#proximamente").hidden = false;
     document.querySelector("#proximamenteTexto").textContent =
         `${TIPO[SEDE.tipo]}, región ${SEDE.region}. Próximamente: sus rutas de acceso y la información del municipio.`;
+    if (SEDE.programas.length) {
+        document.querySelector("#proximamenteProgramas").innerHTML =
+            "<h3>Programas que ofrece</h3><ul>" + SEDE.programas.map(p => `<li>${p}</li>`).join("") + "</ul>";
+    }
     document.querySelector("#ubicacion").textContent = "La Paz";
     for (const a of document.querySelectorAll(".sidebar nav a[href^='#']")) a.remove();
 }

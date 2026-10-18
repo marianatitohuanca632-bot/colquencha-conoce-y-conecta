@@ -13,11 +13,12 @@ for (const sede of SEDES) (regiones[sede.region] ||= []).push(sede);
 for (const region in regiones) {
     const bloque = document.createElement("section");
     const items = regiones[region].map(s => `
-        <li data-buscar="${(s.nombre + " " + region).toLowerCase()}">
+        <li data-buscar="${[s.nombre, region, ...s.programas].join(" ")}">
             <a href="sede.html?sede=${s.id}" class="${s.activa ? "activa" : ""}">
                 ${s.activa ? "✓" : "○"} ${s.nombre}
                 <small>${s.tipo}${s.activa ? ", con rutas" : ", próximamente"}</small>
             </a>
+            ${s.programas.length ? `<span class="programas">${s.programas.join(" · ")}</span>` : ""}
         </li>`).join("");
     bloque.innerHTML = `<h3>${region}</h3><ul>${items}</ul>`;
     cajaRegiones.append(bloque);
@@ -25,8 +26,9 @@ for (const region in regiones) {
 
 
 /* ---------- 2. El buscador: deja visibles las sedes que coinciden ----------
-   Busca sin distinguir mayúsculas ni tildes: "san buena" encuentra San Buenaventura,
-   "norte" encuentra todas las de las regiones del norte. */
+   Busca en el nombre, la región y los programas, sin distinguir mayúsculas ni
+   tildes: "san buena" encuentra San Buenaventura, "yungas" las cuatro de los
+   Yungas y "enfermeria" la sede que ofrece Enfermería. */
 const sinTildes = texto => texto.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
 
 document.querySelector("#buscarSede").addEventListener("input", evento => {
