@@ -2,8 +2,9 @@
    SEDE CORIPATA: los datos de su página (index.html?sede=coripata)
    GENERADO por sedes-datos/escribir.py el 17/10/2026: lugares de OpenStreetMap
    (Nominatim), tramos por carretera de OSRM y el resumen del municipio de
-   Wikipedia. Las distancias son APROXIMADAS. Lo que dice [COMPLETAR] lo
-   escribe quien conozca el municipio, con información verificada.
+   Wikipedia. Las distancias son APROXIMADAS. Cada dato de las secciones lleva
+   su fuente (sedes-datos/contenido.json); las fotos son de Wikimedia Commons,
+   con su autor y su licencia (sedes-datos/fotos.json).
    Mismo formato que sedes/colquencha.js: ver los comentarios de ese archivo.
    ============================================================== */
 
@@ -17,7 +18,7 @@ DATOS_SEDE["coripata"] = {
 
     sede: "Sede Universitaria Local Coripata, del CRU Chulumani",
 
-    fondo: "img/coripata/paisaje.jpg",
+    fondo: "img/coripata/paisaje-coripata.jpg",
 
     lugares: {
         "La Paz": { lat: -16.4957, lon: -68.1336, tipo: "origen", detalle: "Plaza Murillo", mapa: { x: 106, y: 320 } },
@@ -50,20 +51,18 @@ DATOS_SEDE["coripata"] = {
 
     secciones: {
         turismo: [
-            "Coripata es una localidad y municipio de Bolivia, ubicado en la provincia de Nor Yungas del departamento de La Paz. (Wikipedia, «Coripata»)",
-            "[COMPLETAR] Lugares para visitar: cada uno con una línea, cómo se llega y una foto."
+            "Está a 116 km de La Paz y a 1750 m de altura, con 25 °C de temperatura media; el municipio tiene 23 530 habitantes según el censo de 2024 (Wikipedia).",
+            "Sus ríos principales son el Tamampaya, el Peri y el Elena (Wikipedia)."
         ],
         cultura: [
-            "[COMPLETAR] Fiestas y fechas importantes: cuáles, cuándo y cómo se celebran.",
-            "[COMPLETAR] Danzas, costumbres y comidas típicas."
+            "Su nombre, en aimara, significa «altura del oro»: allí acampaban quienes sacaban oro del río Peri (Wikipedia).",
+            "Su patrona es la Virgen del Carmen, cuya fiesta se celebra el 16 de julio (Wikimedia Commons).",
+            "En el municipio vive población afroboliviana: hay monumentos a su trabajo y un espacio ecoafro en la comunidad Coscoma (Wikimedia Commons)."
         ],
         produccion: [
-            "[COMPLETAR] Lo que produce el municipio: agricultura, ganadería, industria o recursos."
+            "Hoja de coca y café (Wikimedia Commons)."
         ],
-        educacion: [
-            "[COMPLETAR] Unidades educativas del municipio y niveles que ofrecen.",
-            "[COMPLETAR] Logros de sus estudiantes (olimpiadas, concursos), con el año y la fuente."
-        ],
+        educacion: [],
         umsa: [
             "Sede Universitaria Local Coripata, del CRU Chulumani de la Universidad Mayor de San Andrés, región Yungas.",
             "Programa: Técnico Superior en Ciencias Químicas.",
@@ -72,9 +71,8 @@ DATOS_SEDE["coripata"] = {
     },
 
     galeria: [
-        { archivo: "foto-plaza.jpg", icono: "🏘️", leyenda: "La plaza principal" },
-        { archivo: "foto-lugar.jpg", icono: "⛰️", leyenda: "Un lugar para visitar" },
-        { archivo: "foto-fiesta.jpg", icono: "🎭", leyenda: "Una fiesta del municipio" },
-        { archivo: "foto-sede.jpg", icono: "🏛️", leyenda: "La sede de la UMSA" }
+        { archivo: "poblacion-de-coripata.jpg", icono: "🏘️", leyenda: "El pueblo de Coripata", credito: "Lormaliz, CC BY-SA 4.0", pagina: "https://commons.wikimedia.org/wiki/File:Poblaci%C3%B3n_de_Coripata.jpg" },
+        { archivo: "imagen-de-la-virgen-del-carmen-patrona-de-coripata.jpg", icono: "⛪", leyenda: "La Virgen del Carmen, patrona", credito: "Lormaliz, CC BY-SA 4.0", pagina: "https://commons.wikimedia.org/wiki/File:Imagen_de_la_Virgen_del_Carmen_-_Patrona_de_Coripata.jpg" },
+        { archivo: "plantacion-de-cafe.jpg", icono: "☕", leyenda: "Plantas de café en Coscoma", credito: "BrandyHil, CC BY-SA 4.0", pagina: "https://commons.wikimedia.org/wiki/File:Plantacion_de_cafe.jpg" }
     ]
 };

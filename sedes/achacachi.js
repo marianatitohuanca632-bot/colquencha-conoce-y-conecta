@@ -2,8 +2,9 @@
    SEDE ACHACACHI: los datos de su página (index.html?sede=achacachi)
    GENERADO por sedes-datos/escribir.py el 17/10/2026: lugares de OpenStreetMap
    (Nominatim), tramos por carretera de OSRM y el resumen del municipio de
-   Wikipedia. Las distancias son APROXIMADAS. Lo que dice [COMPLETAR] lo
-   escribe quien conozca el municipio, con información verificada.
+   Wikipedia. Las distancias son APROXIMADAS. Cada dato de las secciones lleva
+   su fuente (sedes-datos/contenido.json); las fotos son de Wikimedia Commons,
+   con su autor y su licencia (sedes-datos/fotos.json).
    Mismo formato que sedes/colquencha.js: ver los comentarios de ese archivo.
    ============================================================== */
 
@@ -17,7 +18,7 @@ DATOS_SEDE["achacachi"] = {
 
     sede: "Centro Regional Universitario Achacachi",
 
-    fondo: "img/achacachi/paisaje.jpg",
+    fondo: "img/achacachi/plaza-de-achacachi-bolivia.jpg",
 
     lugares: {
         "La Paz": { lat: -16.4957, lon: -68.1336, tipo: "origen", detalle: "Plaza Murillo", mapa: { x: 512, y: 365 } },
@@ -50,19 +51,18 @@ DATOS_SEDE["achacachi"] = {
 
     secciones: {
         turismo: [
-            "Achacachi es una ciudad intermedia y municipio de Bolivia, capital de la provincia de Omasuyos en el departamento de La Paz. Achacachi es también conocido como \"Chacha marka\". (Wikipedia, «Achacachi»)",
-            "[COMPLETAR] Lugares para visitar: cada uno con una línea, cómo se llega y una foto."
+            "Capital de la provincia Omasuyos, a 97 km de La Paz y a 3840 m de altura; fue capital del señorío aimara Umasuyus (Wikipedia).",
+            "Su nombre viene del aimara jach'a k'achi, «peñasco grande y puntiagudo» (Wikipedia)."
         ],
         cultura: [
-            "[COMPLETAR] Fiestas y fechas importantes: cuáles, cuándo y cómo se celebran.",
-            "[COMPLETAR] Danzas, costumbres y comidas típicas."
+            "Sus tres fiestas principales son San Pedro y San Pablo, Corpus Christi y la Exaltación (Wikipedia).",
+            "En la fiesta de la Exaltación del Señor (18 de noviembre) se bailan Incas, Diablada, Kullawada, Mok'ok'aras, Potolos, Llamerada y Morenada (Wikipedia)."
         ],
         produccion: [
-            "[COMPLETAR] Lo que produce el municipio: agricultura, ganadería, industria o recursos."
+            "Los fines de semana hay feria en una de sus calles (Wikimedia Commons)."
         ],
         educacion: [
-            "[COMPLETAR] Unidades educativas del municipio y niveles que ofrecen.",
-            "[COMPLETAR] Logros de sus estudiantes (olimpiadas, concursos), con el año y la fuente."
+            "La localidad tiene 7 centros educativos fiscales y 1 particular, entre ellos el Colegio Nacional Mixto Omasuyos y el Colegio Mariscal Santa Cruz (Wikipedia)."
         ],
         umsa: [
             "Centro Regional Universitario Achacachi de la Universidad Mayor de San Andrés, región Altiplano Norte Lacustre.",
@@ -72,9 +72,9 @@ DATOS_SEDE["achacachi"] = {
     },
 
     galeria: [
-        { archivo: "foto-plaza.jpg", icono: "🏘️", leyenda: "La plaza principal" },
-        { archivo: "foto-lugar.jpg", icono: "⛰️", leyenda: "Un lugar para visitar" },
-        { archivo: "foto-fiesta.jpg", icono: "🎭", leyenda: "Una fiesta del municipio" },
-        { archivo: "foto-sede.jpg", icono: "🏛️", leyenda: "La sede de la UMSA" }
+        { archivo: "plaza-de-achacachi-bolivia.jpg", icono: "🏘️", leyenda: "La plaza principal", credito: "Carlillasa, CC BY-SA 4.0", pagina: "https://commons.wikimedia.org/wiki/File:Plaza_de_Achacachi,_Bolivia.jpg" },
+        { archivo: "colegio-omasuyos-en-achacachi-la-paz-bolivia.jpg", icono: "🏫", leyenda: "El colegio Omasuyos", credito: "Julitatwa, CC BY-SA 4.0", pagina: "https://commons.wikimedia.org/wiki/File:Colegio_Omasuyos,_en_Achacachi,_La_Paz_Bolivia.jpg" },
+        { archivo: "mercado-de-achacachi.jpg", icono: "🧺", leyenda: "La feria de fin de semana", credito: "Julitatwa, CC BY-SA 4.0", pagina: "https://commons.wikimedia.org/wiki/File:Mercado_de_Achacachi.jpg" },
+        { archivo: "todos-santos-en-achacachi-02.jpg", icono: "🎭", leyenda: "Todos Santos", credito: "LAGATANDINA, CC BY-SA 4.0", pagina: "https://commons.wikimedia.org/wiki/File:Todos_Santos_en_Achacachi_02.jpg" }
     ]
 };

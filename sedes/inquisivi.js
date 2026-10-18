@@ -2,8 +2,9 @@
    SEDE INQUISIVI: los datos de su página (index.html?sede=inquisivi)
    GENERADO por sedes-datos/escribir.py el 17/10/2026: lugares de OpenStreetMap
    (Nominatim), tramos por carretera de OSRM y el resumen del municipio de
-   Wikipedia. Las distancias son APROXIMADAS. Lo que dice [COMPLETAR] lo
-   escribe quien conozca el municipio, con información verificada.
+   Wikipedia. Las distancias son APROXIMADAS. Cada dato de las secciones lleva
+   su fuente (sedes-datos/contenido.json); las fotos son de Wikimedia Commons,
+   con su autor y su licencia (sedes-datos/fotos.json).
    Mismo formato que sedes/colquencha.js: ver los comentarios de ese archivo.
    ============================================================== */
 
@@ -17,7 +18,7 @@ DATOS_SEDE["inquisivi"] = {
 
     sede: "Sede Universitaria Local Inquisivi, del CRU Patacamaya",
 
-    fondo: "img/inquisivi/paisaje.jpg",
+    fondo: null,
 
     lugares: {
         "La Paz": { lat: -16.4957, lon: -68.1336, tipo: "origen", detalle: "Plaza Murillo", mapa: { x: 221, y: 37 } },
@@ -50,20 +51,14 @@ DATOS_SEDE["inquisivi"] = {
 
     secciones: {
         turismo: [
-            "Inquisivi es una localidad y municipio de Bolivia, capital de la provincia de Inquisivi, en el departamento de La Paz. Según el censo nacional de 2012, el municipio de Inquisivi cuenta con una población de 14 566 habitantes. (Wikipedia, «Inquisivi»)",
-            "[COMPLETAR] Lugares para visitar: cada uno con una línea, cómo se llega y una foto."
+            "Capital de la provincia Inquisivi, a 262 km de La Paz y a 2760 m de altura, sobre el río Khalu y cerca de Quime; el municipio tiene 18 679 habitantes según el censo de 2024 (Wikipedia).",
+            "Está en la vertiente oriental de la cordillera Quimsa Cruz; la temperatura media es de 10,5 °C (Wikipedia)."
         ],
         cultura: [
-            "[COMPLETAR] Fiestas y fechas importantes: cuáles, cuándo y cómo se celebran.",
-            "[COMPLETAR] Danzas, costumbres y comidas típicas."
+            "El 86,9 % de la población del municipio habla aimara (Wikipedia)."
         ],
-        produccion: [
-            "[COMPLETAR] Lo que produce el municipio: agricultura, ganadería, industria o recursos."
-        ],
-        educacion: [
-            "[COMPLETAR] Unidades educativas del municipio y niveles que ofrecen.",
-            "[COMPLETAR] Logros de sus estudiantes (olimpiadas, concursos), con el año y la fuente."
-        ],
+        produccion: [],
+        educacion: [],
         umsa: [
             "Sede Universitaria Local Inquisivi, del CRU Patacamaya de la Universidad Mayor de San Andrés, región Altiplano Sur.",
             "Programa: Lic. Administración de Empresas y Organizaciones Públicas.",
@@ -71,10 +66,5 @@ DATOS_SEDE["inquisivi"] = {
         ]
     },
 
-    galeria: [
-        { archivo: "foto-plaza.jpg", icono: "🏘️", leyenda: "La plaza principal" },
-        { archivo: "foto-lugar.jpg", icono: "⛰️", leyenda: "Un lugar para visitar" },
-        { archivo: "foto-fiesta.jpg", icono: "🎭", leyenda: "Una fiesta del municipio" },
-        { archivo: "foto-sede.jpg", icono: "🏛️", leyenda: "La sede de la UMSA" }
-    ]
+    galeria: []
 };

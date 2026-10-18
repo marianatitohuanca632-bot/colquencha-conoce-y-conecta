@@ -69,9 +69,11 @@ function mostrarSede() {
     // En Colquencha no hace falta: es la página del proyecto
     if (ES_COLQUENCHA) document.querySelector("#sedeUmsa").remove();
     else document.querySelector("#sedeUmsa").textContent = `${DATOS.sede}.`;
-    // El fondo del inicio: la foto de la sede sobre el degradado del diseño
-    document.querySelector(".hero").style.backgroundImage =
-        `linear-gradient(90deg, #09273ce8, #103a4d99, #102b4230), url("${DATOS.fondo}")`;
+    // El fondo del inicio: la foto de la sede sobre el degradado del diseño (si tiene)
+    if (DATOS.fondo) {
+        document.querySelector(".hero").style.backgroundImage =
+            `linear-gradient(90deg, #09273ce8, #103a4d99, #102b4230), url("${DATOS.fondo}")`;
+    }
 
 
     /* ---------- 5. Lista de puntos de partida, desde los datos ---------- */
@@ -215,32 +217,40 @@ function mostrarSede() {
     }
 
 
-    /* ---------- 10. Botones de las tarjetas: la información de cada sección ---------- */
+    /* ---------- 10. Botones de las tarjetas: la información de cada sección ----------
+       Una sección sin datos verificados no se muestra: ni la tarjeta ni su enlace del menú. */
     for (const tarjeta of document.querySelectorAll(".categoria-card")) {
+        const datos = DATOS.secciones[tarjeta.id] || [];
+        if (!datos.length) {
+            document.querySelector(`.sidebar nav a[href="#${tarjeta.id}"]`)?.remove();
+            tarjeta.remove();
+            continue;
+        }
         const boton = tarjeta.querySelector("button");
         const caja = document.createElement("div");
         caja.className = "detalle-seccion";
         caja.hidden = true;
-        const datos = DATOS.secciones[tarjeta.id] || [];
-        caja.innerHTML = datos.length
-            ? "<ul>" + datos.map(d => d.startsWith("[COMPLETAR")
-                ? `<li class="completar">${d}</li>`
-                : `<li>${d}</li>`).join("") + "</ul>"
-            : "<p>Información en preparación.</p>";
+        caja.innerHTML = "<ul>" + datos.map(d => `<li>${d}</li>`).join("") + "</ul>";
         boton.after(caja);
         boton.addEventListener("click", () => { caja.hidden = !caja.hidden; });
     }
 
 
-    /* ---------- 11. Galería: foto si está, ícono con su leyenda si falta ---------- */
-    const galeria = document.querySelector("#galeria");
+    /* ---------- 11. Galería: cada foto con su leyenda y su crédito (autor y licencia) ----------
+       Sin fotos, la galería no se muestra. */
+    const galeria = document.querySelector("#galeriaFotos");
     for (const f of DATOS.galeria) {
         const figura = document.createElement("figure");
-        figura.innerHTML = `<img src="img/${SEDE.id}/${f.archivo}" alt="${f.leyenda}"><span>${f.icono}</span>
-            <figcaption>${f.leyenda} <i class="completar">[COMPLETAR img/${SEDE.id}/${f.archivo}]</i></figcaption>`;
-        // Cuando la foto existe, la marca [COMPLETAR] sobra
-        figura.querySelector("img").addEventListener("load", () => figura.querySelector("i").remove());
+        const credito = f.pagina
+            ? `<a href="${f.pagina}" target="_blank" rel="noopener">Foto: ${f.credito}</a>`
+            : `Foto: ${f.credito}`;
+        figura.innerHTML = `<img src="img/${SEDE.id}/${f.archivo}" alt="${f.leyenda}" loading="lazy"><span>${f.icono}</span>
+            <figcaption>${f.leyenda} <i>${credito}</i></figcaption>`;
         galeria.append(figura);
+    }
+    if (!DATOS.galeria.length) {
+        document.querySelector("#galeria").remove();
+        document.querySelector('.sidebar nav a[href="#galeria"]')?.remove();
     }
 
 

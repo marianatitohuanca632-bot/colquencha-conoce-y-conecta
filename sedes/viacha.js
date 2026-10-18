@@ -2,8 +2,9 @@
    SEDE VIACHA: los datos de su página (index.html?sede=viacha)
    GENERADO por sedes-datos/escribir.py el 17/10/2026: lugares de OpenStreetMap
    (Nominatim), tramos por carretera de OSRM y el resumen del municipio de
-   Wikipedia. Las distancias son APROXIMADAS. Lo que dice [COMPLETAR] lo
-   escribe quien conozca el municipio, con información verificada.
+   Wikipedia. Las distancias son APROXIMADAS. Cada dato de las secciones lleva
+   su fuente (sedes-datos/contenido.json); las fotos son de Wikimedia Commons,
+   con su autor y su licencia (sedes-datos/fotos.json).
    Mismo formato que sedes/colquencha.js: ver los comentarios de ese archivo.
    ============================================================== */
 
@@ -17,7 +18,7 @@ DATOS_SEDE["viacha"] = {
 
     sede: "Sede Universitaria Local Viacha, del CRU Achacachi",
 
-    fondo: "img/viacha/paisaje.jpg",
+    fondo: "img/viacha/estatua-ecuestre-de-la-plaza-de-viacha-la-paz-boli.jpg",
 
     lugares: {
         "La Paz": { lat: -16.4957, lon: -68.1336, tipo: "origen", detalle: "Plaza Murillo", mapa: { x: 527, y: 42 } },
@@ -60,20 +61,18 @@ DATOS_SEDE["viacha"] = {
 
     secciones: {
         turismo: [
-            "Villa de Viacha o Viacha es una ciudad y municipio de Bolivia, capital de la provincia de Ingavi ubicada en el departamento de La Paz. El municipio cuenta con una población de 80 724 habitantes. (Wikipedia, «Viacha»)",
-            "[COMPLETAR] Lugares para visitar: cada uno con una línea, cómo se llega y una foto."
+            "Capital de la provincia Ingavi, a 22 km de La Paz y a 3860 m de altura; el municipio tiene 113 554 habitantes según el censo de 2024 (Wikipedia).",
+            "El tren La Paz - Guaqui volvió a pasar por Viacha a fines de 2008 (Wikipedia)."
         ],
         cultura: [
-            "[COMPLETAR] Fiestas y fechas importantes: cuáles, cuándo y cómo se celebran.",
-            "[COMPLETAR] Danzas, costumbres y comidas típicas."
+            "Feria de la Natividad: venta de aguayos, canastas, lana de camélidos y artesanía de totora (Wikimedia Commons)."
         ],
         produccion: [
-            "[COMPLETAR] Lo que produce el municipio: agricultura, ganadería, industria o recursos."
+            "Unas 100 fábricas de cerámica aprovechan sus yacimientos de arcilla (Wikipedia).",
+            "Allí está la fábrica de cemento más grande de Bolivia (Wikipedia).",
+            "Es líder departamental en cebada; también produce papa, quinua, tarwi y haba, y leche para el área metropolitana de La Paz (Wikipedia)."
         ],
-        educacion: [
-            "[COMPLETAR] Unidades educativas del municipio y niveles que ofrecen.",
-            "[COMPLETAR] Logros de sus estudiantes (olimpiadas, concursos), con el año y la fuente."
-        ],
+        educacion: [],
         umsa: [
             "Sede Universitaria Local Viacha, del CRU Achacachi de la Universidad Mayor de San Andrés, región Altiplano Norte Lacustre.",
             "Programa: Técnico Superior en Producción Láctea (en proceso de titulación).",
@@ -82,9 +81,9 @@ DATOS_SEDE["viacha"] = {
     },
 
     galeria: [
-        { archivo: "foto-plaza.jpg", icono: "🏘️", leyenda: "La plaza principal" },
-        { archivo: "foto-lugar.jpg", icono: "⛰️", leyenda: "Un lugar para visitar" },
-        { archivo: "foto-fiesta.jpg", icono: "🎭", leyenda: "Una fiesta del municipio" },
-        { archivo: "foto-sede.jpg", icono: "🏛️", leyenda: "La sede de la UMSA" }
+        { archivo: "iglesia-de-viacha.jpg", icono: "⛪", leyenda: "La iglesia, en la Feria de la Natividad", credito: "Olga Lidia Paredes Alcoreza, CC BY-SA 4.0", pagina: "https://commons.wikimedia.org/wiki/File:Iglesia_de_Viacha.jpg" },
+        { archivo: "ferrocarril-en-viacha.jpg", icono: "🚆", leyenda: "El tren Viacha - Guaqui", credito: "Caleidoscopic, CC BY-SA 4.0", pagina: "https://commons.wikimedia.org/wiki/File:Ferrocarril_en_Viacha_.jpg" },
+        { archivo: "fabrica-de-cemento-viacha-soboce.jpg", icono: "🏭", leyenda: "La fábrica de cemento", credito: "Caleidoscopic, CC BY-SA 4.0", pagina: "https://commons.wikimedia.org/wiki/File:F%C3%A1brica_de_cemento_Viacha_SOBOCE.jpg" },
+        { archivo: "venta-de-canastas-feria-de-la-natividad-en-viacha.jpg", icono: "🧺", leyenda: "Feria de la Natividad", credito: "Carlillasa, CC BY-SA 4.0", pagina: "https://commons.wikimedia.org/wiki/File:Venta_de_canastas,_Feria_de_la_Natividad_en_Viacha.jpg" }
     ]
 };

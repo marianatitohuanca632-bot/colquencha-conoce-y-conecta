@@ -82,33 +82,31 @@ DATOS_SEDE.colquencha = {
     /* ----------------------------------------------------------
        4. INFORMACIÓN DE CADA SECCIÓN
        Lo que se muestra al pulsar el botón de cada tarjeta.
-       Solo información verificada, con su fuente. Lo que empieza con
-       "[COMPLETAR" se ve resaltado: lo escribe el grupo (y borra la
-       marca) cuando lo confirme.
+       Solo información verificada, con su fuente entre paréntesis.
+       Una sección sin datos no se muestra.
        ---------------------------------------------------------- */
     secciones: {
         turismo: [
-            "Colquencha es la sexta sección municipal de la provincia Aroma, en el departamento de La Paz: 339 km², a unos 3900 m de altura (Wikipedia, con datos del INE).",
-            "[COMPLETAR] El Calvario: dónde está, qué se ve desde arriba y cómo se sube. Con foto.",
-            "[COMPLETAR] La iglesia de Colquencha: de qué año es, qué tiene de especial. Con foto.",
-            "[COMPLETAR] Otros lugares para visitar (miradores, comunidades, paisajes), cada uno con una línea y una foto."
+            "Colquencha es la sexta sección municipal de la provincia Aroma: 339 km², a unos 3900 m de altura, y 12 490 habitantes según el censo de 2024 (Wikipedia, con datos del INE).",
+            "La iglesia del Tata de la Exaltación está en lo alto de un cerro: se sube por más de 2000 gradas de piedra y cal, y desde arriba se ven El Alto, Viacha, Calamarca, Sapahaqui y el Illimani (Qamasa, 6 de octubre de 2026).",
+            "Según los pobladores, la capilla se construyó hacia 1890: la piedra y la cal se subieron a lomo de burro y de llama. Guarda las imágenes del Tata de la Exaltación y de la Virgen de la Concepción (Qamasa, 2026).",
+            "La iglesia será parte del circuito turístico de la provincia Aroma (Qamasa, 2026)."
         ],
         cultura: [
-            "[COMPLETAR] Fiesta del 16 de julio: qué se celebra, cómo (entradas, danzas, fraternidades) y dónde.",
-            "[COMPLETAR] Fiesta patronal: el santo o la virgen, la fecha y cómo se vive.",
-            "[COMPLETAR] Otras fechas importantes del municipio (aniversario, ferias)."
+            "Devoción al Tata de la Exaltación: los fieles suben a pie, algunos en ayuno, rezan de rodillas ante la cruz del atrio y entran a la capilla (Qamasa, 2026).",
+            "Candelaria (1 y 2 de febrero): el kamana, que cuida los cultivos, entrega a la comunidad las primeras cosechas de papa, cebada y quinua (Iño Daza, revista Prácticas y Discursos, 2026).",
+            "Cada 24 de junio se posesiona al Apu Mallku y a la Mama T'alla, la máxima autoridad política y espiritual (Iño Daza, 2026).",
+            "Colquencha presentó sus danzas autóctonas en el Festival de Música y Danza Autóctona del departamento de La Paz, junto a los municipios de la provincia Aroma (2012)."
         ],
         produccion: [
-            "Papa, y sus derivados deshidratados: chuño y tunta.",
-            "Granos andinos: quinua y cebada.",
-            "[COMPLETAR] La planta de cerámica: qué produce y desde cuándo.",
-            "[COMPLETAR] La minería del municipio: qué se extrae y dónde.",
-            "[COMPLETAR] Otros recursos del municipio."
+            "Agricultura: papa, cebada y quinua; ganadería vacuna (Iño Daza, 2026).",
+            "Papa deshidratada: chuño y tunta.",
+            "Piedra caliza: se extrae a cielo abierto. La Asociación de Mineros Productores de Piedra Caliza (Amiprocal), con unos 1800 afiliados de Colquencha y Marquirivi, abastece a SOBOCE para fabricar cemento: en 2010 le entregó cerca de 530 000 toneladas (Telecombol, 2011).",
+            "La fábrica de cemento de SOBOCE está en Viacha, donde también funcionan unas 100 fábricas de cerámica (Wikipedia, «Viacha»)."
         ],
         educacion: [
-            "[COMPLETAR] Las unidades educativas del municipio: nombre y niveles que ofrecen.",
-            "[COMPLETAR] Logros de sus estudiantes: olimpiadas, medallas, concursos (con el año y la fuente).",
-            "[COMPLETAR] Profesionales y personas destacadas que salieron de Colquencha."
+            "La Unidad Educativa Eduardo Abaroa tiene, desde 2022, un sistema de agua caliente con energía solar para sus estudiantes (Practical Action, 2022).",
+            "En 2011 se abrieron dos telecentros con 40 computadoras en Colquencha y Marquirivi, construidos por SOBOCE y Amiprocal (Telecombol, 2011)."
         ],
         umsa: [
             "Sede Universitaria Local Colquencha, del CRU Patacamaya de la Universidad Mayor de San Andrés.",
@@ -120,15 +118,11 @@ DATOS_SEDE.colquencha = {
 
     /* ----------------------------------------------------------
        5. GALERÍA
-       Cada foto va en img/colquencha/ con el nombre de "archivo".
-       Mientras falte, se ve el ícono con su leyenda.
+       Cada foto va en img/colquencha/ con el nombre de "archivo",
+       y lleva su crédito: autor y licencia. Las fotos del grupo se
+       agregan aquí, con "credito" y sin "pagina".
        ---------------------------------------------------------- */
     galeria: [
-        { archivo: "foto-calvario.jpg",   icono: "⛰️", leyenda: "El Calvario" },
-        { archivo: "foto-iglesia.jpg",    icono: "⛪", leyenda: "La iglesia" },
-        { archivo: "foto-fiesta.jpg",     icono: "🎭", leyenda: "Fiesta del 16 de julio" },
-        { archivo: "foto-produccion.jpg", icono: "🏭", leyenda: "Cerámica y producción" },
-        { archivo: "foto-colegio.jpg",    icono: "🏫", leyenda: "Nuestros colegios" },
-        { archivo: "foto-sede.jpg",       icono: "🏛️", leyenda: "La sede de la UMSA" }
+        { archivo: "mujeres-horticultoras-de-colquencha.jpg", icono: "🌱", leyenda: "Mujeres horticultoras de Colquencha", credito: "Sandra Aruquipa, CC BY-SA 4.0", pagina: "https://commons.wikimedia.org/wiki/File:Mujeres_horticultoras_de_Colquencha.jpg" }
     ]
 };

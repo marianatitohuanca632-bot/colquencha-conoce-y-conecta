@@ -2,8 +2,9 @@
    SEDE CARANAVI: los datos de su página (index.html?sede=caranavi)
    GENERADO por sedes-datos/escribir.py el 17/10/2026: lugares de OpenStreetMap
    (Nominatim), tramos por carretera de OSRM y el resumen del municipio de
-   Wikipedia. Las distancias son APROXIMADAS. Lo que dice [COMPLETAR] lo
-   escribe quien conozca el municipio, con información verificada.
+   Wikipedia. Las distancias son APROXIMADAS. Cada dato de las secciones lleva
+   su fuente (sedes-datos/contenido.json); las fotos son de Wikimedia Commons,
+   con su autor y su licencia (sedes-datos/fotos.json).
    Mismo formato que sedes/colquencha.js: ver los comentarios de ese archivo.
    ============================================================== */
 
@@ -17,7 +18,7 @@ DATOS_SEDE["caranavi"] = {
 
     sede: "Sede Universitaria Local Caranavi, del CRU Chulumani",
 
-    fondo: "img/caranavi/paisaje.jpg",
+    fondo: "img/caranavi/caranavi-forest-lo-4386782289.jpg",
 
     lugares: {
         "La Paz": { lat: -16.4957, lon: -68.1336, tipo: "origen", detalle: "Plaza Murillo", mapa: { x: 196, y: 365 } },
@@ -55,20 +56,17 @@ DATOS_SEDE["caranavi"] = {
 
     secciones: {
         turismo: [
-            "Caranavi es un municipio y una ciudad intermedia de Bolivia, capital de la provincia de Caranavi ubicado en el departamento de La Paz. La ciudad se encuentra distante a 150 km de la ciudad de La Paz. (Wikipedia, «Caranavi»)",
-            "[COMPLETAR] Lugares para visitar: cada uno con una línea, cómo se llega y una foto."
+            "Capital de la provincia Caranavi, a 150 km de La Paz, entre 660 y 1450 m de altura; el municipio tiene 59 676 habitantes según el censo de 2024 (Wikipedia).",
+            "Sus ríos principales son el Coroico, el Yara y el Choro (Wikipedia)."
         ],
         cultura: [
-            "[COMPLETAR] Fiestas y fechas importantes: cuáles, cuándo y cómo se celebran.",
-            "[COMPLETAR] Danzas, costumbres y comidas típicas."
+            "La provincia se creó el 16 de diciembre de 1992 (Decreto Ley 1401), después de un movimiento popular (Wikipedia)."
         ],
         produccion: [
-            "[COMPLETAR] Lo que produce el municipio: agricultura, ganadería, industria o recursos."
+            "Es el mayor productor y exportador de café de Bolivia, la «Capital Cafetalera»: unos 179 956 quintales al año en 13 380 hectáreas (censo agropecuario de 2013, en Wikipedia).",
+            "También produce mandarina (212 940 quintales al año), coca y achiote (Wikipedia)."
         ],
-        educacion: [
-            "[COMPLETAR] Unidades educativas del municipio y niveles que ofrecen.",
-            "[COMPLETAR] Logros de sus estudiantes (olimpiadas, concursos), con el año y la fuente."
-        ],
+        educacion: [],
         umsa: [
             "Sede Universitaria Local Caranavi, del CRU Chulumani de la Universidad Mayor de San Andrés, región Yungas.",
             "Programa: Lic. Ciencias de la Educación para el Desarrollo Sostenible.",
@@ -80,9 +78,8 @@ DATOS_SEDE["caranavi"] = {
     },
 
     galeria: [
-        { archivo: "foto-plaza.jpg", icono: "🏘️", leyenda: "La plaza principal" },
-        { archivo: "foto-lugar.jpg", icono: "⛰️", leyenda: "Un lugar para visitar" },
-        { archivo: "foto-fiesta.jpg", icono: "🎭", leyenda: "Una fiesta del municipio" },
-        { archivo: "foto-sede.jpg", icono: "🏛️", leyenda: "La sede de la UMSA" }
+        { archivo: "caranavi06-046.jpg", icono: "🏘️", leyenda: "La plaza principal", credito: "Roberto Maldonado C., Public domain", pagina: "https://commons.wikimedia.org/wiki/File:Caranavi06-046.JPG" },
+        { archivo: "caranavi-field-lo-4386253945.jpg", icono: "🌱", leyenda: "Cultivos en las laderas", credito: "CIAT, CC BY-SA 2.0", pagina: "https://commons.wikimedia.org/wiki/File:Caranavi_field_lo_(4386253945).jpg" },
+        { archivo: "caranavi-upland-rice41-lo-4387054180.jpg", icono: "🌾", leyenda: "Cosecha de arroz", credito: "CIAT, CC BY-SA 2.0", pagina: "https://commons.wikimedia.org/wiki/File:Caranavi_upland_rice41_lo_(4387054180).jpg" }
     ]
 };

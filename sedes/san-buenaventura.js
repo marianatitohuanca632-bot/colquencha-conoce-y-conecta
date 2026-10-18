@@ -2,8 +2,9 @@
    SEDE SAN BUENAVENTURA: los datos de su página (index.html?sede=san-buenaventura)
    GENERADO por sedes-datos/escribir.py el 17/10/2026: lugares de OpenStreetMap
    (Nominatim), tramos por carretera de OSRM y el resumen del municipio de
-   Wikipedia. Las distancias son APROXIMADAS. Lo que dice [COMPLETAR] lo
-   escribe quien conozca el municipio, con información verificada.
+   Wikipedia. Las distancias son APROXIMADAS. Cada dato de las secciones lleva
+   su fuente (sedes-datos/contenido.json); las fotos son de Wikimedia Commons,
+   con su autor y su licencia (sedes-datos/fotos.json).
    Mismo formato que sedes/colquencha.js: ver los comentarios de ese archivo.
    ============================================================== */
 
@@ -17,7 +18,7 @@ DATOS_SEDE["san-buenaventura"] = {
 
     sede: "Centro Regional Universitario San Buenaventura",
 
-    fondo: "img/san-buenaventura/paisaje.jpg",
+    fondo: "img/san-buenaventura/vista-del-rio-que-divide-rurrenabaque-de-san-buena.jpg",
 
     lugares: {
         "La Paz": { lat: -16.4957, lon: -68.1336, tipo: "origen", detalle: "Plaza Murillo", mapa: { x: 195, y: 395 } },
@@ -56,20 +57,19 @@ DATOS_SEDE["san-buenaventura"] = {
 
     secciones: {
         turismo: [
-            "San Buenaventura es un municipio de la provincia de Iturralde del departamento de La Paz, en Bolivia. Tiene una población de 8.711 habitantes. (Wikipedia, «San Buenaventura (Bolivia)»)",
-            "[COMPLETAR] Lugares para visitar: cada uno con una línea, cómo se llega y una foto."
+            "Está a orillas del río Beni, frente a Rurrenabaque, a unos 200 m de altura, y es una de las entradas al parque nacional Madidi (Wikipedia).",
+            "Un puente une San Buenaventura con Rurrenabaque, en el Beni (Wikimedia Commons)."
         ],
         cultura: [
-            "[COMPLETAR] Fiestas y fechas importantes: cuáles, cuándo y cómo se celebran.",
-            "[COMPLETAR] Danzas, costumbres y comidas típicas."
+            "Nació en 1680 como una de las diez misiones franciscanas de la región, y fue refundada el 14 de julio de 1862 (Wikipedia).",
+            "El keperi es una de sus comidas típicas (Wikimedia Commons)."
         ],
         produccion: [
-            "[COMPLETAR] Lo que produce el municipio: agricultura, ganadería, industria o recursos."
+            "Agricultura: arroz, maíz, yuca, plátano, cítricos, frijol, cacao y caña de azúcar (Wikipedia).",
+            "Desde 2015 funciona el Ingenio Azucarero San Buenaventura, que procesa hasta 14 000 quintales de caña por día (Wikipedia).",
+            "También ganadería, madera, pesca, apicultura y turismo (Wikipedia)."
         ],
-        educacion: [
-            "[COMPLETAR] Unidades educativas del municipio y niveles que ofrecen.",
-            "[COMPLETAR] Logros de sus estudiantes (olimpiadas, concursos), con el año y la fuente."
-        ],
+        educacion: [],
         umsa: [
             "Centro Regional Universitario San Buenaventura de la Universidad Mayor de San Andrés, región Norte Amazónico.",
             "Programa: Lic. Ciencias de la Educación para el Desarrollo Sostenible.",
@@ -81,9 +81,9 @@ DATOS_SEDE["san-buenaventura"] = {
     },
 
     galeria: [
-        { archivo: "foto-plaza.jpg", icono: "🏘️", leyenda: "La plaza principal" },
-        { archivo: "foto-lugar.jpg", icono: "⛰️", leyenda: "Un lugar para visitar" },
-        { archivo: "foto-fiesta.jpg", icono: "🎭", leyenda: "Una fiesta del municipio" },
-        { archivo: "foto-sede.jpg", icono: "🏛️", leyenda: "La sede de la UMSA" }
+        { archivo: "san-buenaventura-bolivia1.jpg", icono: "🏘️", leyenda: "La plaza principal", credito: "Grullab, CC BY-SA 3.0", pagina: "https://commons.wikimedia.org/wiki/File:San_Buenaventura,_Bolivia1.JPG" },
+        { archivo: "puente-que-une-rurrenabaque-y-san-buenaventura.jpg", icono: "🌉", leyenda: "El puente a Rurrenabaque", credito: "LaCris, CC BY 4.0", pagina: "https://commons.wikimedia.org/wiki/File:Puente_que_une_Rurrenabaque_y_San_Buenaventura.jpg" },
+        { archivo: "san-buenaventura-beni-river-bolivia.jpg", icono: "🌊", leyenda: "El río Beni", credito: "Arthur Chapman, CC BY 2.0", pagina: "https://commons.wikimedia.org/wiki/File:San_Buenaventura,_Beni_River,_Bolivia.jpg" },
+        { archivo: "keperi-de-san-buenaventura-la-paz-bolivia.jpg", icono: "🍲", leyenda: "El keperi, comida típica", credito: "N1ny4 t, CC BY-SA 4.0", pagina: "https://commons.wikimedia.org/wiki/File:Keperi_de_San_Buenaventura,_La_Paz,_Bolivia.jpg" }
     ]
 };

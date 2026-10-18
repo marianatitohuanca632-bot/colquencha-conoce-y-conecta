@@ -5,7 +5,7 @@
    Desarrollo Regional y Desconcentración Universitaria de la UMSA):
    "4 Centros Regionales Universitarios y 14 Sedes Universitarias".
    En la copia fotografiada (17/10/2026) se leen 13 sedes locales:
-   [COMPLETAR] falta una de las 14. Cajuata no tiene programa listado.
+   Falta identificar una de las 14. Cajuata no tiene programa listado.
 
    id: lo que va en la dirección: sede.html?sede=<id>
    activa: true = ya tiene su archivo de datos en sedes/<id>.js

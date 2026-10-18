@@ -2,8 +2,9 @@
    SEDE CHULUMANI: los datos de su página (index.html?sede=chulumani)
    GENERADO por sedes-datos/escribir.py el 17/10/2026: lugares de OpenStreetMap
    (Nominatim), tramos por carretera de OSRM y el resumen del municipio de
-   Wikipedia. Las distancias son APROXIMADAS. Lo que dice [COMPLETAR] lo
-   escribe quien conozca el municipio, con información verificada.
+   Wikipedia. Las distancias son APROXIMADAS. Cada dato de las secciones lleva
+   su fuente (sedes-datos/contenido.json); las fotos son de Wikimedia Commons,
+   con su autor y su licencia (sedes-datos/fotos.json).
    Mismo formato que sedes/colquencha.js: ver los comentarios de ese archivo.
    ============================================================== */
 
@@ -17,7 +18,7 @@ DATOS_SEDE["chulumani"] = {
 
     sede: "Centro Regional Universitario Chulumani",
 
-    fondo: "img/chulumani/paisaje.jpg",
+    fondo: "img/chulumani/244-chulumani-main-square.jpg",
 
     lugares: {
         "La Paz": { lat: -16.4957, lon: -68.1336, tipo: "origen", detalle: "Plaza Murillo", mapa: { x: 104, y: 308 } },
@@ -54,20 +55,17 @@ DATOS_SEDE["chulumani"] = {
 
     secciones: {
         turismo: [
-            "Chulumani es un municipio y una localidad de Bolivia, capital de la provincia de Sud Yungas ubicada en el departamento de La Paz, al este de la ciudad de La Paz. Para el censo de 2001 poseía una población de 2.724 habitantes. (Wikipedia, «Chulumani»)",
-            "[COMPLETAR] Lugares para visitar: cada uno con una línea, cómo se llega y una foto."
+            "Capital de la provincia Sud Yungas, a 123 km de La Paz y a 1740 m de altura; su nombre significa «manantial del puma» (Wikipedia).",
+            "Es conocida como destino turístico por sus atractivos naturales; el municipio tiene 18 303 habitantes según el censo de 2024 (Wikipedia)."
         ],
         cultura: [
-            "[COMPLETAR] Fiestas y fechas importantes: cuáles, cuándo y cómo se celebran.",
-            "[COMPLETAR] Danzas, costumbres y comidas típicas."
+            "Su iglesia está dedicada al Tata Bartolo, cuya imagen está en el altar (Wikimedia Commons).",
+            "En Corpus Christi se hacen dibujos religiosos sobre el piso de las calles (Wikimedia Commons)."
         ],
         produccion: [
-            "[COMPLETAR] Lo que produce el municipio: agricultura, ganadería, industria o recursos."
+            "Produce coca, naranja y café (Wikipedia)."
         ],
-        educacion: [
-            "[COMPLETAR] Unidades educativas del municipio y niveles que ofrecen.",
-            "[COMPLETAR] Logros de sus estudiantes (olimpiadas, concursos), con el año y la fuente."
-        ],
+        educacion: [],
         umsa: [
             "Centro Regional Universitario Chulumani de la Universidad Mayor de San Andrés, región Yungas.",
             "Programa: Lic. Administración de Empresas y Organizaciones Públicas.",
@@ -77,9 +75,8 @@ DATOS_SEDE["chulumani"] = {
     },
 
     galeria: [
-        { archivo: "foto-plaza.jpg", icono: "🏘️", leyenda: "La plaza principal" },
-        { archivo: "foto-lugar.jpg", icono: "⛰️", leyenda: "Un lugar para visitar" },
-        { archivo: "foto-fiesta.jpg", icono: "🎭", leyenda: "Una fiesta del municipio" },
-        { archivo: "foto-sede.jpg", icono: "🏛️", leyenda: "La sede de la UMSA" }
+        { archivo: "244-chulumani-main-square.jpg", icono: "🏘️", leyenda: "La plaza principal", credito: "Aurimaz, CC BY-SA 4.0", pagina: "https://commons.wikimedia.org/wiki/File:244_-_Chulumani_main_square.jpg" },
+        { archivo: "fachada-de-la-iglesia-de-chulumani.jpg", icono: "⛪", leyenda: "La iglesia del Tata Bartolo", credito: "Carlillasa, CC BY-SA 4.0", pagina: "https://commons.wikimedia.org/wiki/File:Fachada_de_la_iglesia_de_Chulumani.jpg" },
+        { archivo: "puesto-de-venta-de-jawitas-en-chulumani.jpg", icono: "🍞", leyenda: "Venta de jawitas", credito: "Carlillasa, CC BY-SA 4.0", pagina: "https://commons.wikimedia.org/wiki/File:Puesto_de_venta_de_jawitas_en_Chulumani.jpg" }
     ]
 };

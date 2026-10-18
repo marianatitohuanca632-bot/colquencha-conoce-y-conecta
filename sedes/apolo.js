@@ -2,8 +2,9 @@
    SEDE APOLO: los datos de su página (index.html?sede=apolo)
    GENERADO por sedes-datos/escribir.py el 17/10/2026: lugares de OpenStreetMap
    (Nominatim), tramos por carretera de OSRM y el resumen del municipio de
-   Wikipedia. Las distancias son APROXIMADAS. Lo que dice [COMPLETAR] lo
-   escribe quien conozca el municipio, con información verificada.
+   Wikipedia. Las distancias son APROXIMADAS. Cada dato de las secciones lleva
+   su fuente (sedes-datos/contenido.json); las fotos son de Wikimedia Commons,
+   con su autor y su licencia (sedes-datos/fotos.json).
    Mismo formato que sedes/colquencha.js: ver los comentarios de ese archivo.
    ============================================================== */
 
@@ -17,7 +18,7 @@ DATOS_SEDE["apolo"] = {
 
     sede: "Sede Universitaria Local Apolo, del CRU San Buenaventura",
 
-    fondo: "img/apolo/paisaje.jpg",
+    fondo: "img/apolo/santos-pariamo-de-lejos.jpg",
 
     lugares: {
         "La Paz": { lat: -16.4957, lon: -68.1336, tipo: "origen", detalle: "Plaza Murillo", mapa: { x: 416, y: 366 } },
@@ -50,20 +51,16 @@ DATOS_SEDE["apolo"] = {
 
     secciones: {
         turismo: [
-            "Apolo es una pequeña ciudad del municipio homónimo y capital de la provincia de Franz Tamayo, ubicada esta en el centro norte del departamento de La Paz (Bolivia). Según el último censo oficial realizado por el Instituto Nacional de Estadística de Bolivia (INE) en 2012, el municipio cuenta con una población de 20.308 habitantes y está situado a una altitud promedio de 1.400 metros sobre el nivel del mar. (Wikipedia, «Apolo (Bolivia)»)",
-            "[COMPLETAR] Lugares para visitar: cada uno con una línea, cómo se llega y una foto."
+            "Capital de la provincia Franz Tamayo, a unos 1400 m de altura; el municipio tiene 19 156 habitantes según el censo de 2024 (Wikipedia).",
+            "Parte de su territorio está en la Amazonía: lo cruza el río Tuichi y tiene el lago Chalalán y la laguna Santa Rosa (Wikipedia).",
+            "En la plaza principal hay una fuente y un monumento a Santos Pariamo (Wikimedia Commons)."
         ],
         cultura: [
-            "[COMPLETAR] Fiestas y fechas importantes: cuáles, cuándo y cómo se celebran.",
-            "[COMPLETAR] Danzas, costumbres y comidas típicas."
+            "Su nombre vendría de Aphullu pampa («pampa grande»), Phullu pampa («pampa de toros») o Polo pampa (Wikipedia).",
+            "La antigua provincia Caupolicán, que incluía Apolo, fue creada por el mariscal Sucre el 23 de enero de 1826 (Wikipedia)."
         ],
-        produccion: [
-            "[COMPLETAR] Lo que produce el municipio: agricultura, ganadería, industria o recursos."
-        ],
-        educacion: [
-            "[COMPLETAR] Unidades educativas del municipio y niveles que ofrecen.",
-            "[COMPLETAR] Logros de sus estudiantes (olimpiadas, concursos), con el año y la fuente."
-        ],
+        produccion: [],
+        educacion: [],
         umsa: [
             "Sede Universitaria Local Apolo, del CRU San Buenaventura de la Universidad Mayor de San Andrés, región Norte Amazónico.",
             "Programa: Lic. Administración de Empresas y Organizaciones Públicas.",
@@ -72,9 +69,8 @@ DATOS_SEDE["apolo"] = {
     },
 
     galeria: [
-        { archivo: "foto-plaza.jpg", icono: "🏘️", leyenda: "La plaza principal" },
-        { archivo: "foto-lugar.jpg", icono: "⛰️", leyenda: "Un lugar para visitar" },
-        { archivo: "foto-fiesta.jpg", icono: "🎭", leyenda: "Una fiesta del municipio" },
-        { archivo: "foto-sede.jpg", icono: "🏛️", leyenda: "La sede de la UMSA" }
+        { archivo: "bienvenidos-apolo-madidi.jpg", icono: "🏘️", leyenda: "Bienvenida en la plaza principal", credito: "Agenda acuática, CC BY-SA 4.0", pagina: "https://commons.wikimedia.org/wiki/File:Bienvenidos_Apolo_Madidi.jpg" },
+        { archivo: "fuente-en-la-plaza-principal-en-el-municipio-de-ap.jpg", icono: "⛲", leyenda: "La fuente de la plaza principal", credito: "Agenda acuática, CC BY-SA 4.0", pagina: "https://commons.wikimedia.org/wiki/File:Fuente_en_la_plaza_principal_en_el_municipio_de_Apolo.jpg" },
+        { archivo: "santos-pariamo-de-lejos.jpg", icono: "🗿", leyenda: "Monumento a Santos Pariamo", credito: "Agenda acuática, CC BY-SA 4.0", pagina: "https://commons.wikimedia.org/wiki/File:Santos_Pariamo_de_lejos.jpg" }
     ]
 };

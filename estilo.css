@@ -1206,8 +1206,8 @@ footer i {
 
 /* ==============================
    18. VERSIÓN 2: LAS SEDES DE LA UMSA
-   La barra de sedes, la sección de sedes, la galería con
-   fotos y las marcas [COMPLETAR].
+   La barra de sedes, la sección de sedes y la galería con
+   fotos y su crédito.
 ============================== */
 
 /* Barra de sedes: una fila que se desplaza de lado, un enlace por sede */
@@ -1316,14 +1316,6 @@ footer i {
 
 .sedes-fuente {
     font-size: 11px !important;
-}
-
-/* Lo que el grupo tiene que completar se ve resaltado */
-.completar,
-.detalle-seccion li.completar {
-    background: #fff3b0;
-    color: #6b5212;
-    font-style: normal;
 }
 
 /* Galería: foto si está, ícono con leyenda si falta */
@@ -1537,4 +1529,10 @@ footer i {
    (la barra de sedes y "Volver a otras sedes" solo aparecen en las otras sedes) */
 [hidden] {
     display: none !important;
+}
+
+/* El crédito de cada foto: autor y licencia, con enlace a su página en Wikimedia Commons */
+.galeria-box figcaption a {
+    color: inherit;
+    text-decoration: underline;
 }

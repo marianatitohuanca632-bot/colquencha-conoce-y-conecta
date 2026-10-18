@@ -2,8 +2,9 @@
    SEDE IXIAMAS: los datos de su página (index.html?sede=ixiamas)
    GENERADO por sedes-datos/escribir.py el 17/10/2026: lugares de OpenStreetMap
    (Nominatim), tramos por carretera de OSRM y el resumen del municipio de
-   Wikipedia. Las distancias son APROXIMADAS. Lo que dice [COMPLETAR] lo
-   escribe quien conozca el municipio, con información verificada.
+   Wikipedia. Las distancias son APROXIMADAS. Cada dato de las secciones lleva
+   su fuente (sedes-datos/contenido.json); las fotos son de Wikimedia Commons,
+   con su autor y su licencia (sedes-datos/fotos.json).
    Mismo formato que sedes/colquencha.js: ver los comentarios de ese archivo.
    ============================================================== */
 
@@ -17,7 +18,7 @@ DATOS_SEDE["ixiamas"] = {
 
     sede: "Sede Universitaria Local Ixiamas, del CRU San Buenaventura",
 
-    fondo: "img/ixiamas/paisaje.jpg",
+    fondo: "img/ixiamas/ixiamas-aus-der-luft.jpg",
 
     lugares: {
         "La Paz": { lat: -16.4957, lon: -68.1336, tipo: "origen", detalle: "Plaza Murillo", mapa: { x: 266, y: 366 } },
@@ -52,20 +53,13 @@ DATOS_SEDE["ixiamas"] = {
 
     secciones: {
         turismo: [
-            "Ixiamas es una localidad y municipio de Bolivia, capital de la provincia de Iturralde en el departamento de La Paz. Se encuentra ubicado al norte del departamento de La Paz, en la región de la Amazonía boliviana. (Wikipedia, «Ixiamas»)",
-            "[COMPLETAR] Lugares para visitar: cada uno con una línea, cómo se llega y una foto."
+            "Capital de la provincia Abel Iturralde, en la Amazonía: el municipio tiene 36 750 km² y 12 595 habitantes según el censo de 2024 (Wikipedia).",
+            "Limita con Pando, con el Beni y con el Perú, y tiene ríos como el Madidi, el Beni y el Heath (Wikipedia).",
+            "Su territorio tiene una gran diversidad de flora y fauna (Wikipedia)."
         ],
-        cultura: [
-            "[COMPLETAR] Fiestas y fechas importantes: cuáles, cuándo y cómo se celebran.",
-            "[COMPLETAR] Danzas, costumbres y comidas típicas."
-        ],
-        produccion: [
-            "[COMPLETAR] Lo que produce el municipio: agricultura, ganadería, industria o recursos."
-        ],
-        educacion: [
-            "[COMPLETAR] Unidades educativas del municipio y niveles que ofrecen.",
-            "[COMPLETAR] Logros de sus estudiantes (olimpiadas, concursos), con el año y la fuente."
-        ],
+        cultura: [],
+        produccion: [],
+        educacion: [],
         umsa: [
             "Sede Universitaria Local Ixiamas, del CRU San Buenaventura de la Universidad Mayor de San Andrés, región Norte Amazónico.",
             "Programa: Lic. Ingeniería Agroforestal.",
@@ -74,9 +68,8 @@ DATOS_SEDE["ixiamas"] = {
     },
 
     galeria: [
-        { archivo: "foto-plaza.jpg", icono: "🏘️", leyenda: "La plaza principal" },
-        { archivo: "foto-lugar.jpg", icono: "⛰️", leyenda: "Un lugar para visitar" },
-        { archivo: "foto-fiesta.jpg", icono: "🎭", leyenda: "Una fiesta del municipio" },
-        { archivo: "foto-sede.jpg", icono: "🏛️", leyenda: "La sede de la UMSA" }
+        { archivo: "ixiamas-aus-der-luft.jpg", icono: "🏘️", leyenda: "Ixiamas desde el aire", credito: "Jorge Vasquez, CC BY-SA 4.0", pagina: "https://commons.wikimedia.org/wiki/File:Ixiamas_aus_der_Luft.JPG" },
+        { archivo: "puente-tumupasa-variante-tumupasa-bia-cuahua.jpg", icono: "🌉", leyenda: "Puente en la carretera San Buenaventura - Ixiamas", credito: "cesarc, CC BY 4.0", pagina: "https://commons.wikimedia.org/wiki/File:Puente_Tumupasa_Variante_(Tumupasa_Bia_Cuahua).jpg" },
+        { archivo: "rio-madidi-aus-der-luft.jpg", icono: "🌊", leyenda: "El río Madidi", credito: "Grullab, CC BY-SA 4.0", pagina: "https://commons.wikimedia.org/wiki/File:Rio_madidi_aus_der_Luft.JPG" }
     ]
 };

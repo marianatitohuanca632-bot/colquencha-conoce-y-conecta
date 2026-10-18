@@ -1,8 +1,8 @@
 # Colquencha: Conoce y Conecta - la plataforma
 
 Rutas de acceso y promoción del municipio de Colquencha. La pestaña **«Otras sedes»** muestra además las demás
-sedes universitarias de la UMSA, cada una con su página de rutas. En esas sedes, la información del municipio
-está marcada `[COMPLETAR]`.
+sedes universitarias de la UMSA, cada una con su página de rutas. La información de cada municipio lleva su
+fuente entre paréntesis, y cada foto su autor y su licencia.
 
 ## Cómo abrirla
 
@@ -22,16 +22,16 @@ Doble clic en `index.html`. Funciona **sin internet** y sin instalar nada: todo 
 | `algoritmos.js` | Dijkstra, BFS y A* |
 | `pruebas/probar.js` | las pruebas de los algoritmos y de los datos de cada sede |
 
-## Lo que falta poner (Colquencha)
+## Cómo se agrega información o una foto (Colquencha)
 
-1. **Las imágenes**, en `img/colquencha/` y con estos nombres exactos: `paisaje_colquencha.png` (el fondo del
-   inicio de la sede), `imapro.webp`, `imgpro2.webp`, y las seis de la galería: `foto-calvario.jpg`,
-   `foto-iglesia.jpg`, `foto-fiesta.jpg`, `foto-produccion.jpg`, `foto-colegio.jpg` y `foto-sede.jpg`.
-   Mientras falten, se ve un fondo de color o un ícono con su leyenda.
-2. **La información de Turismo, Cultura, Producción y Educación**, en `secciones` de `sedes/colquencha.js`. Lo
-   que dice `[COMPLETAR]` se ve resaltado en amarillo en la página: escriban el dato y borren la marca.
-   Solo información verificada.
-3. **La lista de sedes**, en `sedes.js`, sale del folleto del IDR-DU: falta una de las 14 sedes locales.
+1. **Un dato** va en `secciones` de `sedes/colquencha.js`, con su fuente entre paréntesis. Solo información
+   verificada. Una sección sin datos no se muestra.
+2. **Una foto** va en `img/colquencha/` y se agrega a `galeria` con su leyenda y su crédito (autor y
+   licencia).
+3. **Las imágenes del diseño** son `paisaje_colquencha.png` (el fondo del inicio), `imapro.webp` e
+   `imgpro2.webp`, también en `img/colquencha/`. Mientras falten, se ve un fondo de color.
+4. **La lista de sedes** está en `sedes.js` y sale del folleto del IDR-DU. Falta identificar una de las 14
+   sedes locales.
 
 ## Cómo se agrega una sede (por ejemplo, la sede local que falta)
 

@@ -2,8 +2,9 @@
    SEDE CAJUATA: los datos de su página (index.html?sede=cajuata)
    GENERADO por sedes-datos/escribir.py el 17/10/2026: lugares de OpenStreetMap
    (Nominatim), tramos por carretera de OSRM y el resumen del municipio de
-   Wikipedia. Las distancias son APROXIMADAS. Lo que dice [COMPLETAR] lo
-   escribe quien conozca el municipio, con información verificada.
+   Wikipedia. Las distancias son APROXIMADAS. Cada dato de las secciones lleva
+   su fuente (sedes-datos/contenido.json); las fotos son de Wikimedia Commons,
+   con su autor y su licencia (sedes-datos/fotos.json).
    Mismo formato que sedes/colquencha.js: ver los comentarios de ese archivo.
    ============================================================== */
 
@@ -17,7 +18,7 @@ DATOS_SEDE["cajuata"] = {
 
     sede: "Sede Universitaria Local Cajuata, del CRU Chulumani",
 
-    fondo: "img/cajuata/paisaje.jpg",
+    fondo: null,
 
     lugares: {
         "La Paz": { lat: -16.4957, lon: -68.1336, tipo: "origen", detalle: "Plaza Murillo", mapa: { x: 102, y: 130 } },
@@ -53,31 +54,18 @@ DATOS_SEDE["cajuata"] = {
 
     secciones: {
         turismo: [
-            "Cajuata es una localidad y municipio de Bolivia, ubicado en la provincia de Inquisivi del departamento de La Paz. (Wikipedia, «Cajuata»)",
-            "[COMPLETAR] Lugares para visitar: cada uno con una línea, cómo se llega y una foto."
+            "Está a 204 km de La Paz y a 1682 m de altura; el municipio tiene 15 565 habitantes según el censo de 2024 (Wikipedia).",
+            "Se llega por Konani, Caxata, Quime, Inquisivi y Licoma Pampa, o por los Yungas, pasando por Chulumani e Irupana (Wikipedia)."
         ],
-        cultura: [
-            "[COMPLETAR] Fiestas y fechas importantes: cuáles, cuándo y cómo se celebran.",
-            "[COMPLETAR] Danzas, costumbres y comidas típicas."
-        ],
-        produccion: [
-            "[COMPLETAR] Lo que produce el municipio: agricultura, ganadería, industria o recursos."
-        ],
-        educacion: [
-            "[COMPLETAR] Unidades educativas del municipio y niveles que ofrecen.",
-            "[COMPLETAR] Logros de sus estudiantes (olimpiadas, concursos), con el año y la fuente."
-        ],
+        cultura: [],
+        produccion: [],
+        educacion: [],
         umsa: [
-            "Sede Universitaria Local Cajuata, del CRU Chulumani de la Universidad Mayor de San Andrés, región Yungas.",
-            "[COMPLETAR] Programas que ofrece la sede: el folleto del IDR-DU no lista ninguno.",
-            "Fuente de los programas: folleto «Programas académicos» del IDR-DU."
+            "Sede Universitaria Local Cajuata, del CRU Chulumani de la Universidad Mayor de San Andrés, región Yungas."
         ]
     },
 
     galeria: [
-        { archivo: "foto-plaza.jpg", icono: "🏘️", leyenda: "La plaza principal" },
-        { archivo: "foto-lugar.jpg", icono: "⛰️", leyenda: "Un lugar para visitar" },
-        { archivo: "foto-fiesta.jpg", icono: "🎭", leyenda: "Una fiesta del municipio" },
-        { archivo: "foto-sede.jpg", icono: "🏛️", leyenda: "La sede de la UMSA" }
+        { archivo: "flag-of-cajuata-bolivia.jpg", icono: "🚩", leyenda: "Bandera del municipio de Cajuata", credito: "Ingaviano, CC0", pagina: "https://commons.wikimedia.org/wiki/File:Flag_of_Cajuata,_Bolivia.svg" }
     ]
 };

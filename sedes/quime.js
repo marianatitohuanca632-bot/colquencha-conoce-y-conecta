@@ -2,8 +2,9 @@
    SEDE QUIME: los datos de su página (index.html?sede=quime)
    GENERADO por sedes-datos/escribir.py el 17/10/2026: lugares de OpenStreetMap
    (Nominatim), tramos por carretera de OSRM y el resumen del municipio de
-   Wikipedia. Las distancias son APROXIMADAS. Lo que dice [COMPLETAR] lo
-   escribe quien conozca el municipio, con información verificada.
+   Wikipedia. Las distancias son APROXIMADAS. Cada dato de las secciones lleva
+   su fuente (sedes-datos/contenido.json); las fotos son de Wikimedia Commons,
+   con su autor y su licencia (sedes-datos/fotos.json).
    Mismo formato que sedes/colquencha.js: ver los comentarios de ese archivo.
    ============================================================== */
 
@@ -17,7 +18,7 @@ DATOS_SEDE["quime"] = {
 
     sede: "Sede Universitaria Local Quime, del CRU Patacamaya",
 
-    fondo: "img/quime/paisaje.jpg",
+    fondo: "img/quime/cumbre-bolivia.jpg",
 
     lugares: {
         "La Paz": { lat: -16.4957, lon: -68.1336, tipo: "origen", detalle: "Plaza Murillo", mapa: { x: 221, y: 37 } },
@@ -52,20 +53,15 @@ DATOS_SEDE["quime"] = {
 
     secciones: {
         turismo: [
-            "Quime es una localidad y municipio de Bolivia, ubicado en los valles de la provincia de Inquisivi del departamento de La Paz. (Wikipedia, «Quime»)",
-            "[COMPLETAR] Lugares para visitar: cada uno con una línea, cómo se llega y una foto."
+            "Está a 233 km de La Paz y a 3001 m de altura; el municipio tiene 10 887 habitantes según el censo de 2024 (Wikipedia).",
+            "En su territorio está la cordillera Quimsa Cruz, con lagunas de deshielo como la laguna Huallatani (Wikipedia).",
+            "En la plaza principal hay un monumento al cóndor (Wikimedia Commons)."
         ],
         cultura: [
-            "[COMPLETAR] Fiestas y fechas importantes: cuáles, cuándo y cómo se celebran.",
-            "[COMPLETAR] Danzas, costumbres y comidas típicas."
+            "En Todos Santos se celebra la wawasutia (Wikimedia Commons)."
         ],
-        produccion: [
-            "[COMPLETAR] Lo que produce el municipio: agricultura, ganadería, industria o recursos."
-        ],
-        educacion: [
-            "[COMPLETAR] Unidades educativas del municipio y niveles que ofrecen.",
-            "[COMPLETAR] Logros de sus estudiantes (olimpiadas, concursos), con el año y la fuente."
-        ],
+        produccion: [],
+        educacion: [],
         umsa: [
             "Sede Universitaria Local Quime, del CRU Patacamaya de la Universidad Mayor de San Andrés, región Altiplano Sur.",
             "Programa: Técnico Superior en Geología de Minas.",
@@ -75,9 +71,9 @@ DATOS_SEDE["quime"] = {
     },
 
     galeria: [
-        { archivo: "foto-plaza.jpg", icono: "🏘️", leyenda: "La plaza principal" },
-        { archivo: "foto-lugar.jpg", icono: "⛰️", leyenda: "Un lugar para visitar" },
-        { archivo: "foto-fiesta.jpg", icono: "🎭", leyenda: "Una fiesta del municipio" },
-        { archivo: "foto-sede.jpg", icono: "🏛️", leyenda: "La sede de la UMSA" }
+        { archivo: "condor-plaza-de-quime.jpg", icono: "🏘️", leyenda: "El cóndor de la plaza de Quime", credito: "Agenda acuática, CC BY-SA 4.0", pagina: "https://commons.wikimedia.org/wiki/File:Condor_Plaza_de_Quime.jpg" },
+        { archivo: "view-of-quime-mountains-from-hummingbird-ranch.jpg", icono: "⛰️", leyenda: "La cordillera Quimsa Cruz", credito: "User: (WT-shared) Hummingbird at wts wikivoyage, Public domain", pagina: "https://commons.wikimedia.org/wiki/File:View_of_Quime_Mountains_from_Hummingbird_Ranch.jpg" },
+        { archivo: "todos-santos-quime.jpg", icono: "🎭", leyenda: "La wawasutia en Todos Santos", credito: "Paosacero, CC BY-SA 4.0", pagina: "https://commons.wikimedia.org/wiki/File:Todos_Santos_Quime.jpg" },
+        { archivo: "vquime.jpg", icono: "🏘️", leyenda: "Vista de Quime", credito: "(WT-en) Hummingbird at English Wikivoyage, Public domain", pagina: "https://commons.wikimedia.org/wiki/File:VQuime.jpg" }
     ]
 };

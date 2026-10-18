@@ -2,8 +2,9 @@
    SEDE PUERTO ACOSTA: los datos de su página (index.html?sede=puerto-acosta)
    GENERADO por sedes-datos/escribir.py el 17/10/2026: lugares de OpenStreetMap
    (Nominatim), tramos por carretera de OSRM y el resumen del municipio de
-   Wikipedia. Las distancias son APROXIMADAS. Lo que dice [COMPLETAR] lo
-   escribe quien conozca el municipio, con información verificada.
+   Wikipedia. Las distancias son APROXIMADAS. Cada dato de las secciones lleva
+   su fuente (sedes-datos/contenido.json); las fotos son de Wikimedia Commons,
+   con su autor y su licencia (sedes-datos/fotos.json).
    Mismo formato que sedes/colquencha.js: ver los comentarios de ese archivo.
    ============================================================== */
 
@@ -17,7 +18,7 @@ DATOS_SEDE["puerto-acosta"] = {
 
     sede: "Sede Universitaria Local Puerto Acosta, del CRU Achacachi",
 
-    fondo: "img/puerto-acosta/paisaje.jpg",
+    fondo: "img/puerto-acosta/el-lago-titicaca-desde-puerto-acosta.jpg",
 
     lugares: {
         "La Paz": { lat: -16.4957, lon: -68.1336, tipo: "origen", detalle: "Plaza Murillo", mapa: { x: 508, y: 365 } },
@@ -54,20 +55,16 @@ DATOS_SEDE["puerto-acosta"] = {
 
     secciones: {
         turismo: [
-            "Puerto Acosta es una localidad y municipio de Bolivia, capital de la provincia de Camacho en el departamento de La Paz. Su población era de 1.123 personas en 2001. (Wikipedia, «Puerto Acosta»)",
-            "[COMPLETAR] Lugares para visitar: cada uno con una línea, cómo se llega y una foto."
+            "Capital de la provincia Camacho, a orillas del lago Titicaca; el municipio tiene 14 012 habitantes según el censo de 2024 (Wikipedia).",
+            "Tiene aguas termales (Wikimedia Commons)."
         ],
         cultura: [
-            "[COMPLETAR] Fiestas y fechas importantes: cuáles, cuándo y cómo se celebran.",
-            "[COMPLETAR] Danzas, costumbres y comidas típicas."
+            "Antes se llamaba Huaycho; su nombre actual, de 1908, honra al intelectual Nicolás Acosta (Wikipedia)."
         ],
         produccion: [
-            "[COMPLETAR] Lo que produce el municipio: agricultura, ganadería, industria o recursos."
+            "Papa y oca, para el consumo familiar y las ferias semanales del pueblo (Wikipedia)."
         ],
-        educacion: [
-            "[COMPLETAR] Unidades educativas del municipio y niveles que ofrecen.",
-            "[COMPLETAR] Logros de sus estudiantes (olimpiadas, concursos), con el año y la fuente."
-        ],
+        educacion: [],
         umsa: [
             "Sede Universitaria Local Puerto Acosta, del CRU Achacachi de la Universidad Mayor de San Andrés, región Altiplano Norte Lacustre.",
             "Programa: Lic. Enfermería.",
@@ -76,9 +73,8 @@ DATOS_SEDE["puerto-acosta"] = {
     },
 
     galeria: [
-        { archivo: "foto-plaza.jpg", icono: "🏘️", leyenda: "La plaza principal" },
-        { archivo: "foto-lugar.jpg", icono: "⛰️", leyenda: "Un lugar para visitar" },
-        { archivo: "foto-fiesta.jpg", icono: "🎭", leyenda: "Una fiesta del municipio" },
-        { archivo: "foto-sede.jpg", icono: "🏛️", leyenda: "La sede de la UMSA" }
+        { archivo: "iglesia-de-puerto-acosta.jpg", icono: "⛪", leyenda: "La iglesia", credito: "Qhanaaru, CC BY-SA 3.0", pagina: "https://commons.wikimedia.org/wiki/File:Iglesia_de_Puerto_Acosta.jpg" },
+        { archivo: "pueblo-de-puerto-acosta-02.jpg", icono: "🏘️", leyenda: "El pueblo", credito: "LAGATANDINA, CC BY-SA 4.0", pagina: "https://commons.wikimedia.org/wiki/File:Pueblo_de_Puerto_Acosta_02.jpg" },
+        { archivo: "atarceder-en-el-lago-titicaca-puerto-acosta.jpg", icono: "🌅", leyenda: "Atardecer en el lago Titicaca", credito: "Rawar666, CC BY-SA 4.0", pagina: "https://commons.wikimedia.org/wiki/File:Atarceder_en_el_Lago_Titicaca_Puerto_Acosta.jpg" }
     ]
 };

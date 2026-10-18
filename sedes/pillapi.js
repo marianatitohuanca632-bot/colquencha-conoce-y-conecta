@@ -2,8 +2,9 @@
    SEDE PILLAPI: los datos de su página (index.html?sede=pillapi)
    GENERADO por sedes-datos/escribir.py el 17/10/2026: lugares de OpenStreetMap
    (Nominatim), tramos por carretera de OSRM y el resumen del municipio de
-   Wikipedia. Las distancias son APROXIMADAS. Lo que dice [COMPLETAR] lo
-   escribe quien conozca el municipio, con información verificada.
+   Wikipedia. Las distancias son APROXIMADAS. Cada dato de las secciones lleva
+   su fuente (sedes-datos/contenido.json); las fotos son de Wikimedia Commons,
+   con su autor y su licencia (sedes-datos/fotos.json).
    Mismo formato que sedes/colquencha.js: ver los comentarios de ese archivo.
    ============================================================== */
 
@@ -17,7 +18,7 @@ DATOS_SEDE["pillapi"] = {
 
     sede: "Sede Universitaria Local Pillapi, del CRU Achacachi",
 
-    fondo: "img/pillapi/paisaje.jpg",
+    fondo: "img/pillapi/tiwanaku-ruins-of-monumental-gate.jpg",
 
     lugares: {
         "La Paz": { lat: -16.4957, lon: -68.1336, tipo: "origen", detalle: "Plaza Murillo", mapa: { x: 555, y: 149 } },
@@ -55,20 +56,16 @@ DATOS_SEDE["pillapi"] = {
     secciones: {
         turismo: [
             "Pillapi es una comunidad del municipio de Tiahuanacu, en la provincia Ingavi (OpenStreetMap).",
-            "Tiahuanaco, Tiahuanacu o Tiwanaku, es un pequeño poblado y un municipio de Bolivia, ubicado en el Altiplano andino en la margen oriental del río Tiwanaku, a 15 km al sudeste del lago Titicaca y a 76 km de la ciudad de La Paz. Administrativamente forma parte de la provincia de Ingavi en el departamento de La Paz. (Wikipedia, «Tiahuanaco (poblado)»)",
-            "[COMPLETAR] Lugares para visitar: cada uno con una línea, cómo se llega y una foto."
+            "A unos 11 km está el sitio arqueológico de Tiwanaku, con la Puerta del Sol y el templo de Kalasasaya (Wikimedia Commons).",
+            "La plaza de Tiahuanaco, con arcos en sus cuatro esquinas, es la única plaza cerrada que subsiste en el territorio del antiguo Virreinato del Perú (Wikipedia)."
         ],
         cultura: [
-            "[COMPLETAR] Fiestas y fechas importantes: cuáles, cuándo y cómo se celebran.",
-            "[COMPLETAR] Danzas, costumbres y comidas típicas."
+            "La mayoría de la población es aimara (Wikipedia)."
         ],
         produccion: [
-            "[COMPLETAR] Lo que produce el municipio: agricultura, ganadería, industria o recursos."
+            "Agricultura: papa, cebada, tarwi, oca y quinua; cría de ganado vacuno y lanar (Wikipedia)."
         ],
-        educacion: [
-            "[COMPLETAR] Unidades educativas del municipio y niveles que ofrecen.",
-            "[COMPLETAR] Logros de sus estudiantes (olimpiadas, concursos), con el año y la fuente."
-        ],
+        educacion: [],
         umsa: [
             "Sede Universitaria Local Pillapi, del CRU Achacachi de la Universidad Mayor de San Andrés, región Altiplano Norte Lacustre.",
             "Programa: Lic. Ciencias de la Educación para el Desarrollo Sostenible.",
@@ -78,9 +75,8 @@ DATOS_SEDE["pillapi"] = {
     },
 
     galeria: [
-        { archivo: "foto-plaza.jpg", icono: "🏘️", leyenda: "La plaza principal" },
-        { archivo: "foto-lugar.jpg", icono: "⛰️", leyenda: "Un lugar para visitar" },
-        { archivo: "foto-fiesta.jpg", icono: "🎭", leyenda: "Una fiesta del municipio" },
-        { archivo: "foto-sede.jpg", icono: "🏛️", leyenda: "La sede de la UMSA" }
+        { archivo: "tiwanaku-arqueologia-02.jpg", icono: "🏛️", leyenda: "Tiwanaku, a 11 km de Pillapi", credito: "LAGATANDINA, CC BY-SA 4.0", pagina: "https://commons.wikimedia.org/wiki/File:Tiwanaku_Arqueologia_02.jpg" },
+        { archivo: "tiwanaku-puerta-del-sol.jpg", icono: "🏛️", leyenda: "La Puerta del Sol, en Tiwanaku", credito: "Fallbeth, CC BY-SA 4.0", pagina: "https://commons.wikimedia.org/wiki/File:Tiwanaku-Puerta_del_sol.jpg" },
+        { archivo: "exterior-del-templo-de-kalasasaya-tiwanaku-bolivia.jpg", icono: "🏛️", leyenda: "El templo de Kalasasaya", credito: "Andrea Lastra, CC0", pagina: "https://commons.wikimedia.org/wiki/File:Exterior_del_Templo_de_Kalasasaya_-_Tiwanaku,_Bolivia.jpg" }
     ]
 };

@@ -2,8 +2,9 @@
    SEDE SICA SICA: los datos de su página (index.html?sede=sica-sica)
    GENERADO por sedes-datos/escribir.py el 17/10/2026: lugares de OpenStreetMap
    (Nominatim), tramos por carretera de OSRM y el resumen del municipio de
-   Wikipedia. Las distancias son APROXIMADAS. Lo que dice [COMPLETAR] lo
-   escribe quien conozca el municipio, con información verificada.
+   Wikipedia. Las distancias son APROXIMADAS. Cada dato de las secciones lleva
+   su fuente (sedes-datos/contenido.json); las fotos son de Wikimedia Commons,
+   con su autor y su licencia (sedes-datos/fotos.json).
    Mismo formato que sedes/colquencha.js: ver los comentarios de ese archivo.
    ============================================================== */
 
@@ -17,7 +18,7 @@ DATOS_SEDE["sica-sica"] = {
 
     sede: "Sede Universitaria Local Sica Sica, del CRU Patacamaya",
 
-    fondo: "img/sica-sica/paisaje.jpg",
+    fondo: "img/sica-sica/campanario-templo-de-sica-sica.jpg",
 
     lugares: {
         "La Paz": { lat: -16.4957, lon: -68.1336, tipo: "origen", detalle: "Plaza Murillo", mapa: { x: 221, y: 37 } },
@@ -54,20 +55,16 @@ DATOS_SEDE["sica-sica"] = {
 
     secciones: {
         turismo: [
-            "Sica Sica es una localidad y municipio de Bolivia, capital de la provincia de Aroma del departamento de La Paz al oeste de Bolivia. La mayoría de la gente se dedica a la agricultura y a la ganadería, al igual que a la pesca, por la presencia de numerosos ríos como el Kheto o la quebrada de Aroma, entre otros. (Wikipedia, «Sica Sica»)",
-            "[COMPLETAR] Lugares para visitar: cada uno con una línea, cómo se llega y una foto."
+            "Capital de la provincia Aroma, a 124 km de La Paz y a unos 3850 m de altura; el municipio tiene 33 885 habitantes según el censo de 2024 (Wikipedia).",
+            "Su templo, dedicado a San Juan Bautista, está registrado como monumento protegido (Wikimedia Commons)."
         ],
-        cultura: [
-            "[COMPLETAR] Fiestas y fechas importantes: cuáles, cuándo y cómo se celebran.",
-            "[COMPLETAR] Danzas, costumbres y comidas típicas."
-        ],
+        cultura: [],
         produccion: [
-            "[COMPLETAR] Lo que produce el municipio: agricultura, ganadería, industria o recursos."
+            "Agricultura: papa, oca, quinua, qañawa y cebada (Wikipedia).",
+            "Ganadería: vacunos criollos, llamas, alpacas y ovinos (Wikipedia).",
+            "Artesanía textil: ponchos y frazadas (Wikipedia)."
         ],
-        educacion: [
-            "[COMPLETAR] Unidades educativas del municipio y niveles que ofrecen.",
-            "[COMPLETAR] Logros de sus estudiantes (olimpiadas, concursos), con el año y la fuente."
-        ],
+        educacion: [],
         umsa: [
             "Sede Universitaria Local Sica Sica, del CRU Patacamaya de la Universidad Mayor de San Andrés, región Altiplano Sur.",
             "Programa: Lic. Administración de Empresas y Organizaciones Públicas.",
@@ -76,9 +73,8 @@ DATOS_SEDE["sica-sica"] = {
     },
 
     galeria: [
-        { archivo: "foto-plaza.jpg", icono: "🏘️", leyenda: "La plaza principal" },
-        { archivo: "foto-lugar.jpg", icono: "⛰️", leyenda: "Un lugar para visitar" },
-        { archivo: "foto-fiesta.jpg", icono: "🎭", leyenda: "Una fiesta del municipio" },
-        { archivo: "foto-sede.jpg", icono: "🏛️", leyenda: "La sede de la UMSA" }
+        { archivo: "templo-de-sica-sica.jpg", icono: "⛪", leyenda: "El templo de Sica Sica, monumento nacional", credito: "Alex chipana, CC BY-SA 4.0", pagina: "https://commons.wikimedia.org/wiki/File:Templo_de_Sica_Sica.jpg" },
+        { archivo: "iglesia-de-sica-sica-en-el-departamento-de-la-paz-.jpg", icono: "⛪", leyenda: "La iglesia de San Juan Bautista", credito: "Lajlectora, CC BY-SA 4.0", pagina: "https://commons.wikimedia.org/wiki/File:Iglesia_de_Sica_Sica_en_el_departamento_de_La_Paz_-_Aroma.jpg" },
+        { archivo: "campanario-templo-de-sica-sica.jpg", icono: "🔔", leyenda: "El campanario del templo", credito: "Jose Ramon Loria, CC BY-SA 3.0", pagina: "https://commons.wikimedia.org/wiki/File:Campanario_Templo_de_Sica_Sica.jpg" }
     ]
 };

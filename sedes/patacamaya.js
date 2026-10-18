@@ -2,8 +2,9 @@
    SEDE PATACAMAYA: los datos de su página (index.html?sede=patacamaya)
    GENERADO por sedes-datos/escribir.py el 17/10/2026: lugares de OpenStreetMap
    (Nominatim), tramos por carretera de OSRM y el resumen del municipio de
-   Wikipedia. Las distancias son APROXIMADAS. Lo que dice [COMPLETAR] lo
-   escribe quien conozca el municipio, con información verificada.
+   Wikipedia. Las distancias son APROXIMADAS. Cada dato de las secciones lleva
+   su fuente (sedes-datos/contenido.json); las fotos son de Wikimedia Commons,
+   con su autor y su licencia (sedes-datos/fotos.json).
    Mismo formato que sedes/colquencha.js: ver los comentarios de ese archivo.
    ============================================================== */
 
@@ -17,7 +18,7 @@ DATOS_SEDE["patacamaya"] = {
 
     sede: "Centro Regional Universitario Patacamaya",
 
-    fondo: "img/patacamaya/paisaje.jpg",
+    fondo: null,
 
     lugares: {
         "La Paz": { lat: -16.4957, lon: -68.1336, tipo: "origen", detalle: "Plaza Murillo", mapa: { x: 237, y: 25 } },
@@ -58,20 +59,15 @@ DATOS_SEDE["patacamaya"] = {
 
     secciones: {
         turismo: [
-            "Patacamaya es una pequeña ciudad y municipio de Bolivia, ubicado en la provincia de Aroma del departamento de La Paz. (Wikipedia, «Patacamaya»)",
-            "[COMPLETAR] Lugares para visitar: cada uno con una línea, cómo se llega y una foto."
+            "Patacamaya es una pequeña ciudad de la provincia Aroma; según el censo de 2012, el municipio tenía 22 858 habitantes (Wikipedia).",
+            "Sus principales atractivos son las aguas termales de Viscachani y los chullpares de Joko Pampa (Wikipedia)."
         ],
-        cultura: [
-            "[COMPLETAR] Fiestas y fechas importantes: cuáles, cuándo y cómo se celebran.",
-            "[COMPLETAR] Danzas, costumbres y comidas típicas."
-        ],
+        cultura: [],
         produccion: [
-            "[COMPLETAR] Lo que produce el municipio: agricultura, ganadería, industria o recursos."
+            "Agricultura: papa, cebada y alfalfa, que se venden en las ferias locales (Wikipedia).",
+            "Ganadería: crianza de camélidos, ovinos y vacunos (Wikipedia)."
         ],
-        educacion: [
-            "[COMPLETAR] Unidades educativas del municipio y niveles que ofrecen.",
-            "[COMPLETAR] Logros de sus estudiantes (olimpiadas, concursos), con el año y la fuente."
-        ],
+        educacion: [],
         umsa: [
             "Centro Regional Universitario Patacamaya de la Universidad Mayor de San Andrés, región Altiplano Sur.",
             "Programa: Lic. Administración de Empresas y Organizaciones Públicas.",
@@ -81,9 +77,6 @@ DATOS_SEDE["patacamaya"] = {
     },
 
     galeria: [
-        { archivo: "foto-plaza.jpg", icono: "🏘️", leyenda: "La plaza principal" },
-        { archivo: "foto-lugar.jpg", icono: "⛰️", leyenda: "Un lugar para visitar" },
-        { archivo: "foto-fiesta.jpg", icono: "🎭", leyenda: "Una fiesta del municipio" },
-        { archivo: "foto-sede.jpg", icono: "🏛️", leyenda: "La sede de la UMSA" }
+        { archivo: "flag-of-patacamaya-bolivia.jpg", icono: "🚩", leyenda: "Bandera del municipio de Patacamaya", credito: "Ingaviano, CC0", pagina: "https://commons.wikimedia.org/wiki/File:Flag_of_Patacamaya,_Bolivia.svg" }
     ]
 };

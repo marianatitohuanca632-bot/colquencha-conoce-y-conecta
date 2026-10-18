@@ -2,8 +2,9 @@
    SEDE SAPECHO: los datos de su página (index.html?sede=sapecho)
    GENERADO por sedes-datos/escribir.py el 17/10/2026: lugares de OpenStreetMap
    (Nominatim), tramos por carretera de OSRM y el resumen del municipio de
-   Wikipedia. Las distancias son APROXIMADAS. Lo que dice [COMPLETAR] lo
-   escribe quien conozca el municipio, con información verificada.
+   Wikipedia. Las distancias son APROXIMADAS. Cada dato de las secciones lleva
+   su fuente (sedes-datos/contenido.json); las fotos son de Wikimedia Commons,
+   con su autor y su licencia (sedes-datos/fotos.json).
    Mismo formato que sedes/colquencha.js: ver los comentarios de ese archivo.
    ============================================================== */
 
@@ -17,7 +18,7 @@ DATOS_SEDE["sapecho"] = {
 
     sede: "Sede Universitaria Local Sapecho, del CRU San Buenaventura",
 
-    fondo: "img/sapecho/paisaje.jpg",
+    fondo: "img/sapecho/perspectiva-paisajista-rio-bajo-inicua-municipio-p.jpg",
 
     lugares: {
         "La Paz": { lat: -16.4957, lon: -68.1336, tipo: "origen", detalle: "Plaza Murillo", mapa: { x: 198, y: 378 } },
@@ -54,20 +55,14 @@ DATOS_SEDE["sapecho"] = {
 
     secciones: {
         turismo: [
-            "Palos Blancos es una pequeña ciudad y un municipio de Bolivia, ubicado en la región subandina en la provincia de Sud Yungas en el departamento de La Paz. Tiene una superficie de 3430 km² y una población de 16 786 habitantes. (Wikipedia, «Palos Blancos (Bolivia)»)",
-            "[COMPLETAR] Lugares para visitar: cada uno con una línea, cómo se llega y una foto."
+            "Sapecho pertenece al municipio de Palos Blancos, en la región subandina de la provincia Sud Yungas: 3430 km² y 27 137 habitantes según el censo de 2024 (Wikipedia).",
+            "El río Bajo Inicua es una de las vías que conectan el municipio (Wikimedia Commons)."
         ],
-        cultura: [
-            "[COMPLETAR] Fiestas y fechas importantes: cuáles, cuándo y cómo se celebran.",
-            "[COMPLETAR] Danzas, costumbres y comidas típicas."
-        ],
+        cultura: [],
         produccion: [
-            "[COMPLETAR] Lo que produce el municipio: agricultura, ganadería, industria o recursos."
+            "Palos Blancos está entre los municipios paceños que, junto a Caranavi, producen el 90 % del café de Bolivia (Wikipedia, «Caranavi»)."
         ],
-        educacion: [
-            "[COMPLETAR] Unidades educativas del municipio y niveles que ofrecen.",
-            "[COMPLETAR] Logros de sus estudiantes (olimpiadas, concursos), con el año y la fuente."
-        ],
+        educacion: [],
         umsa: [
             "Sede Universitaria Local Sapecho, del CRU San Buenaventura de la Universidad Mayor de San Andrés, región Norte Amazónico.",
             "Programa: Lic. Ingeniería Forestal y Maderera.",
@@ -77,9 +72,7 @@ DATOS_SEDE["sapecho"] = {
     },
 
     galeria: [
-        { archivo: "foto-plaza.jpg", icono: "🏘️", leyenda: "La plaza principal" },
-        { archivo: "foto-lugar.jpg", icono: "⛰️", leyenda: "Un lugar para visitar" },
-        { archivo: "foto-fiesta.jpg", icono: "🎭", leyenda: "Una fiesta del municipio" },
-        { archivo: "foto-sede.jpg", icono: "🏛️", leyenda: "La sede de la UMSA" }
+        { archivo: "bajo-inicua-municipio-palos-blancos-la-paz-bolivia.jpg", icono: "🏘️", leyenda: "Bajo Inicua, municipio de Palos Blancos", credito: "Stephanie 14894, CC BY-SA 4.0", pagina: "https://commons.wikimedia.org/wiki/File:BAJO_INICUA_-_MUNICIPIO_PALOS_BLANCOS_(LA_PAZ_-_BOLIVIA).jpg" },
+        { archivo: "medio-de-transporte-rio-bajo-inicua-municipio-palo.jpg", icono: "🌊", leyenda: "El río Bajo Inicua", credito: "Stephanie 14894, CC BY-SA 4.0", pagina: "https://commons.wikimedia.org/wiki/File:MEDIO_DE_TRANSPORTE_RI%C3%93_BAJO_INICUA-_MUNICIPIO_PALOS_BLANCOS_(LA_PAZ_-_BOLIVIA).jpg" }
     ]
 };
