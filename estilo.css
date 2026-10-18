@@ -1,0 +1,1381 @@
+/* ==============================
+   1. CONFIGURACIÓN GENERAL
+============================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #edf4f8;
+    color: #172b3d;
+    font-size: 14px;
+}
+
+button,
+select {
+    font-family: inherit;
+}
+
+button {
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    filter: brightness(1.08);
+    transform: translateY(-2px);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ==============================
+   2. BARRA SUPERIOR
+============================== */
+
+.topbar {
+    height: 62px;
+    width: 100%;
+    background: #102b42;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 0 25px;
+    gap: 25px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 3px 10px #0002;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 25px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.logo-icon {
+    font-size: 32px;
+}
+
+.logo > span:last-child > span {
+    color: #efbd43;
+}
+
+.slogan {
+    border-left: 1px solid #718596;
+    padding-left: 22px;
+    color: #dce7ef;
+    font-size: 14px;
+}
+
+.top-icons {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+/* ==============================
+   3. DISTRIBUCIÓN PRINCIPAL
+============================== */
+
+.layout {
+    display: flex;
+    min-height: 100vh;
+    align-items: stretch;
+}
+
+/* ==============================
+   4. MENÚ LATERAL
+============================== */
+
+.sidebar {
+    width: 180px;
+    flex-shrink: 0;
+    background: #10314b;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px 10px;
+}
+
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.sidebar nav a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 10px;
+    border-radius: 6px;
+    font-size: 13px;
+    transition: 0.25s;
+}
+
+.sidebar nav a:hover,
+.sidebar nav a.menu-activo {
+    background: #2494e2;
+    color: white;
+}
+
+.sidebar-frase {
+    text-align: center;
+    padding: 30px 0 15px;
+    color: #dce7ef;
+    font-style: italic;
+    line-height: 1.6;
+}
+
+.sidebar-frase div {
+    font-size: 24px;
+}
+
+.montana {
+    letter-spacing: 5px;
+}
+
+/* ==============================
+   5. CONTENIDO
+============================== */
+
+.contenido {
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+}
+
+/* ==============================
+   6. BANNER PRINCIPAL
+============================== */
+
+.hero {
+    min-height: 245px;
+    display: flex;
+    align-items: center;
+    padding: 35px 5%;
+    color: white;
+    background:
+        linear-gradient(90deg, #09273ce8, #103a4d99, #102b4230),
+        url("paisaje_colquencha.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-text {
+    max-width: 570px;
+}
+
+.hero-text > p {
+    font-size: 22px;
+    margin-bottom: 2px;
+}
+
+.hero h1 {
+    font-size: clamp(38px, 5vw, 58px);
+    line-height: 1.1;
+    margin-bottom: 12px;
+    text-shadow: 2px 3px 6px #0007;
+}
+
+.hero-text > span {
+    display: block;
+    max-width: 420px;
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+.hero button {
+    background: #f2bd39;
+    color: #203447;
+    border: none;
+    border-radius: 25px;
+    padding: 12px 22px;
+    margin-top: 18px;
+    font-weight: bold;
+}
+
+/* ==============================
+   7. SECCIÓN DE RUTAS
+============================== */
+
+.rutas-section {
+    display: grid;
+    grid-template-columns: minmax(220px, 0.85fr)
+                           minmax(250px, 1.5fr)
+                           minmax(220px, 0.9fr);
+    gap: 12px;
+    padding: 15px;
+    align-items: stretch;
+}
+
+.ruta-panel,
+.resultado-panel,
+.mapa-container {
+    background: white;
+    border: 1px solid #d8e5ed;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px #173b5410;
+    min-width: 0;
+}
+
+.ruta-panel {
+    padding: 15px;
+}
+
+.titulo-seccion {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.titulo-seccion strong,
+.titulo-general > h2:first-child {
+    color: #17618a;
+}
+
+.titulo-seccion strong {
+    font-size: 29px;
+}
+
+.titulo-seccion h2 {
+    font-size: 16px;
+    margin: 3px 0 7px;
+}
+
+.titulo-seccion p {
+    color: #607383;
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+.ruta-panel > label {
+    display: block;
+    font-size: 10px;
+    font-weight: bold;
+    margin: 16px 0 7px;
+    color: #435c6e;
+}
+
+.ruta-panel select,
+.destino {
+    width: 100%;
+    min-height: 40px;
+    padding: 10px;
+    background: #f4f8fa;
+    border: 1px solid #d8e2e8;
+    border-radius: 5px;
+    color: #344b5c;
+}
+
+.destino {
+    display: flex;
+    align-items: center;
+}
+
+.algoritmos {
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+    padding: 5px 0;
+}
+
+.algoritmos label {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.algoritmos input {
+    accent-color: #2479c4;
+}
+
+.algoritmos small {
+    color: #738493;
+    font-size: 10px;
+}
+
+.boton {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.calcular {
+    background: #16864d;
+    color: white;
+    margin-top: 18px;
+}
+
+.info-ruta {
+    margin-top: 13px;
+    background: #eaf5ff;
+    color: #355a75;
+    border-radius: 6px;
+    padding: 11px;
+    display: flex;
+    gap: 8px;
+    font-size: 10px;
+    line-height: 1.5;
+}
+
+/* ==============================
+   8. MAPA PROVISIONAL
+============================== */
+
+.mapa-container {
+    overflow: hidden;
+    min-height: 400px;
+}
+
+.mapa-placeholder {
+    height: 100%;
+    min-height: 400px;
+    position: relative;
+    overflow: hidden;
+    padding: 20px;
+    background:
+        radial-gradient(ellipse at 30% 30%, #b5d6a4, transparent 35%),
+        radial-gradient(ellipse at 75% 65%, #8dbb89, transparent 40%),
+        linear-gradient(140deg, #d7e4bf, #b8d3ad 45%, #8bb49a);
+}
+
+.mapa-placeholder::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    opacity: 0.35;
+    background-image:
+        repeating-linear-gradient(
+            35deg,
+            transparent 0 28px,
+            #ffffff 29px 31px,
+            transparent 32px 60px
+        );
+}
+
+.mapa-titulo {
+    position: relative;
+    z-index: 2;
+    display: inline-block;
+    background: white;
+    padding: 9px 12px;
+    border-radius: 5px;
+    font-weight: bold;
+    box-shadow: 0 2px 7px #0002;
+}
+
+.ruta-linea {
+    position: absolute;
+    top: 42%;
+    left: 15%;
+    width: 70%;
+    height: 30%;
+    display: flex;
+    align-items: center;
+}
+
+.linea {
+    position: absolute;
+    width: 100%;
+    height: 7px;
+    background: #1878ed;
+    border: 2px solid white;
+    border-radius: 10px;
+    transform: rotate(25deg);
+    box-shadow: 0 1px 4px #0004;
+}
+
+.punto {
+    position: absolute;
+    z-index: 2;
+    font-size: 28px;
+}
+
+.punto1 {
+    left: 0;
+    top: -30px;
+}
+
+.punto2 {
+    right: 0;
+    bottom: -35px;
+}
+
+.mapa-lugares {
+    position: absolute;
+    inset: 25% 10%;
+}
+
+.mapa-lugares span {
+    position: absolute;
+    font-weight: bold;
+    font-size: 11px;
+    color: #243b2c;
+    background: #ffffffc9;
+    padding: 4px 6px;
+    border-radius: 4px;
+}
+
+.mapa-lugares span:nth-child(1) {
+    top: 0;
+    left: 15%;
+}
+
+.mapa-lugares span:nth-child(2) {
+    top: 23%;
+    left: 2%;
+}
+
+.mapa-lugares span:nth-child(3) {
+    top: 35%;
+    left: 35%;
+}
+
+.mapa-lugares span:nth-child(4) {
+    top: 55%;
+    left: 45%;
+}
+
+.mapa-lugares span:nth-child(5) {
+    bottom: 0;
+    left: 10%;
+}
+
+.mapa-lugares span:nth-child(6) {
+    bottom: 5%;
+    right: 0;
+}
+
+.mapa-mensaje {
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    right: 12px;
+    padding: 9px;
+    border-radius: 5px;
+    background: #ffffffdf;
+    color: #344b5c;
+    text-align: center;
+    font-size: 11px;
+}
+
+/* ==============================
+   9. RESULTADO DE RUTA
+============================== */
+
+.resultado-panel {
+    padding: 15px;
+}
+
+.resultado-titulo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #17653d;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.resultado-titulo:first-letter {
+    color: #16864d;
+}
+
+#resultadoRuta > p {
+    font-size: 12px;
+    margin: 12px 0;
+    line-height: 1.5;
+}
+
+.estadisticas {
+    background: #e2f7e8;
+    border: 1px solid #c5ebd0;
+    border-radius: 7px;
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 15px 0;
+}
+
+.estadisticas div {
+    display: grid;
+    grid-template-columns: 30px 1fr;
+    align-items: center;
+    gap: 2px 7px;
+}
+
+.estadisticas div > span {
+    grid-row: span 2;
+    font-size: 23px;
+}
+
+.estadisticas b {
+    color: #17653d;
+    font-size: 19px;
+}
+
+.estadisticas small {
+    color: #557261;
+    font-size: 10px;
+}
+
+.resultado-panel h4 {
+    font-size: 12px;
+    margin: 17px 0 10px;
+}
+
+#rutaPasos {
+    list-style: none;
+    counter-reset: paso;
+    font-size: 11px;
+}
+
+#rutaPasos li {
+    counter-increment: paso;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin: 12px 0;
+}
+
+#rutaPasos li::before {
+    content: counter(paso);
+    background: #218548;
+    color: white;
+    min-width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-weight: bold;
+}
+
+.detalles {
+    background: #16864d;
+    color: white;
+    margin-top: 12px;
+}
+
+.importante {
+    margin-top: 14px;
+    padding: 12px;
+    border-radius: 7px;
+    background: #fff4dc;
+    color: #96620b;
+    font-size: 11px;
+}
+
+.importante p {
+    line-height: 1.5;
+    margin-top: 6px;
+    color: #705c3c;
+}
+
+/* ==============================
+   10. TARJETAS DE ACCESO
+============================== */
+
+.accesos {
+    margin: 5px 15px 15px;
+    padding: 15px;
+    background: white;
+    border: 1px solid #dce8ef;
+    border-radius: 10px;
+}
+
+.titulo-general h2 {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.titulo-general p {
+    font-size: 12px;
+    color: #697e8c;
+    margin-bottom: 18px;
+}
+
+.acceso-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.acceso-card {
+    position: relative;
+    padding: 20px 15px 20px 75px;
+    border-radius: 8px;
+    min-height: 120px;
+    border: 1px solid;
+}
+
+.acceso-card h3 {
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+.acceso-card p {
+    font-size: 11px;
+    line-height: 1.7;
+}
+
+.acceso-icon {
+    position: absolute;
+    left: 17px;
+    top: 30px;
+    font-size: 32px;
+}
+
+.acceso-card > span {
+    position: absolute;
+    right: 12px;
+    bottom: 12px;
+    font-size: 18px;
+}
+
+.azul {
+    background: #e5f4ff;
+    color: #145b8e;
+    border-color: #9bd3f5;
+}
+
+.verde {
+    background: #e5faec;
+    color: #236d38;
+    border-color: #b1e7bf;
+}
+
+.morado {
+    background: #f0e9ff;
+    color: #60418b;
+    border-color: #d0b9f0;
+}
+
+/* ==============================
+   11. POR QUÉ VISITAR
+============================== */
+
+.visitar {
+    margin: 0 15px 15px;
+    padding: 15px;
+    display: grid;
+    grid-template-columns: minmax(120px, 0.8fr) 1.2fr;
+    gap: 20px;
+    align-items: center;
+    background: white;
+    border: 1px solid #dce8ef;
+    border-radius: 10px;
+}
+
+.visitar-imagen {
+    min-height: 140px;
+    display: grid;
+    place-items: center;
+    border-radius: 8px;
+    background: linear-gradient(140deg, #8bc9ec, #d4e8b6, #8bb58a);
+    font-size: 55px;
+}
+
+.visitar-texto h2 {
+    font-size: 17px;
+    margin-bottom: 12px;
+}
+
+.visitar-texto p {
+    color: #617484;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.visitar-texto button {
+    margin-top: 12px;
+    border: none;
+    border-radius: 20px;
+    background: #16864d;
+    color: white;
+    padding: 11px 17px;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+/* ==============================
+   12. TARJETAS PRINCIPALES
+============================== */
+
+.categorias {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 12px;
+    padding: 0 15px 20px;
+}
+
+.categoria-card {
+    background: white;
+    border: 1px solid #dce8ef;
+    border-radius: 9px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px #173b540d;
+    min-width: 0;
+}
+
+.categoria-imagen {
+    min-height: 100px;
+    display: grid;
+    place-items: center;
+    font-size: 40px;
+    background: linear-gradient(135deg, #b5d7c5, #dce9bd);
+}
+
+.turismo-img {
+    background: linear-gradient(135deg, #7eb4d0, #d3e7c0);
+}
+
+.cultura-img {
+    background: linear-gradient(135deg, #d8a7a4, #f0d6a2);
+}
+
+.produccion-img {
+    background: linear-gradient(135deg, #9dc98a, #e7d58a);
+}
+
+.educacion-img {
+    background: linear-gradient(135deg, #a4cbe8, #f0d5a4);
+}
+
+.umsa-img {
+    background: linear-gradient(135deg, #8cb9d7, #dce7f0);
+}
+
+.categoria-contenido {
+    padding: 13px;
+    position: relative;
+}
+
+.icono-categoria {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #176c94;
+    color: white;
+    display: grid;
+    place-items: center;
+    margin-top: -30px;
+    margin-bottom: 9px;
+    border: 3px solid white;
+}
+
+.categoria-card h3 {
+    font-size: 12px;
+    margin-bottom: 8px;
+}
+
+.categoria-card p {
+    font-size: 10px;
+    line-height: 1.6;
+    color: #627585;
+    min-height: 48px;
+}
+
+.categoria-card button {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    padding: 8px 5px;
+    border-radius: 18px;
+    border: 1px solid #b7d8ee;
+    background: #e8f5ff;
+    color: #17618a;
+    font-size: 10px;
+}
+
+/* ==============================
+   13. GALERÍA Y NOSOTROS
+============================== */
+
+.galeria,
+.nosotros {
+    margin: 0 15px 18px;
+    padding: 20px;
+    background: white;
+    border: 1px solid #dce8ef;
+    border-radius: 10px;
+}
+
+.galeria h2,
+.nosotros h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.galeria > p,
+.nosotros > p {
+    font-size: 13px;
+    line-height: 1.7;
+    color: #617484;
+}
+
+.galeria-box {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+    margin-top: 18px;
+}
+
+.galeria-box div {
+    min-height: 110px;
+    display: grid;
+    place-items: center;
+    border-radius: 8px;
+    font-size: 35px;
+    background: linear-gradient(135deg, #b7d9e7, #d8e8b9);
+}
+
+/* ==============================
+   14. PIE DE PÁGINA
+============================== */
+
+footer {
+    min-height: 52px;
+    background: #102b42;
+    color: white;
+    padding: 15px 22px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 11px;
+}
+
+footer span {
+    color: #d1e0eb;
+}
+
+footer i {
+    margin-left: auto;
+    color: #d1e0eb;
+}
+
+/* ==============================
+   15. ADAPTACIÓN A TABLET
+============================== */
+
+@media (max-width: 1100px) {
+
+    .top-icons {
+        display: none;
+    }
+
+    .rutas-section {
+        grid-template-columns: minmax(220px, 0.8fr)
+                               minmax(250px, 1.2fr);
+    }
+
+    .resultado-panel {
+        grid-column: 1 / -1;
+    }
+
+    .categorias {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+}
+
+/* ==============================
+   16. ADAPTACIÓN A CELULAR
+============================== */
+
+@media (max-width: 700px) {
+
+    .topbar {
+        height: auto;
+        min-height: 60px;
+        padding: 12px;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .logo-icon {
+        font-size: 25px;
+    }
+
+    .slogan {
+        width: 100%;
+        border-left: none;
+        padding-left: 0;
+        font-size: 11px;
+    }
+
+    .layout {
+        display: block;
+    }
+
+    .sidebar {
+        width: 100%;
+        padding: 8px;
+    }
+
+    .sidebar nav {
+        flex-direction: row;
+        overflow-x: auto;
+        gap: 5px;
+    }
+
+    .sidebar nav a {
+        flex-shrink: 0;
+        padding: 10px;
+        font-size: 12px;
+    }
+
+    .sidebar-frase {
+        display: none;
+    }
+
+    .hero {
+        min-height: 250px;
+        padding: 25px 20px;
+        background-position: center;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero-text > p {
+        font-size: 18px;
+    }
+
+    .rutas-section {
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+
+    .mapa-container {
+        min-height: 300px;
+    }
+
+    .mapa-placeholder {
+        min-height: 300px;
+    }
+
+    .resultado-panel {
+        grid-column: auto;
+    }
+
+    .accesos {
+        margin: 5px 10px 12px;
+        padding: 12px;
+    }
+
+    .acceso-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .visitar {
+        grid-template-columns: 1fr;
+        margin: 10px;
+    }
+
+    .visitar-imagen {
+        min-height: 150px;
+    }
+
+    .categorias {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        padding: 0 10px 15px;
+        gap: 10px;
+    }
+
+    .categoria-imagen {
+        min-height: 85px;
+    }
+
+    .galeria-box {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    footer i {
+        margin-left: 0;
+    }
+
+}
+
+@media (max-width: 380px) {
+
+    .categorias {
+        grid-template-columns: 1fr;
+    }
+
+}
+/* Ajustar imágenes de las tarjetas */
+.categoria-imagen {
+    width: 100%;
+    height: 190px;
+    overflow: hidden;
+    border-radius: 10px 10px 0 0;
+}
+
+.categoria-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+/* Mantener la imagen dentro de su tarjeta */
+.categoria-card {
+    overflow: hidden;
+    box-sizing: border-box;
+}
+/* ==============================
+   17. MAPA, DETALLES Y SECCIONES
+   (agregado para que funcionen script.js y datos.js)
+============================== */
+
+#mapaRuta {
+    position: relative;
+    z-index: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 8px 0 40px;
+}
+
+#mapaRuta .tramo {
+    stroke: #ffffff;
+    stroke-width: 3;
+    opacity: 0.9;
+}
+
+#mapaRuta .tramo.lejos {
+    stroke-dasharray: 6 5;
+}
+
+#mapaRuta .tramo.activo {
+    stroke: #1878ed;
+    stroke-width: 7;
+    opacity: 1;
+}
+
+#mapaRuta .km {
+    paint-order: stroke;
+    stroke: #ffffffd9;
+    stroke-width: 3px;
+    font-size: 11px;
+    fill: #243b2c;
+    text-anchor: middle;
+    font-weight: bold;
+}
+
+#mapaRuta .lugar {
+    fill: #ffffff;
+    stroke: #17618a;
+    stroke-width: 2.5;
+}
+
+#mapaRuta .lugar.cruce {
+    fill: #dce7ef;
+    stroke: #607383;
+}
+
+#mapaRuta .lugar.destino {
+    fill: #16864d;
+    stroke: #ffffff;
+    stroke-width: 3;
+}
+
+#mapaRuta .lugar.activo:not(.destino) {
+    fill: #1878ed;
+    stroke: #ffffff;
+}
+
+#mapaRuta .nombre {
+    font-size: 13px;
+    font-weight: bold;
+    fill: #172b3d;
+    paint-order: stroke;
+    stroke: #ffffffcc;
+    stroke-width: 3px;
+}
+
+#mapaRuta .nombre.cruce {
+    font-weight: normal;
+    font-style: italic;
+    font-size: 11px;
+}
+
+#rutaPasos li span {
+    line-height: 1.5;
+}
+
+.nota-algoritmo {
+    margin-top: 10px;
+    font-size: 11px;
+    color: #17618a;
+    line-height: 1.5;
+}
+
+.detalle-ruta {
+    margin-top: 12px;
+    font-size: 11px;
+    overflow-x: auto;
+}
+
+.detalle-ruta table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 8px 0;
+}
+
+.detalle-ruta th,
+.detalle-ruta td {
+    border: 1px solid #d8e5ed;
+    padding: 5px;
+    text-align: left;
+    vertical-align: top;
+}
+
+.detalle-ruta th {
+    background: #eaf5ff;
+}
+
+.detalle-ruta .fuente {
+    color: #607383;
+    font-style: italic;
+}
+
+.detalle-seccion {
+    margin-top: 10px;
+    font-size: 10px;
+    line-height: 1.6;
+    color: #344b5c;
+}
+
+.detalle-seccion ul {
+    padding-left: 16px;
+}
+
+.detalle-seccion p {
+    font-style: italic;
+    min-height: 0;
+}
+
+/* En celular el nombre no entraba en una línea (white-space: nowrap)
+   y empujaba la página a 402 px de ancho: barra horizontal. */
+@media (max-width: 700px) {
+    .logo {
+        white-space: normal;
+        font-size: 18px;
+        line-height: 1.2;
+    }
+}
+
+/* ==============================
+   18. VERSIÓN 2: LAS SEDES DE LA UMSA
+   La barra de sedes, la sección de sedes, la galería con
+   fotos y las marcas [COMPLETAR].
+============================== */
+
+/* Barra de sedes: una fila que se desplaza de lado */
+.sedes-barra {
+    display: flex;
+    gap: 8px;
+    padding: 8px 25px;
+    overflow-x: auto;
+    background: #17384f;
+    scrollbar-width: thin;
+}
+
+.sedes-barra button {
+    flex: 0 0 auto;
+    border: 1px solid #4d6b80;
+    border-radius: 20px;
+    padding: 5px 12px;
+    background: transparent;
+    color: #dce7ef;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.sedes-barra button.activa {
+    background: #efbd43;
+    border-color: #efbd43;
+    color: #102b42;
+    font-weight: bold;
+}
+
+.sedes-aviso {
+    padding: 8px 25px;
+    background: #fff6dc;
+    color: #6b5212;
+    font-size: 12px;
+}
+
+.hero-prototipo {
+    display: block;
+    max-width: 420px;
+    margin-top: 10px;
+    font-size: 12px;
+    opacity: 0.9;
+}
+
+/* Sección de sedes, agrupada por región */
+.sedes {
+    margin: 0 15px 18px;
+    padding: 20px;
+    background: white;
+    border: 1px solid #dce8ef;
+    border-radius: 10px;
+}
+
+.sedes h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.sedes > p {
+    font-size: 13px;
+    line-height: 1.7;
+    color: #617484;
+}
+
+.sedes-regiones {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 12px;
+    margin: 16px 0;
+}
+
+.sedes-regiones section {
+    padding: 12px;
+    border: 1px solid #dce8ef;
+    border-radius: 8px;
+    background: #f6fafc;
+}
+
+.sedes-regiones h3 {
+    font-size: 13px;
+    color: #17618a;
+    margin-bottom: 8px;
+}
+
+.sedes-regiones li {
+    list-style: none;
+    font-size: 12px;
+    line-height: 1.9;
+}
+
+.sedes-regiones li.activa {
+    font-weight: bold;
+    color: #16864d;
+}
+
+.sedes-regiones small {
+    color: #607383;
+}
+
+.sedes-fuente {
+    font-size: 11px !important;
+}
+
+/* Lo que el grupo tiene que completar se ve resaltado */
+.completar,
+.detalle-seccion li.completar {
+    background: #fff3b0;
+    color: #6b5212;
+    font-style: normal;
+}
+
+/* Galería: foto si está, ícono con leyenda si falta */
+.galeria-box figure {
+    position: relative;
+    min-height: 130px;
+    margin: 0;
+    display: grid;
+    place-items: center;
+    border-radius: 8px;
+    overflow: hidden;
+    background: linear-gradient(135deg, #b7d9e7, #d8e8b9);
+}
+
+.galeria-box figure > span {
+    font-size: 35px;
+}
+
+.galeria-box figure img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.galeria-box figure img + span {
+    display: none;
+}
+
+.galeria-box figcaption {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 4px 6px;
+    background: #102b42cc;
+    color: white;
+    font-size: 11px;
+}
+
+.galeria-box figcaption i {
+    display: block;
+    font-size: 10px;
+}
+
+.galeria-box {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+@media (max-width: 700px) {
+    .sedes-barra,
+    .sedes-aviso {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .galeria-box {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
