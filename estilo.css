@@ -1602,3 +1602,33 @@ footer i {
         text-align: center;
     }
 }
+
+/* ==============================
+   21. OTRA SEDE: SOLO LA TARJETA DE LA UMSA
+   Es la única tarjeta, así que ocupa el ancho, con la imagen al costado.
+============================== */
+
+.categoria-card.sola {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: minmax(160px, 1fr) 3fr;
+}
+
+.categoria-card.sola .categoria-imagen {
+    height: 100%;
+    border-radius: 0;
+}
+
+.categoria-card.sola .icono-categoria {
+    margin-top: 0;
+}
+
+@media (max-width: 700px) {
+    .categoria-card.sola {
+        grid-template-columns: 1fr;
+    }
+
+    .categoria-card.sola .categoria-imagen {
+        height: 140px;
+    }
+}

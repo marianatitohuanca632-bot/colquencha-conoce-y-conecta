@@ -1,8 +1,9 @@
 # Colquencha: Conoce y Conecta - la plataforma
 
 Rutas de acceso y promoción del municipio de Colquencha. La pestaña **«Otras sedes»** muestra además las demás
-sedes universitarias de la UMSA, cada una con su página de rutas. La información de cada municipio lleva su
-fuente entre paréntesis, y cada foto su autor y su licencia.
+sedes universitarias de la UMSA, cada una con su página: rutas de acceso, los programas de la sede y su
+galería de fotos (sin información de turismo ni del municipio). La información de Colquencha lleva su fuente entre paréntesis, y cada
+foto su autor y su licencia.
 
 ## Cómo abrirla
 

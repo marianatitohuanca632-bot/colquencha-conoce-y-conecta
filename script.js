@@ -19,7 +19,8 @@ const ES_COLQUENCHA = SEDE.id === "colquencha";
 for (const el of document.querySelectorAll(".nombre-sede")) el.textContent = SEDE.nombre;
 
 // En otra sede: título propio, la barra de sedes, "Volver a otras sedes" marcado,
-// y "Nosotros" lleva a la página de Colquencha
+// y "Nosotros" lleva a la página de Colquencha. Solo la información de la sede: sin
+// "¿Por qué visitar?" ni turismo, cultura, producción y educación (ver 10); la galería sí queda
 if (!ES_COLQUENCHA) {
     document.title = `${SEDE.nombre} - Otras sedes - Colquencha: Conoce y Conecta`;
     document.querySelector("#sedesBarra").hidden = false;
@@ -27,6 +28,8 @@ if (!ES_COLQUENCHA) {
     document.querySelector(".pestana-sedes").classList.add("menu-activo");
     document.querySelector("#enlaceNosotros").href = "index.html#nosotros";
     document.querySelector("#nosotros").remove();
+    document.querySelector(".visitar").remove();
+    document.querySelector("#umsa").classList.add("sola");
 }
 
 
@@ -51,7 +54,7 @@ if (DATOS) {
     document.querySelector("#contenidoSede").remove();
     document.querySelector("#proximamente").hidden = false;
     document.querySelector("#proximamenteTexto").textContent =
-        `${TIPO[SEDE.tipo]}, región ${SEDE.region}. Próximamente: sus rutas de acceso y la información del municipio.`;
+        `${TIPO[SEDE.tipo]}, región ${SEDE.region}. Próximamente: sus rutas de acceso.`;
     if (SEDE.programas.length) {
         document.querySelector("#proximamenteProgramas").innerHTML =
             "<h3>Programas que ofrece</h3><ul>" + SEDE.programas.map(p => `<li>${p}</li>`).join("") + "</ul>";
@@ -65,7 +68,8 @@ function mostrarSede() {
 
     /* ---------- 4. Los textos y las imágenes de la sede ---------- */
     document.querySelector("#ubicacion").textContent = DATOS.ubicacion;
-    document.querySelector("#lema").textContent = DATOS.lema;
+    document.querySelector("#lema").textContent =
+        ES_COLQUENCHA ? DATOS.lema : "Cómo llegar a la sede de la UMSA y qué programas ofrece.";
     // En Colquencha no hace falta: es la página del proyecto
     if (ES_COLQUENCHA) document.querySelector("#sedeUmsa").remove();
     else document.querySelector("#sedeUmsa").textContent = `${DATOS.sede}.`;
@@ -218,9 +222,10 @@ function mostrarSede() {
 
 
     /* ---------- 10. Botones de las tarjetas: la información de cada sección ----------
-       Una sección sin datos verificados no se muestra: ni la tarjeta ni su enlace del menú. */
+       Una sección sin datos verificados no se muestra: ni la tarjeta ni su enlace del menú.
+       En otra sede solo queda la de la UMSA, ya abierta. */
     for (const tarjeta of document.querySelectorAll(".categoria-card:not(.enlace-sedes)")) {
-        const datos = DATOS.secciones[tarjeta.id] || [];
+        const datos = ES_COLQUENCHA || tarjeta.id === "umsa" ? DATOS.secciones[tarjeta.id] || [] : [];
         if (!datos.length) {
             document.querySelector(`.sidebar nav a[href="#${tarjeta.id}"]`)?.remove();
             tarjeta.remove();
@@ -229,7 +234,7 @@ function mostrarSede() {
         const boton = tarjeta.querySelector("button");
         const caja = document.createElement("div");
         caja.className = "detalle-seccion";
-        caja.hidden = true;
+        caja.hidden = ES_COLQUENCHA;
         caja.innerHTML = "<ul>" + datos.map(d => `<li>${d}</li>`).join("") + "</ul>";
         boton.after(caja);
         boton.addEventListener("click", () => { caja.hidden = !caja.hidden; });
@@ -258,7 +263,7 @@ function mostrarSede() {
     document.querySelector(".hero button").addEventListener("click", () => {
         document.querySelector("#rutas").scrollIntoView();
     });
-    document.querySelector(".visitar button").addEventListener("click", () => {
+    document.querySelector(".visitar button")?.addEventListener("click", () => {
         document.querySelector("#turismo").scrollIntoView();
     });
 
