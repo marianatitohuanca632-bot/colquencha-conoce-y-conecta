@@ -1,0 +1,1116 @@
+{
+  "san-buenaventura": [
+    {
+      "origen": "La Paz",
+      "dijkstra": "La Paz → Unduavi → Caranavi → Sapecho → Yucumo → Rurrenabaque → San Buenaventura",
+      "km": 428.6,
+      "min": 448,
+      "exploraD": 8,
+      "exploraA": 8,
+      "bfs": "La Paz → Unduavi → Caranavi → Sapecho → Yucumo → Rurrenabaque → San Buenaventura",
+      "kmBfs": 428.6
+    },
+    {
+      "origen": "El Alto",
+      "dijkstra": "El Alto → La Paz → Unduavi → Caranavi → Sapecho → Yucumo → Rurrenabaque → San Buenaventura",
+      "km": 436.1,
+      "min": 459,
+      "exploraD": 8,
+      "exploraA": 8,
+      "bfs": "El Alto → La Paz → Unduavi → Caranavi → Sapecho → Yucumo → Rurrenabaque → San Buenaventura",
+      "kmBfs": 436.1
+    },
+    {
+      "origen": "Caranavi",
+      "dijkstra": "Caranavi → Sapecho → Yucumo → Rurrenabaque → San Buenaventura",
+      "km": 264.7,
+      "min": 284,
+      "exploraD": 8,
+      "exploraA": 5,
+      "bfs": "Caranavi → Sapecho → Yucumo → Rurrenabaque → San Buenaventura",
+      "kmBfs": 264.7
+    },
+    {
+      "origen": "Sapecho",
+      "dijkstra": "Sapecho → Yucumo → Rurrenabaque → San Buenaventura",
+      "km": 195,
+      "min": 217,
+      "exploraD": 6,
+      "exploraA": 4,
+      "bfs": "Sapecho → Yucumo → Rurrenabaque → San Buenaventura",
+      "kmBfs": 195
+    },
+    {
+      "origen": "Yucumo",
+      "dijkstra": "Yucumo → Rurrenabaque → San Buenaventura",
+      "km": 105,
+      "min": 132,
+      "exploraD": 4,
+      "exploraA": 3,
+      "bfs": "Yucumo → Rurrenabaque → San Buenaventura",
+      "kmBfs": 105
+    },
+    {
+      "origen": "Rurrenabaque",
+      "dijkstra": "Rurrenabaque → San Buenaventura",
+      "km": 1.3,
+      "min": 2,
+      "exploraD": 2,
+      "exploraA": 2,
+      "bfs": "Rurrenabaque → San Buenaventura",
+      "kmBfs": 1.3
+    },
+    {
+      "origen": "Tumupasa",
+      "dijkstra": "Tumupasa → San Buenaventura",
+      "km": 53.7,
+      "min": 54,
+      "exploraD": 2,
+      "exploraA": 2,
+      "bfs": "Tumupasa → San Buenaventura",
+      "kmBfs": 53.7
+    },
+    {
+      "origen": "Ixiamas",
+      "dijkstra": "Ixiamas → Tumupasa → San Buenaventura",
+      "km": 114.8,
+      "min": 118,
+      "exploraD": 3,
+      "exploraA": 3,
+      "bfs": "Ixiamas → Tumupasa → San Buenaventura",
+      "kmBfs": 114.8
+    }
+  ],
+  "sapecho": [
+    {
+      "origen": "La Paz",
+      "dijkstra": "La Paz → Unduavi → Caranavi → Sapecho",
+      "km": 233.6,
+      "min": 231,
+      "exploraD": 6,
+      "exploraA": 6,
+      "bfs": "La Paz → Unduavi → Coroico → Sapecho",
+      "kmBfs": 248
+    },
+    {
+      "origen": "El Alto",
+      "dijkstra": "El Alto → La Paz → Unduavi → Caranavi → Sapecho",
+      "km": 241.1,
+      "min": 242,
+      "exploraD": 6,
+      "exploraA": 6,
+      "bfs": "El Alto → La Paz → Unduavi → Coroico → Sapecho",
+      "kmBfs": 255.5
+    },
+    {
+      "origen": "Coroico",
+      "dijkstra": "Coroico → Sapecho",
+      "km": 143.4,
+      "min": 139,
+      "exploraD": 6,
+      "exploraA": 3,
+      "bfs": "Coroico → Sapecho",
+      "kmBfs": 143.4
+    },
+    {
+      "origen": "Caranavi",
+      "dijkstra": "Caranavi → Sapecho",
+      "km": 69.7,
+      "min": 67,
+      "exploraD": 2,
+      "exploraA": 2,
+      "bfs": "Caranavi → Sapecho",
+      "kmBfs": 69.7
+    },
+    {
+      "origen": "Palos Blancos",
+      "dijkstra": "Palos Blancos → Sapecho",
+      "km": 10.8,
+      "min": 14,
+      "exploraD": 2,
+      "exploraA": 2,
+      "bfs": "Palos Blancos → Sapecho",
+      "kmBfs": 10.8
+    },
+    {
+      "origen": "Yucumo",
+      "dijkstra": "Yucumo → Sapecho",
+      "km": 90,
+      "min": 85,
+      "exploraD": 2,
+      "exploraA": 2,
+      "bfs": "Yucumo → Sapecho",
+      "kmBfs": 90
+    }
+  ],
+  "ixiamas": [
+    {
+      "origen": "La Paz",
+      "dijkstra": "La Paz → Caranavi → Yucumo → Rurrenabaque → San Buenaventura → Tumupasa → Ixiamas",
+      "km": 542.9,
+      "min": 565,
+      "exploraD": 8,
+      "exploraA": 8,
+      "bfs": "La Paz → Caranavi → Yucumo → Rurrenabaque → San Buenaventura → Tumupasa → Ixiamas",
+      "kmBfs": 542.9
+    },
+    {
+      "origen": "El Alto",
+      "dijkstra": "El Alto → La Paz → Caranavi → Yucumo → Rurrenabaque → San Buenaventura → Tumupasa → Ixiamas",
+      "km": 550.4,
+      "min": 576,
+      "exploraD": 8,
+      "exploraA": 8,
+      "bfs": "El Alto → La Paz → Caranavi → Yucumo → Rurrenabaque → San Buenaventura → Tumupasa → Ixiamas",
+      "kmBfs": 550.4
+    },
+    {
+      "origen": "Caranavi",
+      "dijkstra": "Caranavi → Yucumo → Rurrenabaque → San Buenaventura → Tumupasa → Ixiamas",
+      "km": 378.9,
+      "min": 401,
+      "exploraD": 8,
+      "exploraA": 6,
+      "bfs": "Caranavi → Yucumo → Rurrenabaque → San Buenaventura → Tumupasa → Ixiamas",
+      "kmBfs": 378.9
+    },
+    {
+      "origen": "Yucumo",
+      "dijkstra": "Yucumo → Rurrenabaque → San Buenaventura → Tumupasa → Ixiamas",
+      "km": 219.8,
+      "min": 250,
+      "exploraD": 6,
+      "exploraA": 5,
+      "bfs": "Yucumo → Rurrenabaque → San Buenaventura → Tumupasa → Ixiamas",
+      "kmBfs": 219.8
+    },
+    {
+      "origen": "Rurrenabaque",
+      "dijkstra": "Rurrenabaque → San Buenaventura → Tumupasa → Ixiamas",
+      "km": 116.1,
+      "min": 120,
+      "exploraD": 5,
+      "exploraA": 4,
+      "bfs": "Rurrenabaque → San Buenaventura → Tumupasa → Ixiamas",
+      "kmBfs": 116.1
+    },
+    {
+      "origen": "San Buenaventura",
+      "dijkstra": "San Buenaventura → Tumupasa → Ixiamas",
+      "km": 114.8,
+      "min": 118,
+      "exploraD": 5,
+      "exploraA": 4,
+      "bfs": "San Buenaventura → Tumupasa → Ixiamas",
+      "kmBfs": 114.8
+    },
+    {
+      "origen": "Tumupasa",
+      "dijkstra": "Tumupasa → Ixiamas",
+      "km": 61.1,
+      "min": 64,
+      "exploraD": 4,
+      "exploraA": 2,
+      "bfs": "Tumupasa → Ixiamas",
+      "kmBfs": 61.1
+    }
+  ],
+  "apolo": [
+    {
+      "origen": "La Paz",
+      "dijkstra": "La Paz → El Alto → Huarina → Achacachi → Escoma → Charazani → Apolo",
+      "km": 411.7,
+      "min": 499,
+      "exploraD": 7,
+      "exploraA": 7,
+      "bfs": "La Paz → El Alto → Huarina → Achacachi → Escoma → Charazani → Apolo",
+      "kmBfs": 411.7
+    },
+    {
+      "origen": "El Alto",
+      "dijkstra": "El Alto → Huarina → Achacachi → Escoma → Charazani → Apolo",
+      "km": 404.2,
+      "min": 488,
+      "exploraD": 7,
+      "exploraA": 7,
+      "bfs": "El Alto → Huarina → Achacachi → Escoma → Charazani → Apolo",
+      "kmBfs": 404.2
+    },
+    {
+      "origen": "Huarina",
+      "dijkstra": "Huarina → Achacachi → Escoma → Charazani → Apolo",
+      "km": 341.2,
+      "min": 429,
+      "exploraD": 7,
+      "exploraA": 7,
+      "bfs": "Huarina → Achacachi → Escoma → Charazani → Apolo",
+      "kmBfs": 341.2
+    },
+    {
+      "origen": "Achacachi",
+      "dijkstra": "Achacachi → Escoma → Charazani → Apolo",
+      "km": 321.4,
+      "min": 409,
+      "exploraD": 7,
+      "exploraA": 7,
+      "bfs": "Achacachi → Escoma → Charazani → Apolo",
+      "kmBfs": 321.4
+    },
+    {
+      "origen": "Escoma",
+      "dijkstra": "Escoma → Charazani → Apolo",
+      "km": 246.6,
+      "min": 338,
+      "exploraD": 7,
+      "exploraA": 4,
+      "bfs": "Escoma → Charazani → Apolo",
+      "kmBfs": 246.6
+    },
+    {
+      "origen": "Charazani",
+      "dijkstra": "Charazani → Apolo",
+      "km": 158.3,
+      "min": 238,
+      "exploraD": 3,
+      "exploraA": 2,
+      "bfs": "Charazani → Apolo",
+      "kmBfs": 158.3
+    }
+  ],
+  "patacamaya": [
+    {
+      "origen": "La Paz",
+      "dijkstra": "La Paz → Senkata → Calamarca → Patacamaya",
+      "km": 101.7,
+      "min": 107,
+      "exploraD": 6,
+      "exploraA": 5,
+      "bfs": "La Paz → Senkata → Calamarca → Patacamaya",
+      "kmBfs": 101.7
+    },
+    {
+      "origen": "El Alto",
+      "dijkstra": "El Alto → Senkata → Calamarca → Patacamaya",
+      "km": 95.6,
+      "min": 101,
+      "exploraD": 6,
+      "exploraA": 5,
+      "bfs": "El Alto → Senkata → Calamarca → Patacamaya",
+      "kmBfs": 95.6
+    },
+    {
+      "origen": "Senkata",
+      "dijkstra": "Senkata → Calamarca → Patacamaya",
+      "km": 84.6,
+      "min": 87,
+      "exploraD": 6,
+      "exploraA": 3,
+      "bfs": "Senkata → Calamarca → Patacamaya",
+      "kmBfs": 84.6
+    },
+    {
+      "origen": "Calamarca",
+      "dijkstra": "Calamarca → Patacamaya",
+      "km": 44.3,
+      "min": 46,
+      "exploraD": 4,
+      "exploraA": 2,
+      "bfs": "Calamarca → Patacamaya",
+      "kmBfs": 44.3
+    },
+    {
+      "origen": "Colquencha",
+      "dijkstra": "Colquencha → Patacamaya",
+      "km": 59.7,
+      "min": 69,
+      "exploraD": 5,
+      "exploraA": 2,
+      "bfs": "Colquencha → Patacamaya",
+      "kmBfs": 59.7
+    },
+    {
+      "origen": "Sica Sica",
+      "dijkstra": "Sica Sica → Patacamaya",
+      "km": 23.7,
+      "min": 25,
+      "exploraD": 2,
+      "exploraA": 2,
+      "bfs": "Sica Sica → Patacamaya",
+      "kmBfs": 23.7
+    },
+    {
+      "origen": "Konani",
+      "dijkstra": "Konani → Patacamaya",
+      "km": 51.1,
+      "min": 50,
+      "exploraD": 3,
+      "exploraA": 3,
+      "bfs": "Konani → Patacamaya",
+      "kmBfs": 51.1
+    },
+    {
+      "origen": "Oruro",
+      "dijkstra": "Oruro → Konani → Patacamaya",
+      "km": 129.1,
+      "min": 124,
+      "exploraD": 4,
+      "exploraA": 4,
+      "bfs": "Oruro → Konani → Patacamaya",
+      "kmBfs": 129.1
+    }
+  ],
+  "colquencha": [
+    {
+      "origen": "La Paz",
+      "dijkstra": "La Paz → El Alto → Senkata → Cruce Vilaque → Colquencha",
+      "km": 64.5,
+      "min": 78,
+      "exploraD": 8,
+      "exploraA": 7,
+      "bfs": "La Paz → El Alto → Viacha → Colquencha",
+      "kmBfs": 65.3
+    },
+    {
+      "origen": "El Alto",
+      "dijkstra": "El Alto → Senkata → Cruce Vilaque → Colquencha",
+      "km": 58.2,
+      "min": 69,
+      "exploraD": 8,
+      "exploraA": 7,
+      "bfs": "El Alto → Viacha → Colquencha",
+      "kmBfs": 59
+    },
+    {
+      "origen": "Río Seco",
+      "dijkstra": "Río Seco → Viacha → Colquencha",
+      "km": 58.4,
+      "min": 69,
+      "exploraD": 8,
+      "exploraA": 5,
+      "bfs": "Río Seco → Viacha → Colquencha",
+      "kmBfs": 58.4
+    },
+    {
+      "origen": "Senkata",
+      "dijkstra": "Senkata → Cruce Vilaque → Colquencha",
+      "km": 45.9,
+      "min": 54,
+      "exploraD": 8,
+      "exploraA": 3,
+      "bfs": "Senkata → Viacha → Colquencha",
+      "kmBfs": 53
+    },
+    {
+      "origen": "Viacha",
+      "dijkstra": "Viacha → Colquencha",
+      "km": 34.5,
+      "min": 46,
+      "exploraD": 6,
+      "exploraA": 2,
+      "bfs": "Viacha → Colquencha",
+      "kmBfs": 34.5
+    },
+    {
+      "origen": "Patacamaya",
+      "dijkstra": "Patacamaya → Desvío Calamarca → Colquencha",
+      "km": 62.4,
+      "min": 70,
+      "exploraD": 4,
+      "exploraA": 3,
+      "bfs": "Patacamaya → Desvío Calamarca → Colquencha",
+      "kmBfs": 62.4
+    },
+    {
+      "origen": "Oruro",
+      "dijkstra": "Oruro → Patacamaya → Desvío Calamarca → Colquencha",
+      "km": 190.8,
+      "min": 193,
+      "exploraD": 5,
+      "exploraA": 4,
+      "bfs": "Oruro → Patacamaya → Desvío Calamarca → Colquencha",
+      "kmBfs": 190.8
+    }
+  ],
+  "quime": [
+    {
+      "origen": "La Paz",
+      "dijkstra": "La Paz → El Alto → Patacamaya → Konani → Quime",
+      "km": 234.5,
+      "min": 244,
+      "exploraD": 7,
+      "exploraA": 5,
+      "bfs": "La Paz → El Alto → Patacamaya → Konani → Quime",
+      "kmBfs": 234.5
+    },
+    {
+      "origen": "El Alto",
+      "dijkstra": "El Alto → Patacamaya → Konani → Quime",
+      "km": 227,
+      "min": 233,
+      "exploraD": 7,
+      "exploraA": 5,
+      "bfs": "El Alto → Patacamaya → Konani → Quime",
+      "kmBfs": 227
+    },
+    {
+      "origen": "Patacamaya",
+      "dijkstra": "Patacamaya → Konani → Quime",
+      "km": 135.7,
+      "min": 141,
+      "exploraD": 7,
+      "exploraA": 3,
+      "bfs": "Patacamaya → Konani → Quime",
+      "kmBfs": 135.7
+    },
+    {
+      "origen": "Konani",
+      "dijkstra": "Konani → Quime",
+      "km": 85.8,
+      "min": 94,
+      "exploraD": 5,
+      "exploraA": 2,
+      "bfs": "Konani → Quime",
+      "kmBfs": 85.8
+    },
+    {
+      "origen": "Caracollo",
+      "dijkstra": "Caracollo → Konani → Quime",
+      "km": 127.2,
+      "min": 135,
+      "exploraD": 5,
+      "exploraA": 3,
+      "bfs": "Caracollo → Konani → Quime",
+      "kmBfs": 127.2
+    },
+    {
+      "origen": "Oruro",
+      "dijkstra": "Oruro → Caracollo → Konani → Quime",
+      "km": 165,
+      "min": 172,
+      "exploraD": 5,
+      "exploraA": 4,
+      "bfs": "Oruro → Caracollo → Konani → Quime",
+      "kmBfs": 165
+    },
+    {
+      "origen": "Inquisivi",
+      "dijkstra": "Inquisivi → Quime",
+      "km": 20.6,
+      "min": 20,
+      "exploraD": 2,
+      "exploraA": 2,
+      "bfs": "Inquisivi → Quime",
+      "kmBfs": 20.6
+    }
+  ],
+  "inquisivi": [
+    {
+      "origen": "La Paz",
+      "dijkstra": "La Paz → El Alto → Patacamaya → Konani → Quime → Inquisivi",
+      "km": 255.1,
+      "min": 264,
+      "exploraD": 7,
+      "exploraA": 6,
+      "bfs": "La Paz → El Alto → Patacamaya → Konani → Quime → Inquisivi",
+      "kmBfs": 255.1
+    },
+    {
+      "origen": "El Alto",
+      "dijkstra": "El Alto → Patacamaya → Konani → Quime → Inquisivi",
+      "km": 247.6,
+      "min": 253,
+      "exploraD": 7,
+      "exploraA": 6,
+      "bfs": "El Alto → Patacamaya → Konani → Quime → Inquisivi",
+      "kmBfs": 247.6
+    },
+    {
+      "origen": "Patacamaya",
+      "dijkstra": "Patacamaya → Konani → Quime → Inquisivi",
+      "km": 156.3,
+      "min": 161,
+      "exploraD": 7,
+      "exploraA": 4,
+      "bfs": "Patacamaya → Konani → Quime → Inquisivi",
+      "kmBfs": 156.3
+    },
+    {
+      "origen": "Konani",
+      "dijkstra": "Konani → Quime → Inquisivi",
+      "km": 106.4,
+      "min": 114,
+      "exploraD": 5,
+      "exploraA": 3,
+      "bfs": "Konani → Quime → Inquisivi",
+      "kmBfs": 106.4
+    },
+    {
+      "origen": "Quime",
+      "dijkstra": "Quime → Inquisivi",
+      "km": 20.6,
+      "min": 20,
+      "exploraD": 2,
+      "exploraA": 2,
+      "bfs": "Quime → Inquisivi",
+      "kmBfs": 20.6
+    },
+    {
+      "origen": "Oruro",
+      "dijkstra": "Oruro → Konani → Quime → Inquisivi",
+      "km": 184.4,
+      "min": 188,
+      "exploraD": 5,
+      "exploraA": 4,
+      "bfs": "Oruro → Konani → Quime → Inquisivi",
+      "kmBfs": 184.4
+    }
+  ],
+  "sica-sica": [
+    {
+      "origen": "La Paz",
+      "dijkstra": "La Paz → Calamarca → Patacamaya → Sica Sica",
+      "km": 125.9,
+      "min": 131,
+      "exploraD": 5,
+      "exploraA": 5,
+      "bfs": "La Paz → Calamarca → Patacamaya → Sica Sica",
+      "kmBfs": 125.9
+    },
+    {
+      "origen": "El Alto",
+      "dijkstra": "El Alto → Calamarca → Patacamaya → Sica Sica",
+      "km": 119.7,
+      "min": 125,
+      "exploraD": 5,
+      "exploraA": 5,
+      "bfs": "El Alto → Calamarca → Patacamaya → Sica Sica",
+      "kmBfs": 119.7
+    },
+    {
+      "origen": "Calamarca",
+      "dijkstra": "Calamarca → Patacamaya → Sica Sica",
+      "km": 70.2,
+      "min": 73,
+      "exploraD": 5,
+      "exploraA": 3,
+      "bfs": "Calamarca → Patacamaya → Sica Sica",
+      "kmBfs": 70.2
+    },
+    {
+      "origen": "Patacamaya",
+      "dijkstra": "Patacamaya → Sica Sica",
+      "km": 25.9,
+      "min": 27,
+      "exploraD": 2,
+      "exploraA": 2,
+      "bfs": "Patacamaya → Sica Sica",
+      "kmBfs": 25.9
+    },
+    {
+      "origen": "Konani",
+      "dijkstra": "Konani → Sica Sica",
+      "km": 28.1,
+      "min": 27,
+      "exploraD": 2,
+      "exploraA": 2,
+      "bfs": "Konani → Sica Sica",
+      "kmBfs": 28.1
+    },
+    {
+      "origen": "Caracollo",
+      "dijkstra": "Caracollo → Konani → Sica Sica",
+      "km": 69.5,
+      "min": 68,
+      "exploraD": 4,
+      "exploraA": 3,
+      "bfs": "Caracollo → Konani → Sica Sica",
+      "kmBfs": 69.5
+    },
+    {
+      "origen": "Oruro",
+      "dijkstra": "Oruro → Caracollo → Konani → Sica Sica",
+      "km": 107.3,
+      "min": 105,
+      "exploraD": 4,
+      "exploraA": 4,
+      "bfs": "Oruro → Caracollo → Konani → Sica Sica",
+      "kmBfs": 107.3
+    }
+  ],
+  "chulumani": [
+    {
+      "origen": "La Paz",
+      "dijkstra": "La Paz → Unduavi → Chulumani",
+      "km": 116.7,
+      "min": 127,
+      "exploraD": 6,
+      "exploraA": 4,
+      "bfs": "La Paz → Unduavi → Chulumani",
+      "kmBfs": 116.7
+    },
+    {
+      "origen": "El Alto",
+      "dijkstra": "El Alto → La Paz → Unduavi → Chulumani",
+      "km": 124.2,
+      "min": 138,
+      "exploraD": 6,
+      "exploraA": 4,
+      "bfs": "El Alto → La Paz → Unduavi → Chulumani",
+      "kmBfs": 124.2
+    },
+    {
+      "origen": "Coroico",
+      "dijkstra": "Coroico → Coripata → Chulumani",
+      "km": 62.6,
+      "min": 86,
+      "exploraD": 4,
+      "exploraA": 3,
+      "bfs": "Coroico → Unduavi → Chulumani",
+      "kmBfs": 134.1
+    },
+    {
+      "origen": "Coripata",
+      "dijkstra": "Coripata → Chulumani",
+      "km": 29.2,
+      "min": 43,
+      "exploraD": 2,
+      "exploraA": 2,
+      "bfs": "Coripata → Chulumani",
+      "kmBfs": 29.2
+    },
+    {
+      "origen": "Irupana",
+      "dijkstra": "Irupana → Chulumani",
+      "km": 30.3,
+      "min": 38,
+      "exploraD": 2,
+      "exploraA": 2,
+      "bfs": "Irupana → Chulumani",
+      "kmBfs": 30.3
+    }
+  ],
+  "caranavi": [
+    {
+      "origen": "La Paz",
+      "dijkstra": "La Paz → Unduavi → Caranavi",
+      "km": 163.9,
+      "min": 164,
+      "exploraD": 6,
+      "exploraA": 5,
+      "bfs": "La Paz → Unduavi → Caranavi",
+      "kmBfs": 163.9
+    },
+    {
+      "origen": "El Alto",
+      "dijkstra": "El Alto → La Paz → Unduavi → Caranavi",
+      "km": 171.4,
+      "min": 175,
+      "exploraD": 6,
+      "exploraA": 5,
+      "bfs": "El Alto → La Paz → Unduavi → Caranavi",
+      "kmBfs": 171.4
+    },
+    {
+      "origen": "Coroico",
+      "dijkstra": "Coroico → Caranavi",
+      "km": 77.9,
+      "min": 76,
+      "exploraD": 4,
+      "exploraA": 2,
+      "bfs": "Coroico → Caranavi",
+      "kmBfs": 77.9
+    },
+    {
+      "origen": "Coripata",
+      "dijkstra": "Coripata → Caranavi",
+      "km": 111.2,
+      "min": 118,
+      "exploraD": 4,
+      "exploraA": 3,
+      "bfs": "Coripata → Caranavi",
+      "kmBfs": 111.2
+    },
+    {
+      "origen": "Sapecho",
+      "dijkstra": "Sapecho → Caranavi",
+      "km": 69.7,
+      "min": 67,
+      "exploraD": 2,
+      "exploraA": 2,
+      "bfs": "Sapecho → Caranavi",
+      "kmBfs": 69.7
+    }
+  ],
+  "coripata": [
+    {
+      "origen": "La Paz",
+      "dijkstra": "La Paz → Unduavi → Coripata",
+      "km": 113.5,
+      "min": 126,
+      "exploraD": 5,
+      "exploraA": 4,
+      "bfs": "La Paz → Unduavi → Coripata",
+      "kmBfs": 113.5
+    },
+    {
+      "origen": "El Alto",
+      "dijkstra": "El Alto → La Paz → Unduavi → Coripata",
+      "km": 121,
+      "min": 137,
+      "exploraD": 5,
+      "exploraA": 4,
+      "bfs": "El Alto → La Paz → Unduavi → Coripata",
+      "kmBfs": 121
+    },
+    {
+      "origen": "Coroico",
+      "dijkstra": "Coroico → Coripata",
+      "km": 33.4,
+      "min": 43,
+      "exploraD": 2,
+      "exploraA": 2,
+      "bfs": "Coroico → Coripata",
+      "kmBfs": 33.4
+    },
+    {
+      "origen": "Chulumani",
+      "dijkstra": "Chulumani → Coripata",
+      "km": 29.2,
+      "min": 43,
+      "exploraD": 2,
+      "exploraA": 2,
+      "bfs": "Chulumani → Coripata",
+      "kmBfs": 29.2
+    }
+  ],
+  "cajuata": [
+    {
+      "origen": "La Paz",
+      "dijkstra": "La Paz → Unduavi → Irupana → Cajuata",
+      "km": 226.2,
+      "min": 305,
+      "exploraD": 6,
+      "exploraA": 6,
+      "bfs": "La Paz → El Alto → Quime → Cajuata",
+      "kmBfs": 324
+    },
+    {
+      "origen": "El Alto",
+      "dijkstra": "El Alto → La Paz → Unduavi → Irupana → Cajuata",
+      "km": 233.7,
+      "min": 316,
+      "exploraD": 7,
+      "exploraA": 6,
+      "bfs": "El Alto → Quime → Cajuata",
+      "kmBfs": 316.5
+    },
+    {
+      "origen": "Chulumani",
+      "dijkstra": "Chulumani → Irupana → Cajuata",
+      "km": 112.2,
+      "min": 181,
+      "exploraD": 4,
+      "exploraA": 3,
+      "bfs": "Chulumani → Irupana → Cajuata",
+      "kmBfs": 112.2
+    },
+    {
+      "origen": "Irupana",
+      "dijkstra": "Irupana → Cajuata",
+      "km": 81.9,
+      "min": 143,
+      "exploraD": 3,
+      "exploraA": 3,
+      "bfs": "Irupana → Cajuata",
+      "kmBfs": 81.9
+    },
+    {
+      "origen": "Quime",
+      "dijkstra": "Quime → Cajuata",
+      "km": 90.8,
+      "min": 192,
+      "exploraD": 2,
+      "exploraA": 2,
+      "bfs": "Quime → Cajuata",
+      "kmBfs": 90.8
+    }
+  ],
+  "achacachi": [
+    {
+      "origen": "La Paz",
+      "dijkstra": "La Paz → El Alto → Batallas → Huarina → Achacachi",
+      "km": 91.7,
+      "min": 93,
+      "exploraD": 5,
+      "exploraA": 5,
+      "bfs": "La Paz → El Alto → Batallas → Huarina → Achacachi",
+      "kmBfs": 91.7
+    },
+    {
+      "origen": "El Alto",
+      "dijkstra": "El Alto → Batallas → Huarina → Achacachi",
+      "km": 84.2,
+      "min": 82,
+      "exploraD": 5,
+      "exploraA": 4,
+      "bfs": "El Alto → Batallas → Huarina → Achacachi",
+      "kmBfs": 84.2
+    },
+    {
+      "origen": "Batallas",
+      "dijkstra": "Batallas → Huarina → Achacachi",
+      "km": 34.8,
+      "min": 36,
+      "exploraD": 3,
+      "exploraA": 3,
+      "bfs": "Batallas → Huarina → Achacachi",
+      "kmBfs": 34.8
+    },
+    {
+      "origen": "Huarina",
+      "dijkstra": "Huarina → Achacachi",
+      "km": 19.8,
+      "min": 20,
+      "exploraD": 3,
+      "exploraA": 2,
+      "bfs": "Huarina → Achacachi",
+      "kmBfs": 19.8
+    },
+    {
+      "origen": "Ancoraimes",
+      "dijkstra": "Ancoraimes → Achacachi",
+      "km": 35.9,
+      "min": 31,
+      "exploraD": 2,
+      "exploraA": 2,
+      "bfs": "Ancoraimes → Achacachi",
+      "kmBfs": 35.9
+    },
+    {
+      "origen": "Escoma",
+      "dijkstra": "Escoma → Ancoraimes → Achacachi",
+      "km": 75,
+      "min": 72,
+      "exploraD": 3,
+      "exploraA": 3,
+      "bfs": "Escoma → Ancoraimes → Achacachi",
+      "kmBfs": 75
+    }
+  ],
+  "pillapi": [
+    {
+      "origen": "La Paz",
+      "dijkstra": "La Paz → Laja → Tiwanaku → Pillapi",
+      "km": 80,
+      "min": 89,
+      "exploraD": 6,
+      "exploraA": 5,
+      "bfs": "La Paz → Laja → Tiwanaku → Pillapi",
+      "kmBfs": 80
+    },
+    {
+      "origen": "El Alto",
+      "dijkstra": "El Alto → Laja → Tiwanaku → Pillapi",
+      "km": 74.2,
+      "min": 80,
+      "exploraD": 6,
+      "exploraA": 4,
+      "bfs": "El Alto → Laja → Tiwanaku → Pillapi",
+      "kmBfs": 74.2
+    },
+    {
+      "origen": "Laja",
+      "dijkstra": "Laja → Tiwanaku → Pillapi",
+      "km": 48.7,
+      "min": 55,
+      "exploraD": 6,
+      "exploraA": 3,
+      "bfs": "Laja → Tiwanaku → Pillapi",
+      "kmBfs": 48.7
+    },
+    {
+      "origen": "Viacha",
+      "dijkstra": "Viacha → Laja → Tiwanaku → Pillapi",
+      "km": 65.6,
+      "min": 77,
+      "exploraD": 6,
+      "exploraA": 4,
+      "bfs": "Viacha → Laja → Tiwanaku → Pillapi",
+      "kmBfs": 65.6
+    },
+    {
+      "origen": "Tiwanaku",
+      "dijkstra": "Tiwanaku → Pillapi",
+      "km": 11.4,
+      "min": 18,
+      "exploraD": 2,
+      "exploraA": 2,
+      "bfs": "Tiwanaku → Pillapi",
+      "kmBfs": 11.4
+    },
+    {
+      "origen": "Guaqui",
+      "dijkstra": "Guaqui → Pillapi",
+      "km": 16.2,
+      "min": 27,
+      "exploraD": 2,
+      "exploraA": 2,
+      "bfs": "Guaqui → Pillapi",
+      "kmBfs": 16.2
+    }
+  ],
+  "viacha": [
+    {
+      "origen": "La Paz",
+      "dijkstra": "La Paz → El Alto → Viacha",
+      "km": 30.4,
+      "min": 35,
+      "exploraD": 5,
+      "exploraA": 3,
+      "bfs": "La Paz → El Alto → Viacha",
+      "kmBfs": 30.4
+    },
+    {
+      "origen": "El Alto",
+      "dijkstra": "El Alto → Viacha",
+      "km": 22.9,
+      "min": 24,
+      "exploraD": 5,
+      "exploraA": 2,
+      "bfs": "El Alto → Viacha",
+      "kmBfs": 22.9
+    },
+    {
+      "origen": "Río Seco",
+      "dijkstra": "Río Seco → Viacha",
+      "km": 23.9,
+      "min": 23,
+      "exploraD": 6,
+      "exploraA": 2,
+      "bfs": "Río Seco → Viacha",
+      "kmBfs": 23.9
+    },
+    {
+      "origen": "Senkata",
+      "dijkstra": "Senkata → Viacha",
+      "km": 18.4,
+      "min": 18,
+      "exploraD": 5,
+      "exploraA": 2,
+      "bfs": "Senkata → Viacha",
+      "kmBfs": 18.4
+    },
+    {
+      "origen": "Laja",
+      "dijkstra": "Laja → Viacha",
+      "km": 16.9,
+      "min": 22,
+      "exploraD": 2,
+      "exploraA": 2,
+      "bfs": "Laja → Viacha",
+      "kmBfs": 16.9
+    },
+    {
+      "origen": "Tiwanaku",
+      "dijkstra": "Tiwanaku → Laja → Viacha",
+      "km": 54.2,
+      "min": 59,
+      "exploraD": 3,
+      "exploraA": 3,
+      "bfs": "Tiwanaku → Laja → Viacha",
+      "kmBfs": 54.2
+    },
+    {
+      "origen": "Colquencha",
+      "dijkstra": "Colquencha → Viacha",
+      "km": 34.8,
+      "min": 47,
+      "exploraD": 2,
+      "exploraA": 2,
+      "bfs": "Colquencha → Viacha",
+      "kmBfs": 34.8
+    }
+  ],
+  "puerto-acosta": [
+    {
+      "origen": "La Paz",
+      "dijkstra": "La Paz → El Alto → Batallas → Huarina → Achacachi → Ancoraimes → Carabuco → Escoma → Puerto Acosta",
+      "km": 191.1,
+      "min": 193,
+      "exploraD": 9,
+      "exploraA": 9,
+      "bfs": "La Paz → El Alto → Batallas → Huarina → Achacachi → Ancoraimes → Carabuco → Escoma → Puerto Acosta",
+      "kmBfs": 191.1
+    },
+    {
+      "origen": "El Alto",
+      "dijkstra": "El Alto → Batallas → Huarina → Achacachi → Ancoraimes → Carabuco → Escoma → Puerto Acosta",
+      "km": 183.6,
+      "min": 182,
+      "exploraD": 9,
+      "exploraA": 9,
+      "bfs": "El Alto → Batallas → Huarina → Achacachi → Ancoraimes → Carabuco → Escoma → Puerto Acosta",
+      "kmBfs": 183.6
+    },
+    {
+      "origen": "Batallas",
+      "dijkstra": "Batallas → Huarina → Achacachi → Ancoraimes → Carabuco → Escoma → Puerto Acosta",
+      "km": 134.2,
+      "min": 136,
+      "exploraD": 9,
+      "exploraA": 7,
+      "bfs": "Batallas → Huarina → Achacachi → Ancoraimes → Carabuco → Escoma → Puerto Acosta",
+      "kmBfs": 134.2
+    },
+    {
+      "origen": "Huarina",
+      "dijkstra": "Huarina → Achacachi → Ancoraimes → Carabuco → Escoma → Puerto Acosta",
+      "km": 119.2,
+      "min": 120,
+      "exploraD": 9,
+      "exploraA": 6,
+      "bfs": "Huarina → Achacachi → Ancoraimes → Carabuco → Escoma → Puerto Acosta",
+      "kmBfs": 119.2
+    },
+    {
+      "origen": "Achacachi",
+      "dijkstra": "Achacachi → Ancoraimes → Carabuco → Escoma → Puerto Acosta",
+      "km": 99.4,
+      "min": 100,
+      "exploraD": 9,
+      "exploraA": 5,
+      "bfs": "Achacachi → Ancoraimes → Carabuco → Escoma → Puerto Acosta",
+      "kmBfs": 99.4
+    },
+    {
+      "origen": "Ancoraimes",
+      "dijkstra": "Ancoraimes → Carabuco → Escoma → Puerto Acosta",
+      "km": 63.5,
+      "min": 69,
+      "exploraD": 6,
+      "exploraA": 4,
+      "bfs": "Ancoraimes → Carabuco → Escoma → Puerto Acosta",
+      "kmBfs": 63.5
+    },
+    {
+      "origen": "Carabuco",
+      "dijkstra": "Carabuco → Escoma → Puerto Acosta",
+      "km": 37.8,
+      "min": 45,
+      "exploraD": 4,
+      "exploraA": 3,
+      "bfs": "Carabuco → Escoma → Puerto Acosta",
+      "kmBfs": 37.8
+    },
+    {
+      "origen": "Escoma",
+      "dijkstra": "Escoma → Puerto Acosta",
+      "km": 24.5,
+      "min": 28,
+      "exploraD": 3,
+      "exploraA": 2,
+      "bfs": "Escoma → Puerto Acosta",
+      "kmBfs": 24.5
+    }
+  ]
+}
