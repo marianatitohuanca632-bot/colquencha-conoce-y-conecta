@@ -1,0 +1,509 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Turismo - Colquencha</title>
+
+    <link rel="stylesheet" href="secciones.css">
+
+    <style>
+        /* GALERÍA DE LUGARES TURÍSTICOS */
+        .tarjetas-foto {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .foto-card {
+            overflow: hidden;
+            border-radius: 12px;
+            background: white;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+        }
+
+        .foto-card > img {
+            display: block;
+            width: 100%;
+            height: 260px;
+            object-fit: cover;
+        }
+
+        .foto-info {
+            padding: 18px;
+        }
+
+        .boton-galeria {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 11px 18px;
+            border: none;
+            border-radius: 8px;
+            background: #346b45;
+            color: white;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        .boton-galeria:hover {
+            background: #244c30;
+        }
+
+        /* VISOR DE IMÁGENES */
+        .visor-foto[hidden] {
+            display: none !important;
+        }
+
+        .visor-foto {
+            position: fixed;
+            inset: 0;
+            z-index: 99999;
+            background: rgba(0, 0, 0, 0.94);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 60px;
+        }
+
+        #fotoGrande {
+            max-width: 90%;
+            max-height: 80vh;
+            object-fit: contain;
+            border-radius: 6px;
+        }
+
+        .cerrar-visor,
+        .imagen-anterior,
+        .imagen-siguiente {
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            background: rgba(255, 255, 255, 0.15);
+            border: none;
+            border-radius: 50%;
+            width: 48px;
+            height: 48px;
+            font-size: 30px;
+            cursor: pointer;
+        }
+
+        .cerrar-visor {
+            top: 20px;
+            right: 25px;
+        }
+
+        .imagen-anterior {
+            left: 20px;
+        }
+
+        .imagen-siguiente {
+            right: 20px;
+        }
+
+        .contador-imagen {
+            position: absolute;
+            bottom: 12px;
+            color: white;
+            font-size: 15px;
+        }
+
+        /* VIDEOS */
+        .videos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .video-card video {
+            display: block;
+            width: 100%;
+            border-radius: 12px;
+        }
+
+        .video-info {
+            padding: 15px;
+        }
+
+        /* CELULARES */
+        @media (max-width: 600px) {
+            .tarjetas-foto,
+            .videos-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .foto-card > img {
+                height: 220px;
+            }
+
+            .visor-foto {
+                padding: 35px;
+            }
+
+            #fotoGrande {
+                max-width: 100%;
+                max-height: 75vh;
+            }
+
+            .imagen-anterior {
+                left: 5px;
+            }
+
+            .imagen-siguiente {
+                right: 5px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ENCABEZADO -->
+    <header class="sub-topbar">
+        <a class="sub-logo" href="index.html">
+            ⛰️ COLQUENCHA: CONOCE Y CONECTA
+        </a>
+
+        <a class="volver" href="index.html">
+            ← Volver al inicio
+        </a>
+    </header>
+
+    <!-- PORTADA -->
+    <section class="sub-hero turismo-hero">
+        <div class="sub-hero-contenido">
+
+            <span class="etiqueta">DESCUBRE Y EXPLORA</span>
+
+            <h1>Turismo en Colquencha</h1>
+
+            <p>
+                Descubre nuestros paisajes, lugares de interés
+                y la belleza de nuestro municipio.
+            </p>
+
+            <a href="#fotografias" class="boton-sub principal">
+                Ver fotografías ↓
+            </a>
+
+            <a href="#videos" class="boton-sub transparente">
+                Ver videos ▶
+            </a>
+
+        </div>
+    </section>
+
+    <main>
+
+        <!-- GALERÍAS DE LUGARES TURÍSTICOS -->
+        <section class="bloque-sub" id="fotografias">
+
+            <div class="encabezado-sub">
+                <span class="etiqueta">NUESTROS LUGARES</span>
+
+                <h2>DESCUBRE COLQUENCHA</h2>
+
+                <p>
+                    Selecciona un lugar para ver todas sus fotografías.
+                </p>
+            </div>
+
+            <div class="tarjetas-foto">
+
+                <!-- CALVARIO PATA -->
+                <article class="foto-card">
+
+                    <img src="img/colquencha/tur-calavario.jpeg"
+                         alt="Calvario Pata">
+
+                    <div class="foto-info">
+                        <h3>Calvario Pata</h3>
+
+                        <p>
+                            Conoce este lugar representativo
+                            del municipio de Colquencha.
+                        </p>
+
+                        <button class="boton-galeria"
+                                type="button"
+                                onclick="abrirGaleria('calvario')">
+                            Ver fotografías
+                        </button>
+                    </div>
+
+                </article>
+
+                <!-- CIUDAD DE PIEDRA -->
+                <article class="foto-card">
+
+                    <img src="img/colquencha/ciudaddepiedra1.jpeg"
+                         alt="Ciudad de Piedra">
+
+                    <div class="foto-info">
+                        <h3>Ciudad de Piedra</h3>
+
+                        <p>
+                            Descubre los paisajes y las formaciones
+                            naturales de nuestra región.
+                        </p>
+
+                        <button class="boton-galeria"
+                                type="button"
+                                onclick="abrirGaleria('piedra')">
+                            Ver fotografías
+                        </button>
+                    </div>
+
+                </article>
+
+                <!-- CANTERA -->
+                <article class="foto-card">
+
+                    <img src="img/colquencha/cantera1.jpeg"
+                         alt="Cantera de Colquencha">
+
+                    <div class="foto-info">
+                        <h3>Cantera</h3>
+
+                        <p>
+                            Conoce el entorno y las actividades
+                            productivas del municipio.
+                        </p>
+
+                        <button class="boton-galeria"
+                                type="button"
+                                onclick="abrirGaleria('cantera')">
+                            Ver fotografías
+                        </button>
+                    </div>
+
+                </article>
+
+            </div>
+        </section>
+
+        <!-- MENSAJE -->
+        <section class="franja-sub">
+            <div>
+                <span class="franja-icono">🌄</span>
+
+                <h2>¡Colquencha te espera!</h2>
+
+                <p>
+                    Un municipio con paisajes, tradiciones
+                    y una comunidad llena de historia.
+                </p>
+            </div>
+        </section>
+
+        <!-- VIDEOS -->
+        <section class="bloque-sub" id="videos">
+
+            <div class="encabezado-sub">
+                <span class="etiqueta">CONOCE A TRAVÉS DE VIDEOS</span>
+
+                <h2>Videos de Colquencha</h2>
+
+                <p>
+                    Observa videos de los paisajes y las actividades
+                    de nuestro municipio.
+                </p>
+            </div>
+
+            <div class="videos-grid">
+
+                <article class="video-card">
+                    <video controls>
+                        <source src="videos/colquencha/col1.mp4"
+                                type="video/mp4">
+
+                        Tu navegador no puede reproducir este video.
+                    </video>
+
+                    <div class="video-info">
+                        <h3>Conoce Colquencha</h3>
+
+                        <p>
+                            Video de presentación del municipio.
+                        </p>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- NAVEGACIÓN -->
+        <section class="llamada-sub">
+
+            <h2>Conoce más de Colquencha</h2>
+
+            <p>
+                Explora también nuestra cultura y tradiciones.
+            </p>
+
+            <a href="cultura.html" class="boton-sub principal">
+                Conocer nuestra cultura →
+            </a>
+
+            <a href="index.html" class="boton-sub claro">
+                Volver al inicio
+            </a>
+
+        </section>
+
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="sub-footer">
+        <strong>COLQUERUTA © 2026</strong>
+
+        <span>
+            Proyecto para la comunidad y el desarrollo de Colquencha
+        </span>
+    </footer>
+
+    <!-- VISOR DE FOTOGRAFÍAS -->
+    <div class="visor-foto" id="visorFoto" hidden>
+
+        <button class="cerrar-visor"
+                id="cerrarVisor"
+                type="button"
+                aria-label="Cerrar imagen">
+            &times;
+        </button>
+
+        <button class="imagen-anterior"
+                id="imagenAnterior"
+                type="button"
+                aria-label="Imagen anterior">
+            &#10094;
+        </button>
+
+        <img src=""
+             alt="Fotografía ampliada"
+             id="fotoGrande">
+
+        <button class="imagen-siguiente"
+                id="imagenSiguiente"
+                type="button"
+                aria-label="Imagen siguiente">
+            &#10095;
+        </button>
+
+        <p class="contador-imagen" id="contadorImagen"></p>
+
+    </div>
+
+    <!-- JAVASCRIPT DE LAS GALERÍAS -->
+    <script>
+        /*
+          Añade aquí las rutas de todas las imágenes
+          que quieras mostrar en cada lugar.
+        */
+        const galerias = {
+            calvario: [
+                "img/colquencha/tur-calavario.jpeg",
+                "img/colquencha/calvario2.jpeg",
+                "img/colquencha/calvario3.jpeg",
+                "img/colquencha/calvario4.jpeg"
+
+            ],
+
+            piedra: [
+                "img/colquencha/ciudaddepiedra1.jpeg",
+                 "img/colquencha/ciudaddepiedra2.jpeg",
+                  "img/colquencha/ciudaddepiedra3.jpeg"
+
+            ],
+
+            cantera: [
+                "img/colquencha/cantera1.jpeg",
+                "img/colquencha/cantera2.jpeg"
+            ]
+        };
+
+        let imagenesActuales = [];
+        let indiceActual = 0;
+
+        const visor = document.getElementById("visorFoto");
+        const fotoGrande = document.getElementById("fotoGrande");
+        const contador = document.getElementById("contadorImagen");
+
+        function abrirGaleria(lugar) {
+            imagenesActuales = galerias[lugar];
+
+            if (!imagenesActuales || imagenesActuales.length === 0) {
+                return;
+            }
+
+            indiceActual = 0;
+            mostrarImagen();
+            visor.hidden = false;
+        }
+
+        function mostrarImagen() {
+            fotoGrande.src = imagenesActuales[indiceActual];
+
+            fotoGrande.alt = "Fotografía " +
+                (indiceActual + 1) + " del lugar turístico";
+
+            contador.textContent =
+                (indiceActual + 1) + " / " + imagenesActuales.length;
+        }
+
+        function cambiarImagen(direccion) {
+            if (imagenesActuales.length === 0) return;
+
+            indiceActual =
+                (indiceActual + direccion + imagenesActuales.length)
+                % imagenesActuales.length;
+
+            mostrarImagen();
+        }
+
+        document.getElementById("cerrarVisor")
+            .addEventListener("click", function() {
+                visor.hidden = true;
+                fotoGrande.src = "";
+            });
+
+        document.getElementById("imagenAnterior")
+            .addEventListener("click", function() {
+                cambiarImagen(-1);
+            });
+
+        document.getElementById("imagenSiguiente")
+            .addEventListener("click", function() {
+                cambiarImagen(1);
+            });
+
+        visor.addEventListener("click", function(evento) {
+            if (evento.target === visor) {
+                visor.hidden = true;
+                fotoGrande.src = "";
+            }
+        });
+
+        document.addEventListener("keydown", function(evento) {
+            if (visor.hidden) return;
+
+            if (evento.key === "Escape") {
+                visor.hidden = true;
+                fotoGrande.src = "";
+            }
+
+            if (evento.key === "ArrowRight") {
+                cambiarImagen(1);
+            }
+
+            if (evento.key === "ArrowLeft") {
+                cambiarImagen(-1);
+            }
+        });
+    </script>
+
+</body>
+</html>

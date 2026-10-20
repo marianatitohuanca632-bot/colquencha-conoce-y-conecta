@@ -13,7 +13,7 @@ DATOS_SEDE.colquencha = {
     sede: "Sede Universitaria Local Colquencha, del CRU Patacamaya",
 
     // Fondo del inicio de la página (la foto del grupo). Si falta, se ve un fondo de color.
-    fondo: "img/colquencha/paisaje_colquencha.png",
+    fondo: "img/colquencha/fondo-colquencha.jpeg",
 
 
     /* ----------------------------------------------------------

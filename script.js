@@ -30,6 +30,12 @@ if (!ES_COLQUENCHA) {
     document.querySelector("#nosotros").remove();
     document.querySelector(".visitar").remove();
     document.querySelector("#umsa").classList.add("sola");
+    // La foto de la tarjeta UMSA y la página UMSACO.html son de Colquencha: aquí va la primera
+    // foto de la galería de la sede (o el ícono, si no tiene) y el botón solo abre la información
+    const foto = DATOS.galeria[0];
+    document.querySelector("#umsa .categoria-imagen").innerHTML = foto
+        ? `<img src="img/${SEDE.id}/${foto.archivo}" alt="${foto.leyenda}">` : "🏛️";
+    document.querySelector("#umsa button").removeAttribute("onclick");
 }
 
 

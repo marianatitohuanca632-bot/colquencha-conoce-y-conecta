@@ -1615,8 +1615,16 @@ footer i {
 }
 
 .categoria-card.sola .categoria-imagen {
-    height: 100%;
+    position: relative;
+    height: auto;
+    min-height: 200px;
     border-radius: 0;
+}
+
+/* La foto de la sede llena su lado sin estirar la tarjeta: el alto lo pone el texto */
+.categoria-card.sola .categoria-imagen img {
+    position: absolute;
+    inset: 0;
 }
 
 .categoria-card.sola .icono-categoria {

@@ -1,0 +1,193 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Producción de Colquencha | Conoce y Conecta</title>
+
+    <link rel="stylesheet" href="secciones.css">
+</head>
+
+<body>
+
+    <!-- ENCABEZADO -->
+    <header>
+        <h1>Colquencha</h1>
+        <nav>
+            <a href="index.html">← Volver al inicio</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- PORTADA -->
+        <section class="hero">
+            <h2>Producción de Colquencha</h2>
+            <p>
+                Conoce las actividades productivas de nuestra comunidad,
+                especialmente la cosecha de papa y la crianza de ganado ovino.
+            </p>
+        </section>
+
+        <!-- INTRODUCCIÓN -->
+        <section class="info">
+            <h2>La producción en nuestra comunidad</h2>
+
+            <p>
+                La producción es una actividad importante para las familias
+                de Colquencha. La cosecha de papa y la crianza de ovejas
+                forman parte del trabajo rural y contribuyen al sustento
+                de muchas familias.
+            </p>
+        </section>
+
+        <!-- COSECHA DE PAPA -->
+        <section>
+            <h2>Cosecha de papa</h2>
+
+            <p>
+                La papa es un cultivo tradicional del altiplano. Su cosecha
+                requiere el trabajo de los productores y representa una
+                actividad importante para la alimentación familiar.
+            </p>
+
+            <div class="galeria">
+
+                <article class="tarjeta">
+                    <img src="img/colquencha/cosecha-papa1.webp"
+                         alt="Cosecha de papa en Colquencha"
+                         onclick="ampliarImagen(this)">
+
+                    <h3>Trabajo en el campo</h3>
+                    <p>
+                        Las familias participan en las labores de
+                        recolección de la papa.
+                    </p>
+                </article>
+
+                <article class="tarjeta">
+                    <img src="img/colquencha/cosecha-papa2.webp"
+                         alt="Recolección de papas"
+                         onclick="ampliarImagen(this)">
+
+                    <h3>Recolección de papa</h3>
+                    <p>
+                        La cosecha permite recoger los tubérculos
+                        cultivados durante la temporada agrícola.
+                    </p>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- GANADO OVINO -->
+        <section>
+            <h2>Ganado ovino</h2>
+
+            <p>
+                La crianza de ganado ovino consiste en el cuidado de
+                ovejas y forma parte de las actividades ganaderas de
+                las comunidades rurales.
+            </p>
+
+            <div class="galeria">
+
+                <article class="tarjeta">
+                    <img src="img/colquencha/ganado-ovino1.webp"
+                         alt="Rebaño de ovejas"
+                         onclick="ampliarImagen(this)">
+
+                    <h3>Rebaño de ovejas</h3>
+                    <p>
+                        El ganado ovino forma parte de las actividades
+                        productivas de las familias.
+                    </p>
+                </article>
+
+                <article class="tarjeta">
+                    <img src="img/colquencha/ganado-ovino2.webp"
+                         alt="Ovejas pastando"
+                         onclick="ampliarImagen(this)">
+
+                    <h3>Rebaño de Vacas</h3>
+                    <p>
+                        El ganado ovino forma parte de las actividades
+                        productivas de las familias.
+                    </p>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- IMPORTANCIA -->
+        <section class="info">
+            <h2>Importancia de estas actividades</h2>
+
+            <p>
+                La cosecha de papa y la crianza de ganado ovino
+                representan el esfuerzo de las familias productoras.
+                Estas actividades contribuyen a la alimentación,
+                al sustento familiar y a la economía local.
+            </p>
+        </section>
+
+        <!-- NAVEGACIÓN -->
+        <section>
+            <a href="index.html" class="btn">
+                ← Volver al inicio
+            </a>
+
+            <a href="educacion.html" class="btn">
+                Conocer la educación →
+            </a>
+        </section>
+
+    </main>
+
+    <!-- VISOR DE IMÁGENES AMPLIADAS -->
+    <div id="visorImagen"
+         class="visor-imagen"
+         onclick="cerrarImagen()">
+
+        <button class="cerrar-visor"
+                onclick="cerrarImagen()"
+                aria-label="Cerrar imagen">×</button>
+
+        <img id="imagenGrande"
+             src=""
+             alt="Fotografía ampliada">
+    </div>
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+        <p><strong>Colquencha: Conoce y Conecta</strong></p>
+        <p>Valoramos el trabajo de nuestras familias productoras.</p>
+        <p>© 2026 - Proyecto web de Colquencha</p>
+    </footer>
+
+    <!-- FUNCIONES PARA AMPLIAR LAS IMÁGENES -->
+    <script>
+        function ampliarImagen(imagen) {
+            document.getElementById("imagenGrande").src = imagen.src;
+            document.getElementById("imagenGrande").alt = imagen.alt;
+
+            document.getElementById("visorImagen")
+                .classList.add("abierto");
+        }
+
+        function cerrarImagen() {
+            document.getElementById("visorImagen")
+                .classList.remove("abierto");
+        }
+
+        document.addEventListener("keydown", function(evento) {
+            if (evento.key === "Escape") {
+                cerrarImagen();
+            }
+        });
+    </script>
+
+</body>
+</html>

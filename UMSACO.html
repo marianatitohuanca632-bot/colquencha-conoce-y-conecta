@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>UMSA COLQUENCHA</title>
+
+    <link rel="stylesheet" href="secciones.css">
+
+    <style>
+        /* BOTÓN PARA VER FOTOGRAFÍAS */
+        .btn-fotos {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 18px;
+            background-color: #286b45;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 15px;
+        }
+
+        .btn-fotos:hover {
+            background-color: #194d30;
+        }
+
+        /* VISOR DE FOTOGRAFÍAS */
+        .visor-imagen {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            inset: 0;
+            background-color: rgba(0, 0, 0, 0.9);
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 20px;
+        }
+
+        .visor-imagen.abierto {
+            display: flex;
+        }
+
+        .visor-imagen img {
+            max-width: 85%;
+            max-height: 75vh;
+            object-fit: contain;
+        }
+
+        .cerrar-visor {
+            position: absolute;
+            top: 15px;
+            right: 25px;
+            color: white;
+            font-size: 40px;
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
+
+        .flecha {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: white;
+            background: none;
+            border: none;
+            font-size: 45px;
+            cursor: pointer;
+            padding: 10px;
+        }
+
+        .anterior {
+            left: 10px;
+        }
+
+        .siguiente {
+            right: 10px;
+        }
+
+        #contador {
+            color: white;
+            margin-top: 15px;
+            font-size: 17px;
+        }
+
+        @media (max-width: 600px) {
+            .visor-imagen img {
+                max-width: 95%;
+                max-height: 65vh;
+            }
+
+            .flecha {
+                font-size: 35px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ENCABEZADO -->
+    <header class="encabezado">
+        <h1>UMSA COLQUENCHA</h1>
+        <p>Educación superior para nuestra comunidad</p>
+
+        <a href="index.html" class="btn">Volver al inicio</a>
+    </header>
+
+    <!-- PRESENTACIÓN -->
+    <section class="hero">
+        <h2>SEDE UMSA-COLQUENCHA</h2>
+        <p>
+            La Universidad Mayor de San Andrés (UMSA) desarrolla actividades
+            académicas y de formación profesional en el municipio de Colquencha.<br>
+            "PAD TECNICO SUPERIOR EN INFORMÁTICA"
+        </p>
+    </section>
+
+    <!-- INFORMACIÓN -->
+    <section class="info">
+        <h2>UMSA Colquencha</h2>
+
+        <p>
+            La educación superior permite adquirir conocimientos, desarrollar
+            habilidades y prepararse para el futuro profesional. Para la
+            población de Colquencha, conocer las oportunidades educativas
+            es importante para continuar sus estudios y contribuir al
+            desarrollo de su municipio.
+        </p>
+    </section>
+
+    <!-- GALERÍA DE IMÁGENES -->
+    <section class="info">
+        <h2>Galería de imágenes</h2>
+
+        <p>
+            Conoce mediante fotografías los espacios y las actividades
+            relacionadas con la sede-Colquencha.
+        </p>
+
+        <div class="galeria">
+
+            <!-- SEDE COLQUENCHA -->
+            <div class="tarjeta">
+                <img src="img/colquencha/umsa1.jpeg"
+                     alt="Instalaciones de UMSA Colquencha">
+
+                <h3>Sede Colquencha</h3>
+
+                <p>
+                    Espacios relacionados con la formación académica
+                    de la comunidad.
+                </p>
+
+                <button class="btn-fotos"
+                        onclick="abrirGaleria('sede')">
+                    Ver fotografías
+                </button>
+            </div>
+
+            <!-- ESTUDIANTES -->
+            <div class="tarjeta">
+                <img src="img/colquencha/estudiantes1.jpeg"
+                     alt="Estudiantes de Colquencha">
+
+                <h3>Estudiantes</h3>
+
+                <p>
+                    Jóvenes que buscan continuar sus estudios
+                    y alcanzar sus metas profesionales.
+                </p>
+
+                <button class="btn-fotos"
+                        onclick="abrirGaleria('estudiantes')">
+                    Ver fotografías
+                </button>
+            </div>
+
+            <!-- ACTIVIDADES EDUCATIVAS -->
+            <div class="tarjeta">
+                <img src="img/colquencha/actividades11.jpeg"
+                     alt="Actividades educativas">
+
+                <h3>Actividades educativas</h3>
+
+                <p>
+                    Actividades que contribuyen al aprendizaje
+                    y al desarrollo de conocimientos.
+                </p>
+
+                <button class="btn-fotos"
+                        onclick="abrirGaleria('actividades')">
+                    Ver fotografías
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- VIDEO -->
+    <section class="info">
+        <h2>Video de UMSA Colquencha</h2>
+
+        <p>
+            En este espacio puedes presentar un video sobre las instalaciones,
+            las actividades académicas o la experiencia educativa en Colquencha.
+        </p>
+
+        <div class="videos">
+            <div class="video-card">
+
+                <video controls width="100%">
+                    <source src="videos/umsa-colquencha.mp4"
+                            type="video/mp4">
+
+                    Tu navegador no puede reproducir este video.
+                </video>
+
+                <p>
+                    Conoce más sobre la educación y las oportunidades
+                    de formación en Colquencha.
+                </p>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ENLACE A LA UMSA DE LA PAZ -->
+    <section class="info">
+        <h2>UMSA La Paz</h2>
+
+        <p>
+            Visita la página oficial de la Universidad Mayor de San Andrés
+            para conocer su oferta académica, convocatorias, becas,
+            noticias y otros servicios universitarios.
+        </p>
+
+        <a href="https://www.facebook.com/share/1FLcrKTU9q/"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="btn">
+            Visitar página oficial de facebook IDRU
+        </a>
+        <a href="https://www.umsa.bo/"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="btn">
+            Visitar página oficial de la UMSA
+        </a>
+    </section>
+
+    <!-- VISOR DE FOTOGRAFÍAS -->
+    <div id="visorImagen"
+         class="visor-imagen"
+         onclick="cerrarGaleriaFondo(event)">
+
+        <button class="cerrar-visor"
+                onclick="cerrarGaleria()"
+                aria-label="Cerrar galería">
+            &times;
+        </button>
+
+        <button class="flecha anterior"
+                onclick="cambiarFoto(-1)"
+                aria-label="Fotografía anterior">
+            &#10094;
+        </button>
+
+        <img id="imagenGrande"
+             src=""
+             alt="Fotografía ampliada">
+
+        <button class="flecha siguiente"
+                onclick="cambiarFoto(1)"
+                aria-label="Fotografía siguiente">
+            &#10095;
+        </button>
+
+        <p id="contador"></p>
+    </div>
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+        <p>
+            Colquencha: Conoce y Conecta |
+            Universidad Mayor de San Andrés
+        </p>
+    </footer>
+
+    <!-- FUNCIONES DE LAS GALERÍAS -->
+    <script>
+        // FOTOGRAFÍAS DE CADA CATEGORÍA
+        const galerias = {
+            sede: [
+                "img/colquencha/umsa1.jpeg",
+                "img/colquencha/umsa2.jpeg",
+                 "img/colquencha/umsa3.jpeg",
+                  "img/colquencha/umsa4.jpeg",
+                   "img/colquencha/umsa5.jpeg",
+
+            ],
+
+            estudiantes: [
+                "img/colquencha/estudiantes1.jpeg",
+                "img/colquencha/estudiantes4.jpeg",
+                "img/colquencha/estudiantes5.jpeg"
+            ],
+
+            actividades: [
+                "img/umsa-colquencha/actividades.webp",
+                "img/umsa-colquencha/actividades2.webp"
+            ]
+        };
+
+        let fotosActuales = [];
+        let indiceActual = 0;
+
+        // ABRIR LA GALERÍA SELECCIONADA
+        function abrirGaleria(categoria) {
+            fotosActuales = galerias[categoria];
+            indiceActual = 0;
+
+            mostrarFoto();
+
+            document.getElementById("visorImagen")
+                .classList.add("abierto");
+        }
+
+        // MOSTRAR LA FOTOGRAFÍA ACTUAL
+        function mostrarFoto() {
+            document.getElementById("imagenGrande").src =
+                fotosActuales[indiceActual];
+
+            document.getElementById("contador").textContent =
+                (indiceActual + 1) + " de " + fotosActuales.length;
+        }
+
+        // AVANZAR O RETROCEDER
+        function cambiarFoto(direccion) {
+            indiceActual += direccion;
+
+            if (indiceActual >= fotosActuales.length) {
+                indiceActual = 0;
+            }
+
+            if (indiceActual < 0) {
+                indiceActual = fotosActuales.length - 1;
+            }
+
+            mostrarFoto();
+        }
+
+        // CERRAR EL VISOR
+        function cerrarGaleria() {
+            document.getElementById("visorImagen")
+                .classList.remove("abierto");
+        }
+
+        // CERRAR AL HACER CLIC EN EL FONDO OSCURO
+        function cerrarGaleriaFondo(evento) {
+            if (evento.target.id === "visorImagen") {
+                cerrarGaleria();
+            }
+        }
+
+        // USAR LAS FLECHAS DEL TECLADO Y ESCAPE
+        document.addEventListener("keydown", function(evento) {
+            const visor = document.getElementById("visorImagen");
+
+            if (!visor.classList.contains("abierto")) {
+                return;
+            }
+
+            if (evento.key === "Escape") {
+                cerrarGaleria();
+            } else if (evento.key === "ArrowRight") {
+                cambiarFoto(1);
+            } else if (evento.key === "ArrowLeft") {
+                cambiarFoto(-1);
+            }
+        });
+    </script>
+
+</body>
+</html>

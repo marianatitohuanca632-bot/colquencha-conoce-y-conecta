@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Educación de Colquencha | Conoce y Conecta</title>
+
+    <link rel="stylesheet" href="secciones.css">
+
+    <style>
+        /* BOTÓN PARA VER FOTOGRAFÍAS */
+        .btn-fotos {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 18px;
+            background-color: #286b45;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 15px;
+        }
+
+        .btn-fotos:hover {
+            background-color: #194d30;
+        }
+
+        /* VENTANA DE FOTOGRAFÍAS */
+        .visor {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            inset: 0;
+            background-color: rgba(0, 0, 0, 0.9);
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 20px;
+        }
+
+        .visor img {
+            max-width: 85%;
+            max-height: 75vh;
+            object-fit: contain;
+        }
+
+        .cerrar {
+            position: absolute;
+            top: 15px;
+            right: 25px;
+            color: white;
+            font-size: 40px;
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
+
+        .flecha {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: white;
+            background: none;
+            border: none;
+            font-size: 45px;
+            cursor: pointer;
+            padding: 10px;
+        }
+
+        .anterior {
+            left: 10px;
+        }
+
+        .siguiente {
+            right: 10px;
+        }
+
+        #contador {
+            color: white;
+            margin-top: 15px;
+            font-size: 17px;
+        }
+
+        @media (max-width: 600px) {
+            .visor img {
+                max-width: 95%;
+                max-height: 65vh;
+            }
+
+            .flecha {
+                font-size: 35px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ENCABEZADO -->
+    <header>
+        <h1>Colquencha</h1>
+
+        <nav>
+            <a href="index.html">← Volver al inicio</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- PORTADA -->
+        <section class="hero">
+            <h2>Educación en Colquencha</h2>
+
+            <p>
+                Conoce la importancia de la educación, los centros
+                educativos y las oportunidades de aprendizaje para
+                los niños y jóvenes del municipio de Colquencha.
+            </p>
+        </section>
+
+        <!-- INTRODUCCIÓN -->
+        <section class="info">
+            <h2>La educación en nuestra comunidad</h2>
+
+            <p>
+                La educación es fundamental para el desarrollo de
+                Colquencha, porque permite adquirir conocimientos,
+                desarrollar habilidades y construir mejores
+                oportunidades para el futuro.
+            </p>
+
+            <p>
+                Las unidades educativas cumplen un papel importante
+                en la formación de niños y jóvenes, promoviendo
+                valores, responsabilidad, respeto y participación
+                en la comunidad.
+            </p>
+        </section>
+
+        <!-- NIVELES EDUCATIVOS -->
+        <section>
+            <h2>Niveles educativos</h2>
+
+            <div class="galeria">
+
+                <!-- UNIDAD EDUCATIVA CENTRAL COLQUENCHA -->
+                <article class="tarjeta">
+                    <img src="imagenes/educacion2.webp"
+                         alt="Unidad Educativa Central Colquencha">
+
+                    <h3>
+                        Educación primaria <br>
+                        "UNIDAD EDUCATIVA CENTRAL COLQUENCHA"
+                    </h3>
+
+                    <p>
+                        Permite fortalecer la lectura, escritura,
+                        matemáticas y otros conocimientos básicos
+                        necesarios para la formación escolar.
+                    </p>
+
+                    <button class="btn-fotos"
+                            onclick="abrirGaleria('central')">
+                        Ver fotografías
+                    </button>
+                </article>
+
+                <!-- UNIDAD EDUCATIVA PEDRO DOMINGO MURILLO -->
+                <article class="tarjeta">
+                    <img src="imagenes/educacion2.webp"
+                         alt="Unidad Educativa Pedro Domingo Murillo">
+
+                    <h3>
+                        Educación primaria <br>
+                        "UNIDAD EDUCATIVA PEDRO DOMINGO MURILLO"
+                    </h3>
+
+                    <p>
+                        Permite fortalecer la lectura, escritura,
+                        matemáticas y otros conocimientos básicos
+                        necesarios para la formación escolar.
+                    </p>
+
+                    <button class="btn-fotos"
+                            onclick="abrirGaleria('murillo')">
+                        Ver fotografías
+                    </button>
+                </article>
+
+                <!-- UNIDAD EDUCATIVA ADVENTISTA COLQUENCHA -->
+                <article class="tarjeta">
+                    <img src="imagenes/educacion2.webp"
+                         alt="Unidad Educativa Adventista Colquencha">
+
+                    <h3>
+                        Educación primaria <br>
+                        "UNIDAD EDUCATIVA ADVENTISTA COLQUENCHA"
+                    </h3>
+
+                    <p>
+                        Promueve el aprendizaje y la formación
+                        de los estudiantes, fortaleciendo sus
+                        conocimientos y valores.
+                    </p>
+
+                    <button class="btn-fotos"
+                            onclick="abrirGaleria('adventista')">
+                        Ver fotografías
+                    </button>
+                </article>
+
+                <!-- UNIDAD EDUCATIVA NACIONAL LITORAL -->
+                <article class="tarjeta">
+                    <img src="img/colquencha/litoral1.jpeg"
+                         alt="Unidad Educativa Nacional Litoral">
+
+                    <h3>
+                        Educación secundaria <br>
+                        "U.E. TEC. HUM. NACIONAL LITORAL"
+                    </h3>
+
+                    <p>
+                        Prepara a los estudiantes para continuar
+                        sus estudios superiores y desarrollar
+                        capacidades para su vida profesional.
+                    </p>
+
+                    <button class="btn-fotos"
+                            onclick="abrirGaleria('litoral')">
+                        Ver fotografías
+                    </button>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- UNIDADES EDUCATIVAS -->
+        <section class="info">
+            <h2>Unidades educativas</h2>
+
+            <p>
+                Las unidades educativas son espacios de enseñanza
+                y aprendizaje donde estudiantes y docentes trabajan
+                para alcanzar objetivos educativos.
+            </p>
+
+            <p>
+                En esta sección puedes conocer las unidades
+                educativas de Colquencha mediante sus fotografías
+                y la información disponible.
+            </p>
+        </section>
+
+        <!-- IMPORTANCIA -->
+        <section>
+            <h2>Importancia de estudiar</h2>
+
+            <div class="galeria">
+
+                <article class="tarjeta">
+                    <img src="imagenes/educacion5.webp"
+                         alt="Trabajo en equipo en el aula">
+
+                    <h3>Valores y convivencia</h3>
+
+                    <p>
+                        La escuela fomenta el respeto, la solidaridad,
+                        la responsabilidad y el trabajo en equipo.
+                    </p>
+                </article>
+
+                <article class="tarjeta">
+                    <img src="imagenes/educacion6.webp"
+                         alt="Jóvenes preparándose para el futuro">
+
+                    <h3>Oportunidades</h3>
+
+                    <p>
+                        La formación educativa permite prepararse
+                        para nuevos retos académicos y laborales.
+                    </p>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- MENSAJE FINAL -->
+        <section class="info">
+            <h2>Educación para un mejor futuro</h2>
+
+            <p>
+                Apoyar la educación es contribuir al crecimiento
+                de Colquencha. La participación de estudiantes,
+                docentes, familias y comunidad es importante para
+                construir mejores oportunidades para las nuevas
+                generaciones.
+            </p>
+        </section>
+
+        <!-- NAVEGACIÓN -->
+        <section>
+            <a href="index.html" class="btn">
+                ← Volver al inicio
+            </a>
+
+            <a href="cultura.html" class="btn">
+                Conocer nuestra cultura →
+            </a>
+        </section>
+
+    </main>
+
+    <!-- VISOR DE FOTOGRAFÍAS -->
+    <div id="visor" class="visor">
+
+        <button class="cerrar"
+                onclick="cerrarGaleria()"
+                aria-label="Cerrar galería">
+            &times;
+        </button>
+
+        <button class="flecha anterior"
+                onclick="cambiarFoto(-1)"
+                aria-label="Fotografía anterior">
+            &#10094;
+        </button>
+
+        <img id="fotoGrande"
+             src=""
+             alt="Fotografía de la unidad educativa">
+
+        <button class="flecha siguiente"
+                onclick="cambiarFoto(1)"
+                aria-label="Fotografía siguiente">
+            &#10095;
+        </button>
+
+        <p id="contador"></p>
+    </div>
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+        <p><strong>Colquencha: Conoce y Conecta</strong></p>
+
+        <p>La educación construye nuestro futuro.</p>
+
+        <p>© 2026 - Proyecto web de Colquencha</p>
+    </footer>
+
+    <!-- JAVASCRIPT DE LAS GALERÍAS -->
+    <script>
+        // Fotografías de cada unidad educativa.
+        // Agrega aquí todas las imágenes que quieras mostrar.
+
+        const galerias = {
+            central: [
+                "imagenes/educacion2.we",
+                "imagenes/central2.jpeg"
+            ],
+
+            murillo: [
+                "imagenes/educacion2.webp",
+                "imagenes/murillo2.jpeg"
+            ],
+
+            adventista: [
+                "imagenes/educacion2.webp",
+                "imagenes/adventista2.jpeg"
+            ],
+
+            litoral: [
+                "img/colquencha/litoral1.jpeg",
+                "img/colquencha/litoral2.jpeg",
+                "img/colquencha/litoral3.jpeg",
+                "img/colquencha/litoral4.jpeg"
+            ]
+        };
+
+        let fotosActuales = [];
+        let indiceActual = 0;
+
+        // Abrir la galería de la unidad seleccionada.
+        function abrirGaleria(unidad) {
+            fotosActuales = galerias[unidad];
+            indiceActual = 0;
+
+            mostrarFoto();
+
+            document.getElementById("visor").style.display = "flex";
+        }
+
+        // Mostrar la fotografía seleccionada.
+        function mostrarFoto() {
+            const foto = document.getElementById("fotoGrande");
+
+            foto.src = fotosActuales[indiceActual];
+
+            document.getElementById("contador").textContent =
+                (indiceActual + 1) + " de " + fotosActuales.length;
+        }
+
+        // Avanzar o retroceder entre fotografías.
+        function cambiarFoto(direccion) {
+            indiceActual += direccion;
+
+            if (indiceActual >= fotosActuales.length) {
+                indiceActual = 0;
+            }
+
+            if (indiceActual < 0) {
+                indiceActual = fotosActuales.length - 1;
+            }
+
+            mostrarFoto();
+        }
+
+        // Cerrar la galería.
+        function cerrarGaleria() {
+            document.getElementById("visor").style.display = "none";
+        }
+
+        // Cerrar al hacer clic fuera de la fotografía.
+        document.getElementById("visor").addEventListener("click", function(evento) {
+            if (evento.target === this) {
+                cerrarGaleria();
+            }
+        });
+
+        // Cerrar al presionar Escape y navegar con las flechas del teclado.
+        document.addEventListener("keydown", function(evento) {
+            const visor = document.getElementById("visor");
+
+            if (visor.style.display !== "flex") {
+                return;
+            }
+
+            if (evento.key === "Escape") {
+                cerrarGaleria();
+            } else if (evento.key === "ArrowRight") {
+                cambiarFoto(1);
+            } else if (evento.key === "ArrowLeft") {
+                cambiarFoto(-1);
+            }
+        });
+    </script>
+
+</body>
+</html>

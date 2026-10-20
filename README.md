@@ -19,7 +19,9 @@ Doble clic en `index.html`. Funciona **sin internet** y sin instalar nada: todo 
 | `sedes.js` | **la lista de las sedes**: nombre, región, tipo y si ya está activa |
 | `sedes/colquencha.js` | **los datos de Colquencha**: lugares, tramos, accesos, información de cada sección y galería |
 | `sedes/<sede>.js` | los datos de cada sede de la pestaña «Otras sedes», con el mismo formato (generados con OpenStreetMap y Wikipedia) |
+| `lugaresturisticos.html`, `cultura.html`, `produccion.html`, `educacion.html`, `UMSACO.html` + `secciones.css` | las páginas de cada tarjeta de Colquencha (versión 2.1 del grupo): el botón de cada tarjeta lleva a la suya. En otra sede no se usan |
 | `img/colquencha/` | las imágenes de Colquencha |
+| `videos/colquencha/` | los videos de Colquencha (reducidos a 480p para que carguen con internet lento) |
 | `algoritmos.js` | Dijkstra, BFS y A* |
 | `pruebas/probar.js` | las pruebas de los algoritmos y de los datos de cada sede |
 
@@ -29,8 +31,9 @@ Doble clic en `index.html`. Funciona **sin internet** y sin instalar nada: todo 
    verificada. Una sección sin datos no se muestra.
 2. **Una foto** va en `img/colquencha/` y se agrega a `galeria` con su leyenda y su crédito (autor y
    licencia).
-3. **Las imágenes del diseño** son `paisaje_colquencha.png` (el fondo del inicio), `imapro.webp` e
-   `imgpro2.webp`, también en `img/colquencha/`. Mientras falten, se ve un fondo de color.
+3. **Las imágenes del diseño** están en `img/colquencha/`: el fondo del inicio es `fondo-colquencha.jpeg`
+   (se cambia en `fondo` de `sedes/colquencha.js`) y las fotos de las tarjetas se cambian en `index.html`.
+   Todavía falta `imapro.webp` (la de «¿Por qué visitar?»).
 4. **La lista de sedes** está en `sedes.js` y sale del folleto del IDR-DU. Falta identificar una de las 14
    sedes locales.
 
