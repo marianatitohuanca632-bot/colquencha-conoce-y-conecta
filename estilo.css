@@ -680,26 +680,48 @@ a {
    11. POR QUÉ VISITAR
 ============================== */
 
+
+/* 11. POR QUÉ VISITAR */
+
 .visitar {
     margin: 0 15px 15px;
     padding: 15px;
     display: grid;
-    grid-template-columns: minmax(120px, 0.8fr) 1.2fr;
-    gap: 20px;
+    grid-template-columns: 65% 35%;
+    gap: 0;
     align-items: center;
     background: white;
     border: 1px solid #dce8ef;
     border-radius: 10px;
+    box-sizing: border-box;
+    overflow: hidden;
 }
 
 .visitar-imagen {
-    min-height: 140px;
-    display: grid;
-    place-items: center;
+    width: 100%;
+    height: 325px;
+    min-width: 0;
+    overflow: hidden;
     border-radius: 8px;
-    background: linear-gradient(140deg, #8bc9ec, #d4e8b6, #8bb58a);
-    font-size: 55px;
+    box-sizing: border-box;
 }
+
+.visitar-imagen img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+}
+
+.visitar-texto {
+    width: 100%;
+    min-width: 0;
+    padding: 15px 20px;
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+}
+
 
 .visitar-texto h2 {
     font-size: 17px;
